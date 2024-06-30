@@ -1,0 +1,6 @@
+[book]
+authors = ["abdulshaikh55"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Data Structures and Algorithms in Rust"
