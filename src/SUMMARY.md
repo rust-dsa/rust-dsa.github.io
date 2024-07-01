@@ -6,4 +6,5 @@
 - [Array](./array/array.md)
   - [Primitive Type](./array/primitive.md)
   - [Vector Type](./array/vector.md)
-- [Stack](./2_stack.md)
+  - [Array or Vector?](./array/array_or_vector.md)
+- [Stack](./stack/stack.md)

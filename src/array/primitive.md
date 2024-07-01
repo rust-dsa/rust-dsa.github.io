@@ -1,5 +1,9 @@
-# Primitive type
-In rust primitive data types are those, which are built in and do not need any library to be used. Rust provides this type of array.
+# Primitive Type
+In rust primitive data types are those, which are built in and do not need any library to be used.[^1] 
+
+For instance, signed integers (`i8`, `i32`, `isize`, ...), floating point (`f32`, `f64`), char, etc are *scalar primitive types* as they hold only single values.
+
+On the other hand arrays and tuples are called *compound primitive types* because they hold multiple values.
 
 
 ## Initializing an array {#initializing-an-array}
@@ -23,10 +27,13 @@ We can also repeat values by specifying a value to repeat and the number of time
 {{#include ./../code/dsa/arrays.rs:repeat}}
 ```
 
-## Modifying an array
-We can modify the values using the index of the element provided the array is mutable.
+## Accessing and modifying an array
+We can access array elements using their index, and modify the values provided the array is mutable.
+```rust
+{{#include ./../code/dsa/arrays.rs:access_one_array_element}}
+```
 
-
+## Advantages and Disadvantages of Arrays
 | **Advantages** | **Disadvantages** |
 | --- | --- |
 | Accessing / searching for elements is fast. | Fixed size |
@@ -42,10 +49,12 @@ One dimensional array refers to an array that contains only a row of elements. A
 
 **Use Case**: 1D arrays are used when we have to store similar items contiguously. These items are related in some way.
 
-### 2D array: 
+### 2D array:
 Two Dimensional array refers to an array that contains rows as well as columns of element. A 2D array can be accessed by using two indices; one index specifying the row, the other specifying the column.
 
 **Initializing a 2D array**: While arrays are stored in a single line, they are ideal for a One dimensional relationship. But in some cases you need to store elements that have a Two dimensional relationship. To structure that data in such a way, this is how we do it:
 ```rust
 {{#include ./../code/dsa/arrays.rs:2D_array}}
 ```
+
+[^1]: <https://doc.rust-lang.org/rust-by-example/primitives.html>
