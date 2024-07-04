@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive Type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector Type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="linked_list/singly.html"><strong aria-hidden="true">4.1.</strong> Singly linked list</a></li><li class="chapter-item expanded "><a href="linked_list/doubly.html"><strong aria-hidden="true">4.2.</strong> Doubly linked list</a></li><li class="chapter-item expanded "><a href="linked_list/circular.html"><strong aria-hidden="true">4.3.</strong> Circular linked list</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -188,8 +188,9 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <p>A data structure is like a blueprint that shows how data is connected and organized.</p>
 <p>To understand this better, let's look at a common data structure called an array.</p>
 <p>An <strong>Array</strong> is a group of similar things. It's a data structure because it helps us see how data is arranged in memory and how they relate to each other.</p>
-<p>A more formal definition of a data structure is:
-'<strong>Data structure</strong> is a special way of organizing, processing, finding, changing, and storing data. Data structures are like plans for organizing data to meet specific needs. They don't just store data, they also keep track of how the data is connected.'<sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>In a computer, 'data' is ultimately represented as a sequence of zeros and ones (bits), but this representation is too low level for the human beings operating that computer to discern. Hence, we have data structures that are closer to the way humans can understand and visualize the structure of this data. This is because it is humans who have to develop and maintain the software systems - computers merely run them.</p>
+<p>A more formal definition is:
+'<strong>Data structure</strong> is a particular way of organizing data for particular types of operation.</p>
 <h2 id="operations-on-data-structures"><a class="header" href="#operations-on-data-structures">Operations on Data Structures</a></h2>
 <p>Arrays are a fundamental data structure that requires various operations to function effectively. These operations include:</p>
 <ol>
@@ -199,9 +200,6 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <li><strong>Search</strong>: This process involves finding a specific element within an array by comparing the target element with each element in the array until a match is found.</li>
 <li><strong>Sorting</strong>: This operation involves arranging elements in a specific order.</li>
 </ol>
-<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://www.altexsoft.com/blog/data-structure/">Data Structure - altexsoft.com</a></p>
-</div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="algorithms"><a class="header" href="#algorithms">Algorithms</a></h1>
 <p>An algorithm is a set of steps / instructions that leads to solving a problem. Algorithms are a fundamental part of computer science. They are used to accomplish a variety of computational tasks, such as performing calculations, or finding specific information in databases.</p>
 <p>We may not realize it, we also use algorithms in our daily lives. Our rituals after waking up, the specific way we choose to make our coffee, the way we fold our laundry, all these tasks are completed as a result of us following an algorithm which we have chosen to execute.</p>
@@ -214,6 +212,7 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <li>Consistent</li>
 </ul>
 <p>They can be expressed as natural languages, programming languages, pseudo code, flowcharts and control tables.</p>
+<p>After we have chosen the representation of data as required, this data has to be processed somehow. This is what leads to the need of algorithms. The process of interest could be searching, sorting, encryption, etc</p>
 <h2 id="types-of-algorithms"><a class="header" href="#types-of-algorithms">Types of Algorithms</a></h2>
 <p><strong>1. Search algorithm:</strong> This algorithm takes a token to be searched as input and outputs the address of that token in the data structure / database.</p>
 <p><strong>2. Sorting algorithm:</strong> This algorithm is used to rearrange data structures based on a comparison operator, which decides the new order of data.</p>
@@ -225,8 +224,13 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <p><strong>7. Encryption algorithm:</strong> This algorithm takes data and maybe an encryption key as input and outputs an encrypted data. Concurrently a decryption algorithm takes the encrypted data and decryption key as input and outputs the original text.</p>
 <p><strong>8. Recursive algorithm:</strong> This algorithm calls itself repeatedly until a solution emerges. Recursive algorithms call themselves with a smaller values every time a recursive function is involved.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="array"><a class="header" href="#array">Array</a></h1>
-<p>An array is a collection  of similar data types which are stored in contiguous memory locations. Each location has an index number through which we can access the element of that particular index.
-In programming, we have to use data elements of similar type and similar purpose. Instead of declaring and defining every variable individually, we can use an array to store all of them together.</p>
+<p>An array is a collection  of similar data types which are stored in contiguous memory locations. Each location has an index number through which we can access the element of that particular index.</p>
+<p>In programming, we have to use data elements of similar type and similar purpose. Instead of declaring and defining every variable individually, we can use an array to store all of them together.</p>
+<p><img src="array/../images/array.jpg" alt="Array representation" /></p>
+<p>The array in the diagram has 8 elements, and hence we say its size is 8 (length in terms of Rust).</p>
+<p>The line of numbers below the array is called the indices of the array. These numbers are the addresses of elements in the array. We access elements with the help of these number. An index number generally starts with 0.</p>
+<p>For instance, if you want to access the 4th element, you'll do that by its index, i.e. 4 - 1 = 3:</p>
+<p><code>number = array[3]</code>;</p>
 <p>In Rust an array can be defined in two methods. Each method comes with its pros and cons. The two types of array in rust are: Primitive type and Vector type.</p>
 <h2 id="array-algorithms"><a class="header" href="#array-algorithms">Array Algorithms</a></h2>
 <p>These algorithm while not specific to array data type, serve an important function while deal with them. While we don't need algorithms to traverse, access, or insert elements in arrays like we will in other data structures, there are some functionalities that require different algorithms.</p>
@@ -435,6 +439,127 @@ In programming, we have to use data elements of similar type and similar purpose
     let work = stack.pop().unwrap();
     println!("After pop: {work}");
 <span class="boring">}</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linked-list"><a class="header" href="#linked-list">Linked list</a></h1>
+<p>A linked list is a linear data structure that stores a collection of 'nodes' together via links i.e. pointers. A node consists of data value and a pointer to the address of the next node within the linked list. Nodes are not stored at contiguous locations, rather they are linked using pointers to different memory locations.</p>
+<p>A linked list starts with a head node which points to the starting node of the linked list. Every node consists of data which holds the value associated with the node and a pointer which holds the memory address of the next node in linked list.</p>
+<p>The last node is called the tail node in the list which points to null indicating the end of the list.</p>
+<h2 id="types-of-linked-list"><a class="header" href="#types-of-linked-list">Types of linked list</a></h2>
+<ol>
+<li>Singly linked list</li>
+<li>Doubly linked list</li>
+<li>Circular linked list</li>
+</ol>
+<p>Let's understand them in a bit more detail</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="singly-linked-list"><a class="header" href="#singly-linked-list">Singly Linked List</a></h1>
+<p>A node in the singly linked list consists of only two parts; data and next pointer. The data part stores the actual data of the node and the next part stores the address of its immediate successor.</p>
+<p>A singly linked list can be traversed in only one direction.</p>
+<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<ol>
+<li><code>create</code>:</li>
+<li><code>traverse</code>:</li>
+<li><code>insert</code>:</li>
+<li><code>delete</code>:</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="doubly-linked-list"><a class="header" href="#doubly-linked-list">Doubly linked list</a></h1>
+<p>A node in doubly linked list consists of three parts; one part is data, other two parts are previous pointer and next pointer. The previous pointer holds the address of the previous node in linked list, the data part holds the actual data, and the next part holds the address of the next node in the linked list</p>
+<p>As we have the address of the next as well as the previous node we can traverse in both directions in the linked list.</p>
+<h2 id="operations-1"><a class="header" href="#operations-1">Operations</a></h2>
+<ol>
+<li><code>insert_first</code>:</li>
+<li><code>insert_last</code>:</li>
+<li><code>insert_after</code>:</li>
+<li><code>delete_first</code>:</li>
+<li><code>delete_last</code>:</li>
+<li><code>delete_after</code>:</li>
+<li><code>display_forward</code>: (forward manner)</li>
+<li><code>display backward</code>: (reverse manner)</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="circular-linked-list"><a class="header" href="#circular-linked-list">Circular linked list</a></h1>
+<p>Circular linked list is an extension of singly and doubly linked list, in that it connects the last node (tail node) with the first node (head node) of the linked list.</p>
+<p>This makes sure that they are connected in a loop and we can recursively access every element.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="search-algorithms"><a class="header" href="#search-algorithms">Search algorithms</a></h1>
+<p>An important and recurring problem in computing is locating information. More succinctly, this problem is called as searching. To solve this problem, search algorithms are used.</p>
+<p>As you may have guessed from the name of the algorithms, search algorithms help us locate data in data structures.</p>
+<p>In order to simplify matters, we'll search through items in a array. Recalling what we learned in chapter 2, arrays are a collection of similar items stored in a contiguous location. Searching through it will be simple enough.</p>
+<p>The most straightforward approach to searching is to examine each element of the data structure sequentially. Concurrently this searching algorithm is called linear search or sequential search.</p>
+<h2 id="linear-search-algorithm"><a class="header" href="#linear-search-algorithm">Linear search algorithm</a></h2>
+<p>Let's discuss what the search algorithm will take as input and will give out as output.</p>
+<ul>
+<li>
+<p>Input:</p>
+<ol>
+<li>the array</li>
+<li>element to be searched</li>
+</ol>
+</li>
+<li>
+<p>Output:</p>
+<ol>
+<li><code>Some(index)</code> if element is present in the array</li>
+<li><code>None</code> if element is not present in the array</li>
+</ol>
+</li>
+</ul>
+<p>Now that we know what the algorithm expects and what we expect of it, let's understand how it will work</p>
+<ol>
+<li>The algorithm takes the array and the token (number to be searched) as input</li>
+<li>It compares the token with every element in the array</li>
+<li>If the token and element match, the algorithm returns the index of that element</li>
+<li>If the token doesn't match with any element i.e. it reaches the end of array, return <code>None</code></li>
+</ol>
+<p>This is how a linear search algorithm works</p>
+<p>Now let's write a function that does the preceding:</p>
+<pre><code class="language-rust ignore">fn linear_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
+
+    for (idx, element) in array.into_iter().enumerate() {
+        if element == token {
+            return Some(idx);
+        }
+    }
+
+    None
+}</code></pre>
+<p>Here, we created a function that accepts an array and the element to be searched and gives out the Option enum.</p>
+<p>Inside the function, a <code>for</code> loop iterates through every element in the array, that element is compared with given token for equality. If equal, the index of the element enclosed inside <code>Some</code> is returned.  When the loop iterates through the array and cannot find the token, then the function returns <code>None</code>.</p>
+<p>Now that we have a function let's give it the inputs</p>
+<pre><code class="language-rust ignore">    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
+    let token = 21;</code></pre>
+<p>Note that the by default type of both these variables is <code>Vec&lt;i32&gt;</code> and <code>i32</code> respectively.</p>
+<p>By setting up the variables and the outputs in the main function</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
+    let token = 21;
+
+    let index = linear_search(array, token);
+
+    match index {
+        Some(x) =&gt; println!("The element is at index {x}."),
+        None =&gt; println!("The element is not present in the array."),
+    }
+}</code></pre></pre>
+<h2 id="result"><a class="header" href="#result">Result</a></h2>
+<pre><pre class="playground"><code class="language-rust editable">fn main() {
+    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
+    let token = 21;
+
+    let index = linear_search(array, token);
+
+    match index {
+        Some(x) =&gt; println!("The element is at index {x}."),
+        None =&gt; println!("The element is not present in the array."),
+    }
+}
+
+fn linear_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
+
+    for (idx, element) in array.into_iter().enumerate() {
+        if element == token {
+            return Some(idx);
+        }
+    }
+
+    None
+}</code></pre></pre>
 
                     </main>
 

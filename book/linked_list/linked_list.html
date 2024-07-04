@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Stack - Data Structures and Algorithms in Rust</title>
+        <title>Linked list - Data Structures and Algorithms in Rust</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html" class="active"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linked_list/singly.html"><strong aria-hidden="true">4.1.</strong> Singly linked list</a></li><li class="chapter-item expanded "><a href="../linked_list/doubly.html"><strong aria-hidden="true">4.2.</strong> Doubly linked list</a></li><li class="chapter-item expanded "><a href="../linked_list/circular.html"><strong aria-hidden="true">4.3.</strong> Circular linked list</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html" class="active"><strong aria-hidden="true">4.</strong> Linked list</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linked_list/singly.html"><strong aria-hidden="true">4.1.</strong> Singly linked list</a></li><li class="chapter-item expanded "><a href="../linked_list/doubly.html"><strong aria-hidden="true">4.2.</strong> Doubly linked list</a></li><li class="chapter-item expanded "><a href="../linked_list/circular.html"><strong aria-hidden="true">4.3.</strong> Circular linked list</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,55 +176,27 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="stack"><a class="header" href="#stack">Stack</a></h1>
-<p>A stack is a linear data structure that follows the principle of <em>Last In First Out (LIFO)</em>. This means that the last element inserted inside the stack is removed first.</p>
-<p>Stacks can be visualized as a stack of plates on a table. Only the top plate is accessible by the user. The plates below cannot be accessed until they are at the top i.e., the plates above them have been removed.</p>
-<p>The way in which we define stack in rust is the same as we define a vector. The vector data structure can be used as both an array and a stack in rust. For instance, the operations provided for vector include the operations on stack.</p>
-<h2 id="initializing-a-stack"><a class="header" href="#initializing-a-stack">Initializing a stack.</a></h2>
-<p>Since we'll be using vector as a stack, we initialize it the same way.</p>
-<pre><pre class="playground"><code class="language-rust no_run"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    let mut stack = Vec::new();
-<span class="boring">}</span></code></pre></pre>
-<p>Let's see the operations of stack and those functions in rust.</p>
-<h2 id="operations-on-a-stack"><a class="header" href="#operations-on-a-stack">Operations on a Stack</a></h2>
-<p><strong>1. push:</strong> Add an element to the top of a stack.</p>
-<p><strong>2. pop:</strong> Remove an element from the top of a stack.</p>
-<p><strong>3. is_empty:</strong> check if stack is empty</p>
-<p><strong>4. is_full:</strong> check if stack is full</p>
-<p><strong>5. peek:</strong> get value without removing from the stack</p>
-<p>Let's see how to implement the two fundamental functions of a stack</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span><span class="boring">    let mut stack = Vec::new();
-</span>    // PUSH
-    // name.push(element);
-
-    stack.push(74);
-    stack.push(83);
-    stack.push(44);
-    stack.push(91);
-
-    println!("Stack: {:?}", stack);
-
-    // POP
-    // name.pop();
-    stack.pop(); // pops 91
-    
-    // var_name = name.pop();
-    let work = stack.pop().unwrap();
-    println!("After pop: {work}");
-<span class="boring">}</span></code></pre></pre>
+                        <h1 id="linked-list"><a class="header" href="#linked-list">Linked list</a></h1>
+<p>A linked list is a linear data structure that stores a collection of 'nodes' together via links i.e. pointers. A node consists of data value and a pointer to the address of the next node within the linked list. Nodes are not stored at contiguous locations, rather they are linked using pointers to different memory locations.</p>
+<p>A linked list starts with a head node which points to the starting node of the linked list. Every node consists of data which holds the value associated with the node and a pointer which holds the memory address of the next node in linked list.</p>
+<p>The last node is called the tail node in the list which points to null indicating the end of the list.</p>
+<h2 id="types-of-linked-list"><a class="header" href="#types-of-linked-list">Types of linked list</a></h2>
+<ol>
+<li>Singly linked list</li>
+<li>Doubly linked list</li>
+<li>Circular linked list</li>
+</ol>
+<p>Let's understand them in a bit more detail</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../array/array_or_vector.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../stack/stack.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../linked_list/linked_list.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../linked_list/singly.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -234,11 +206,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../array/array_or_vector.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../stack/stack.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../linked_list/linked_list.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../linked_list/singly.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

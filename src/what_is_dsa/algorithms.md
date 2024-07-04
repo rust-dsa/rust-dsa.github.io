@@ -13,6 +13,7 @@ We may not realize it, we also use algorithms in our daily lives. Our rituals af
 
 They can be expressed as natural languages, programming languages, pseudo code, flowcharts and control tables.
 
+After we have chosen the representation of data as required, this data has to be processed somehow. This is what leads to the need of algorithms. The process of interest could be searching, sorting, encryption, etc
 
 ## Types of Algorithms
 

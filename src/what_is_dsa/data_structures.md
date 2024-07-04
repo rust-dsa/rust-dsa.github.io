@@ -5,8 +5,10 @@ To understand this better, let's look at a common data structure called an array
 
 An **Array** is a group of similar things. It's a data structure because it helps us see how data is arranged in memory and how they relate to each other.
 
-A more formal definition of a data structure is:
-'**Data structure** is a special way of organizing, processing, finding, changing, and storing data. Data structures are like plans for organizing data to meet specific needs. They don't just store data, they also keep track of how the data is connected.'[^1]
+In a computer, 'data' is ultimately represented as a sequence of zeros and ones (bits), but this representation is too low level for the human beings operating that computer to discern. Hence, we have data structures that are closer to the way humans can understand and visualize the structure of this data. This is because it is humans who have to develop and maintain the software systems - computers merely run them. 
+
+A more formal definition is:
+'**Data structure** is a particular way of organizing data for particular types of operation.
 
 ## Operations on Data Structures
 Arrays are a fundamental data structure that requires various operations to function effectively. These operations include:
@@ -15,5 +17,3 @@ Arrays are a fundamental data structure that requires various operations to func
 3. **Deletion**: This operation involves removing an existing element from an array. Similar to insertion, an element can be deleted from any position within the array, and existing elements may shift to fill the gap.
 4. **Search**: This process involves finding a specific element within an array by comparing the target element with each element in the array until a match is found.
 5. **Sorting**: This operation involves arranging elements in a specific order.
-
-[^1]: [Data Structure - altexsoft.com](https://www.altexsoft.com/blog/data-structure/)

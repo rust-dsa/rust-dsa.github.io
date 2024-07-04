@@ -8,7 +8,7 @@ On the other hand arrays and tuples are called *compound primitive types* becaus
 
 ## Initializing an array {#initializing-an-array}
 ```rust
-{{#include ./../code/dsa/arrays.rs:initialize}}
+{{#include ./../code/ds/arrays.rs:initialize}}
 ```
 
 ## Defining an array
@@ -16,7 +16,7 @@ We can specify type and length in the format of `[T; N]`, where:<br>
 `T`: Element Type<br>
 `N`: Size (it is constant and it should be non-negative)
 ```rust
-{{#include ./../code/dsa/arrays.rs:quantify}}
+{{#include ./../code/ds/arrays.rs:quantify}}
 ```
 
 We can also repeat values by specifying a value to repeat and the number of times to repeat it<br>
@@ -24,13 +24,13 @@ We can also repeat values by specifying a value to repeat and the number of time
 `E`: Expression<br>
 `N`: Number of times to repeat
 ```rust
-{{#include ./../code/dsa/arrays.rs:repeat}}
+{{#include ./../code/ds/arrays.rs:repeat}}
 ```
 
 ## Accessing and modifying an array
 We can access array elements using their index, and modify the values provided the array is mutable.
 ```rust
-{{#include ./../code/dsa/arrays.rs:access_one_array_element}}
+{{#include ./../code/ds/arrays.rs:access_one_array_element}}
 ```
 
 ## Advantages and Disadvantages of Arrays
@@ -54,7 +54,7 @@ Two Dimensional array refers to an array that contains rows as well as columns o
 
 **Initializing a 2D array**: While arrays are stored in a single line, they are ideal for a One dimensional relationship. But in some cases you need to store elements that have a Two dimensional relationship. To structure that data in such a way, this is how we do it:
 ```rust
-{{#include ./../code/dsa/arrays.rs:2D_array}}
+{{#include ./../code/ds/arrays.rs:2D_array}}
 ```
 
 [^1]: <https://doc.rust-lang.org/rust-by-example/primitives.html>

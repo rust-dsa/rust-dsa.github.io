@@ -1,6 +1,17 @@
 # Array
 An array is a collection  of similar data types which are stored in contiguous memory locations. Each location has an index number through which we can access the element of that particular index.
+
 In programming, we have to use data elements of similar type and similar purpose. Instead of declaring and defining every variable individually, we can use an array to store all of them together.
+
+![Array representation](../images/array.jpg)
+
+The array in the diagram has 8 elements, and hence we say its size is 8 (length in terms of Rust).
+
+The line of numbers below the array is called the indices of the array. These numbers are the addresses of elements in the array. We access elements with the help of these number. An index number generally starts with 0. 
+
+For instance, if you want to access the 4th element, you'll do that by its index, i.e. 4 - 1 = 3:
+
+`number = array[3]`;
 
 In Rust an array can be defined in two methods. Each method comes with its pros and cons. The two types of array in rust are: Primitive type and Vector type.
 

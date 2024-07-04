@@ -8,7 +8,7 @@ The way in which we define stack in rust is the same as we define a vector. The 
 ## Initializing a stack.
 Since we'll be using vector as a stack, we initialize it the same way.
 ```rust,no_run
-{{#include ./../code/dsa/stack.rs:initialize}}
+{{#include ./../code/ds/stack.rs:initialize}}
 ```
 
 Let's see the operations of stack and those functions in rust. 
@@ -27,5 +27,5 @@ Let's see the operations of stack and those functions in rust.
 Let's see how to implement the two fundamental functions of a stack
 
 ```rust
-{{#include ./../code/dsa/stack.rs:operations}}
+{{#include ./../code/ds/stack.rs:operations}}
 ```
