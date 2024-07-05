@@ -3,10 +3,10 @@
 fn main() {
     // ANCHOR: input
     let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let token = 21;
+    let target = 21;
     // ANCHOR_END: input
 
-    let index = linear_search(array, token);
+    let index = linear_search(array, target);
 
     match index {
         Some(x) => println!("The element is at index {x}."),
@@ -16,10 +16,10 @@ fn main() {
 // ANCHOR_END: main
 
 // ANCHOR: search_function
-fn linear_search(array: Vec<i32>, token: i32) -> Option<usize> {
+fn linear_search(array: Vec<i32>, target: i32) -> Option<usize> {
 
     for (idx, element) in array.into_iter().enumerate() {
-        if element == token {
+        if element == target {
             return Some(idx);
         }
     }

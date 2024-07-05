@@ -21,7 +21,7 @@ These algorithm while not specific to array data type, serve an important functi
 ### Search Algorithms 🔍
 They serve the function of checking and retrieving information stored within some data structure where that data is stored.
 
-**1. Linear Search algorithm**: It is also called sequential search algorithm. This algorithm works by sequentially iterating through the whole array from one end until the target element is round. If found, the algorithm returns its index, else - 1.
+**1. [Linear Search algorithm](../search_algorithms.md#linear-search-algorithm)**: It is also called sequential search algorithm. This algorithm works by sequentially iterating through the whole array from one end until the target element is round. If found, the algorithm returns its index, else - 1.
 
 **2. Binary Search Algorithm** This type of searching algorithm is used to find the position of a specific value contained in a sorted array. The binary search algorithm works on the principle of divide and conquer and is the best searching algorithm because its faster to run.
 

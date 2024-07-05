@@ -236,7 +236,7 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <p>These algorithm while not specific to array data type, serve an important function while deal with them. While we don't need algorithms to traverse, access, or insert elements in arrays like we will in other data structures, there are some functionalities that require different algorithms.</p>
 <h3 id="search-algorithms-"><a class="header" href="#search-algorithms-">Search Algorithms 🔍</a></h3>
 <p>They serve the function of checking and retrieving information stored within some data structure where that data is stored.</p>
-<p><strong>1. Linear Search algorithm</strong>: It is also called sequential search algorithm. This algorithm works by sequentially iterating through the whole array from one end until the target element is round. If found, the algorithm returns its index, else - 1.</p>
+<p><strong>1. <a href="array/../search_algorithms.html#linear-search-algorithm">Linear Search algorithm</a></strong>: It is also called sequential search algorithm. This algorithm works by sequentially iterating through the whole array from one end until the target element is round. If found, the algorithm returns its index, else - 1.</p>
 <p><strong>2. Binary Search Algorithm</strong> This type of searching algorithm is used to find the position of a specific value contained in a sorted array. The binary search algorithm works on the principle of divide and conquer and is the best searching algorithm because its faster to run.</p>
 <h3 id="sorting-algorithms-"><a class="header" href="#sorting-algorithms-">Sorting Algorithms 🧲</a></h3>
 <p>Sorting algorithm rearrange a given array of elements in a specific order. In case of numbers, it could be ascending or descending order.</p>
@@ -481,9 +481,7 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <p>An important and recurring problem in computing is locating information. More succinctly, this problem is called as searching. To solve this problem, search algorithms are used.</p>
 <p>As you may have guessed from the name of the algorithms, search algorithms help us locate data in data structures.</p>
 <p>In order to simplify matters, we'll search through items in a array. Recalling what we learned in chapter 2, arrays are a collection of similar items stored in a contiguous location. Searching through it will be simple enough.</p>
-<p>The most straightforward approach to searching is to examine each element of the data structure sequentially. Concurrently this searching algorithm is called linear search or sequential search.</p>
-<h2 id="linear-search-algorithm"><a class="header" href="#linear-search-algorithm">Linear search algorithm</a></h2>
-<p>Let's discuss what the search algorithm will take as input and will give out as output.</p>
+<p>Let's discuss what a search algorithm will take as input and will give out as output.</p>
 <ul>
 <li>
 <p>Input:</p>
@@ -500,19 +498,23 @@ We use algorithms to create, access, update, and delete data structures.</p>
 </ol>
 </li>
 </ul>
-<p>Now that we know what the algorithm expects and what we expect of it, let's understand how it will work</p>
+<h2 id="linear-search-algorithm"><a class="header" href="#linear-search-algorithm">Linear search algorithm</a></h2>
+<p>The most straightforward approach to searching is to examine each element of the data structure sequentially. Concurrently this searching algorithm is called linear search or sequential search.</p>
+<blockquote>
+<p>Imagine you're in a library, searching for a book by your favorite thriller author. You head to the thriller section and start scanning the shelves. You examine each book, one by one, until you find the one you're looking for. This process is akin to a linear search. There are a few possible outcomes: you might find the book you want, reach the end of the section without finding it, or decide to continue searching even after finding one book by the author, looking for additional titles.</p>
+</blockquote>
+<h3 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h3>
 <ol>
-<li>The algorithm takes the array and the token (number to be searched) as input</li>
-<li>It compares the token with every element in the array</li>
-<li>If the token and element match, the algorithm returns the index of that element</li>
-<li>If the token doesn't match with any element i.e. it reaches the end of array, return <code>None</code></li>
+<li>The algorithm takes the array and the token (number to be searched) as input.</li>
+<li>It compares the token with every element in the array.</li>
+<li>If the token and element match, the algorithm returns the index of that element.</li>
+<li>If the token doesn't match with any element (i.e., it reaches the end of the array), it returns <code>None</code>.</li>
 </ol>
-<p>This is how a linear search algorithm works</p>
-<p>Now let's write a function that does the preceding:</p>
-<pre><code class="language-rust ignore">fn linear_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
+<p>Now let's write a function that implements the preceding steps:</p>
+<pre><code class="language-rust ignore">fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
 
     for (idx, element) in array.into_iter().enumerate() {
-        if element == token {
+        if element == target {
             return Some(idx);
         }
     }
@@ -523,26 +525,26 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <p>Inside the function, a <code>for</code> loop iterates through every element in the array, that element is compared with given token for equality. If equal, the index of the element enclosed inside <code>Some</code> is returned.  When the loop iterates through the array and cannot find the token, then the function returns <code>None</code>.</p>
 <p>Now that we have a function let's give it the inputs</p>
 <pre><code class="language-rust ignore">    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let token = 21;</code></pre>
+    let target = 21;</code></pre>
 <p>Note that the by default type of both these variables is <code>Vec&lt;i32&gt;</code> and <code>i32</code> respectively.</p>
 <p>By setting up the variables and the outputs in the main function</p>
 <pre><pre class="playground"><code class="language-rust">fn main() {
     let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let token = 21;
+    let target = 21;
 
-    let index = linear_search(array, token);
+    let index = linear_search(array, target);
 
     match index {
         Some(x) =&gt; println!("The element is at index {x}."),
         None =&gt; println!("The element is not present in the array."),
     }
 }</code></pre></pre>
-<h2 id="result"><a class="header" href="#result">Result</a></h2>
+<h3 id="result-"><a class="header" href="#result-">Result 📦</a></h3>
 <pre><pre class="playground"><code class="language-rust editable">fn main() {
     let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let token = 21;
+    let target = 21;
 
-    let index = linear_search(array, token);
+    let index = linear_search(array, target);
 
     match index {
         Some(x) =&gt; println!("The element is at index {x}."),
@@ -550,16 +552,98 @@ We use algorithms to create, access, update, and delete data structures.</p>
     }
 }
 
-fn linear_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
+fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
 
     for (idx, element) in array.into_iter().enumerate() {
-        if element == token {
+        if element == target {
             return Some(idx);
         }
     }
 
     None
 }</code></pre></pre>
+<h3 id="time-and-space-complexity"><a class="header" href="#time-and-space-complexity">Time and Space Complexity</a></h3>
+<p>The time complexity of linear search is O(n), where n is the number of elements in the array. This is because in the worst case, the algorithm will have to compare the token with every element in the array.</p>
+<p>The space complexity of linear search is O(1), as it does not require any extra space other than the input array and the token.</p>
+<h2 id="binary-search-algorithm"><a class="header" href="#binary-search-algorithm">Binary search algorithm</a></h2>
+<p>When we write an algorithm, we have to consider the possibility that it can be improved in terms of performance. Performance may be improved as a result of less time required, and/or less space occupied.  Binary search algorithm is the improvement of linear search in that it reduces the time required to search for an element.</p>
+<p>You may ask yourself, "Why not stick with linear search? It gets the work done." While we're working with minimal data in our examples, real-world scenarios often involve dealing with billions of units of data. In such cases, linear search would take O(5,000,000,000) on average and O(10,000,000,000) at worst. Those numbers don't look good, do they? That's why we need a more efficient algorithm for large datasets.</p>
+<blockquote>
+<p>You recently stumbled upon a word - Facet: a distinct feature or element in a problem - that you don't know the meaning of. And as you are a sane person, chose to find your answer in a dictionary.</p>
+<p>You start by opening the dictionary right in the middle section. You see words starting with 'M'. Now you know that 'F', the first letter in you word, comes before 'M'. So you discard the letters after 'M'. Now the word you are looking for is somewhere between 'A' and 'M'.</p>
+<p>You open the section roughly between 'A' and 'M', your new, smaller dictionary. You have found the 'F' section of the dictionary. Now you can choose to linearly search through the words.</p>
+<p>With every iteration, you cut the search area in half. The first time you were searching through 26 letters. The second, you were searching through only 13. The next time would be half of that, and so on.</p>
+</blockquote>
+<p>Binary search is an efficient algorithm for finding a specific element in a sorted array. It works by repeatedly dividing the search interval in half.</p>
+<h3 id="algorithm-1"><a class="header" href="#algorithm-1">Algorithm</a></h3>
+<ol>
+<li>The algorithm starts with the entire sorted array.</li>
+<li>It compares the target value with the middle element of the array.</li>
+<li>If the target matches the middle element, the search is complete.</li>
+<li>If the target is less than the middle element, the search continues in the lower half of the array.</li>
+<li>If the target is greater than the middle element, the search continues in the upper half of the array.</li>
+<li>This process repeats, halving the search space each time, until the target is found or it's determined that the target is not in the array.</li>
+</ol>
+<p>Binary search is much faster than linear search for large datasets, with a time complexity of O(log n) compared to O(n) for linear search. 🚀</p>
+<p>Let's write the function that implements the preceding steps:</p>
+<pre><code class="language-rust ignore">fn binary_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
+    let mut low = 0;
+    let mut high = array.len() - 1;
+
+    while low &lt;= high {
+        let mid = (low + high) / 2;
+        if array[mid] == token {
+            return Some(mid);
+        } else if token &lt; array[mid] {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    None
+}</code></pre>
+<p>Here, we created a function that has the same input and output as the linear search algorithm. The only thing that has changed is the internal working</p>
+<p>Two variables <code>low</code> and <code>high</code> are initialed to extreme points of the array. We then format a while loop which terminates when high is smaller than low. This suggests that we have been through the entire array and haven't found the <code>target</code> element.</p>
+<p>In the loop, we initialize a <code>mid</code> variable which is the mid point of array to be searched in. If the <code>target</code> compared with element in mid index is equal, we return <code>Some(mid)</code>. If not then based on whether the element is smaller or larger than <code>target</code> we either reassign high to mid (new array will be on left side of <code>mid</code>), or low to mid (new array will be on the right side of <code>mid</code>). The visuals below will help.</p>
+<!-- !TODO Add diagrams showing the journey of binary search -->
+<h3 id="result--1"><a class="header" href="#result--1">Result 📦</a></h3>
+<pre><pre class="playground"><code class="language-rust editable">fn main() {
+    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
+    let token = 21;
+
+    let index = binary_search(array, token);
+
+    match index {
+        Some(x) =&gt; println!("The element is at index {x}"),
+        None =&gt; println!("The element is not present in the array"),
+    }
+}
+
+fn binary_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
+    let mut low = 0;
+    let mut high = array.len() - 1;
+
+    while low &lt;= high {
+        let mid = (low + high) / 2;
+        if array[mid] == token {
+            return Some(mid);
+        } else if token &lt; array[mid] {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    None
+}</code></pre></pre>
+<h3 id="time-and-space-complexity-1"><a class="header" href="#time-and-space-complexity-1">Time and Space Complexity</a></h3>
+<p>The time complexity of binary search is O(log n), where n is the number of elements in the array. This is because the algorithm divides the search space in half with each iteration, effectively reducing the number of comparisons needed to find the target element.</p>
+<p>The space complexity of binary search is O(1), as it does not require any extra space other than the input array and the target.</p>
+<hr>
+<blockquote>
+<p>Try this <a href="https://leetcode.com/problems/binary-search/description/">LeetCode Problem</a>.</p>
+</blockquote>
 
                     </main>
 
