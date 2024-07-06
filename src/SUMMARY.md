@@ -18,3 +18,4 @@
 
 # Algorithms
 - [Search algorithms](./search_algorithms.md)
+- [Sorting algorithms](./sorting_algorithms.md)

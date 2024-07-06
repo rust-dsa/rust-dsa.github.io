@@ -23,13 +23,13 @@ They serve the function of checking and retrieving information stored within som
 
 **1. [Linear Search algorithm](../search_algorithms.md#linear-search-algorithm)**: It is also called sequential search algorithm. This algorithm works by sequentially iterating through the whole array from one end until the target element is round. If found, the algorithm returns its index, else - 1.
 
-**2. Binary Search Algorithm** This type of searching algorithm is used to find the position of a specific value contained in a sorted array. The binary search algorithm works on the principle of divide and conquer and is the best searching algorithm because its faster to run.
+**2. [Binary Search Algorithm](../search_algorithms.md#binary-search-algorithm)** This type of searching algorithm is used to find the position of a specific value contained in a sorted array. The binary search algorithm works on the principle of divide and conquer and is the best searching algorithm because its faster to run.
 
 
 ### Sorting Algorithms 🧲
 Sorting algorithm rearrange a given array of elements in a specific order. In case of numbers, it could be ascending or descending order.
 
-**1. Bubble Sort** It is the simplest sorting algorithm, where is iteratively swaps the adjacent algorithms if they are in the wrong order.
+**1. [Bubble Sort](../sorting_algorithms.md#bubble-sort-algorithm)** It is the simplest sorting algorithm, where is iteratively swaps the adjacent algorithms if they are in the wrong order.
 
 **2. Selection Sort:** This algorithm works by iteratively selecting the smallest / largest element from the unsorted portion of the list and moving it to the sorted portion of the array.
 
