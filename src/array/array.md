@@ -31,7 +31,7 @@ Sorting algorithm rearrange a given array of elements in a specific order. In ca
 
 **1. [Bubble Sort](../sorting_algorithms.md#bubble-sort-algorithm)** It is the simplest sorting algorithm, where is iteratively swaps the adjacent algorithms if they are in the wrong order.
 
-**2. Selection Sort:** This algorithm works by iteratively selecting the smallest / largest element from the unsorted portion of the list and moving it to the sorted portion of the array.
+**2. [Selection Sort](../sorting_algorithms.md#selection-sort-algorithm):** This algorithm works by iteratively selecting the smallest / largest element from the unsorted portion of the list and moving it to the sorted portion of the array.
 
 **3. Insertion sort:** This sorting algorithm works by iteratively inserting each element of an unsorted array into its correct position in a sorted portion of the list. 
 
