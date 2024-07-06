@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html" class="active"><strong aria-hidden="true">4.</strong> Linked list</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linked_list/singly.html"><strong aria-hidden="true">4.1.</strong> Singly linked list</a></li><li class="chapter-item expanded "><a href="../linked_list/doubly.html"><strong aria-hidden="true">4.2.</strong> Doubly linked list</a></li><li class="chapter-item expanded "><a href="../linked_list/circular.html"><strong aria-hidden="true">4.3.</strong> Circular linked list</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html" class="active"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -187,6 +187,33 @@
 <li>Circular linked list</li>
 </ol>
 <p>Let's understand them in a bit more detail</p>
+<h3 id="singly-linked-list"><a class="header" href="#singly-linked-list">Singly linked list</a></h3>
+<p>A node in the singly linked list consists of only two parts; data and next pointer. The data part stores the actual data of the node and the next part stores the address of its immediate successor.</p>
+<p>A singly linked list can be traversed in only one direction.</p>
+<p><strong>Operations</strong></p>
+<ol>
+<li><code>create</code>:</li>
+<li><code>traverse</code>:</li>
+<li><code>insert</code>:</li>
+<li><code>delete</code>:</li>
+</ol>
+<h3 id="doubly-linked-list"><a class="header" href="#doubly-linked-list">Doubly linked list</a></h3>
+<p>A node in doubly linked list consists of three parts; one part is data, other two parts are previous pointer and next pointer. The previous pointer holds the address of the previous node in linked list, the data part holds the actual data, and the next part holds the address of the next node in the linked list</p>
+<p>As we have the address of the next as well as the previous node we can traverse in both directions in the linked list.</p>
+<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<ol>
+<li><code>insert_first</code>:</li>
+<li><code>insert_last</code>:</li>
+<li><code>insert_after</code>:</li>
+<li><code>delete_first</code>:</li>
+<li><code>delete_last</code>:</li>
+<li><code>delete_after</code>:</li>
+<li><code>display_forward</code>: (forward manner)</li>
+<li><code>display backward</code>: (reverse manner)</li>
+</ol>
+<h3 id="circular-linked-list"><a class="header" href="#circular-linked-list">Circular linked list</a></h3>
+<p>Circular linked list is an extension of singly and doubly linked list, in that it connects the last node (tail node) with the first node (head node) of the linked list.</p>
+<p>This makes sure that they are connected in a loop and we can recursively access every element.</p>
 
                     </main>
 
@@ -196,7 +223,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../linked_list/singly.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../search_algorithms.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -210,7 +237,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../linked_list/singly.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../search_algorithms.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -11,9 +11,6 @@
   - [Array or Vector?](./array/array_or_vector.md)
 - [Stack](./stack/stack.md)
 - [Linked list](./linked_list/linked_list.md)
-  - [Singly linked list](./linked_list/singly.md)
-  - [Doubly linked list](./linked_list/doubly.md)
-  - [Circular linked list](./linked_list/circular.md)
 
 
 # Algorithms
