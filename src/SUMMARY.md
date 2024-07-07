@@ -12,7 +12,6 @@
 - [Stack](./stack/stack.md)
 - [Linked list](./linked_list/linked_list.md)
 
-
 # Algorithms
 - [Search algorithms](./search_algorithms.md)
 - [Sorting algorithms](./sorting_algorithms.md)
