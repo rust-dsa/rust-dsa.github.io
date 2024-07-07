@@ -51,6 +51,15 @@ By setting up the variables and the outputs in the main function
 ```rust
 {{#include ./code/algo/linear_search.rs:main}}
 ```
+<details>
+  <summary>Visualization of linear search</summary>
+  <img src="./images/linear1.jpg" alt="linear search"/>
+  <img src="./images/linear2.jpg" alt="linear search"/>
+  <img src="./images/linear3.jpg" alt="linear search"/>
+  <img src="./images/linear4.jpg" alt="linear search"/>
+  <img src="./images/linear5.jpg" alt="linear search"/>
+  <img src="./images/linear6.jpg" alt="linear search"/>
+</details>
 
 ### Result 📦
 
