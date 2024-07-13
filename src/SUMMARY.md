@@ -15,3 +15,6 @@
 # Algorithms
 - [Search algorithms](./search_algorithms.md)
 - [Sorting algorithms](./sorting_algorithms.md)
+  - [Bubble sort algorithm](./sorting_algorithms/bubble_sort.md)
+  - [Selection sort algorithm](./sorting_algorithms/selection_sort.md)
+  - [Insertion sort algorithm](./sorting_algorithms/insertion_sort.md)

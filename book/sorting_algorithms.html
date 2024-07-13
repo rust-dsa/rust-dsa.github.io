@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li class="chapter-item expanded "><a href="sorting_algorithms.html" class="active"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li class="chapter-item expanded "><a href="sorting_algorithms.html" class="active"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -184,161 +184,6 @@
 <p>You start by comparing the first two students. If the first student's grade is higher than the second student's grade, you swap them. Then you compare the next two students. If the second student's grade is higher than the third student's grade, you swap them. This process continues until you reach the end of the list.</p>
 <p>You repeat this process until you've sorted the entire list. This is a simple sorting algorithm.</p>
 </blockquote>
-<h2 id="bubble-sort-algorithm"><a class="header" href="#bubble-sort-algorithm">Bubble sort algorithm</a></h2>
-<p>Bubble sort is a simple sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. The algorithm continues to iterate until the array is sorted. Since it compares N elements to N - 1, it is not efficient for large arrays.</p>
-<h3 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h3>
-<ol>
-<li>The algorithm takes the array as input.</li>
-<li>It compares the first two elements of the array.</li>
-<li>If the first element is greater than the second, the algorithm swaps them.</li>
-<li>It compares the second and third elements of the array.</li>
-<li>If the second element is greater than the third, the algorithm swaps them.</li>
-<li>This goes on till the end of the array. At this point, the largest element is in its correct position.</li>
-<li>This process is repeated until the array is sorted.</li>
-</ol>
-<p>Now let's write a function that implements the preceding steps:</p>
-<pre><code class="language-rust ignore">fn bubble_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
-    let mut array = array;
-    let arr_len = array.len();
-    for i in 0..arr_len - 1{
-        for j in 0..arr_len - 1 - i {
-            if array[j] &gt; array[j + 1] {
-                array.swap(j, j + 1);
-            }
-        }
-    }
-    array
-}</code></pre>
-<p>Here, we created a function that accepts an array and gives out the sorted array.
-We used a <code>for</code> loop to iterate over the array. The first <code>for</code> loop is set to iterate N times, where N is the length of the array. This is because we need displace every element to its sorted position. The second <code>for</code> loop iterates over the array N - i times, where i is the instance of the first loop. If the first loop has iterated i times, then i elements are sorted. So, in the second loop, we are only comparing N - i elements.</p>
-<p>The <code>if</code> condition checks if the current element is greater than the next element. If it is, then we swap them. This is done by using the <code>swap</code> function. The <code>swap</code> function takes two arguments, the first being the index of the first element and the second being the index of the second element.</p>
-<p>At the end of the function, we return the sorted array.</p>
-<h3 id="result"><a class="header" href="#result">Result</a></h3>
-<pre><pre class="playground"><code class="language-rust">fn main() {
-    let array = vec![45, 7, 12, 33, 19, 48, 26, 36];
-
-    let sorted_array = bubble_sort(array);
-
-    println!("Sorted array: {:?}", sorted_array);
-}
-
-fn bubble_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
-    let mut array = array;
-    let arr_len = array.len();
-    for i in 0..arr_len - 1{
-        for j in 0..arr_len - 1 - i {
-            if array[j] &gt; array[j + 1] {
-                array.swap(j, j + 1);
-            }
-        }
-    }
-    array
-}</code></pre></pre>
-<h3 id="time-and-space-complexity"><a class="header" href="#time-and-space-complexity">Time and Space Complexity</a></h3>
-<p>The time complexity of bubble sort is O(n^2), where n is the number of elements in the array. This is because the algorithm compares each element with every other element in the array, resulting in quadratic time complexity.</p>
-<p>The space complexity of bubble sort is O(1), as it does not require any extra space other than the input array itself.</p>
-<h2 id="selection-sort-algorithm"><a class="header" href="#selection-sort-algorithm">Selection sort algorithm</a></h2>
-<p>Selection sort is another simple sorting algorithm that works by repeatedly finding the minimum/maximum element in the array and swapping it with the current element. The algorithm continues to iterate until the array is sorted.</p>
-<h3 id="algorithm-1"><a class="header" href="#algorithm-1">Algorithm</a></h3>
-<ol>
-<li>The algorithm takes the array as input.</li>
-<li>It initializes the first element as the current minimum/maximum element in the array. (let's chose the minimum element for this example)</li>
-<li>It compares the current minimum with each element in the array.</li>
-<li>If the current element is smaller than the current minimum, the algorithm swaps them.</li>
-<li>The current minimum (at the end of the iteration) is swapped with element at the beginning of the array.</li>
-<li>This goes on till the end of the array.</li>
-</ol>
-<p>Now let's write a function that implements the preceding steps:</p>
-<pre><code class="language-rust ignore">fn selection_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
-    let mut array = array;
-    let arr_len = array.len();
-    
-    for i in 0..arr_len - 1 {
-        let mut current_min = i;
-        for current_idx in i + 1..arr_len {
-            if array[current_min] &gt; array[current_idx] {
-                current_min = current_idx;
-            }
-        }
-        array.swap(current_min, i);
-    }
-    array
-}</code></pre>
-<p>Here, we created a function that accepts an array and gives out the sorted array.
-We used a <code>for</code> loop to iterate over the array. The first <code>for</code> loop is set to iterate N - 1 times, where N is the length of the array. This is because we need to swap every element to its sorted position. The second <code>for</code> loop starts iterating from i + 1 till the end of the array because the elements before i are already sorted. So, in the second loop, we are only comparing N - i elements.</p>
-<p>The <code>if</code> condition checks if the current element is smaller than the current minimum. If it is, then we swap them. This is done by using the <code>swap</code> function.</p>
-<p>At the end of the function, we return the sorted array.</p>
-<h3 id="result-1"><a class="header" href="#result-1">Result</a></h3>
-<pre><pre class="playground"><code class="language-rust">fn main() {
-    let array = vec![45, 7, 12, 33, 19, 48, 26, 36];
-
-    let sorted_array = selection_sort(array);
-
-    println!("Sorted array: {:?}", sorted_array);
-}
-
-fn selection_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
-    let mut array = array;
-    let arr_len = array.len();
-    
-    for i in 0..arr_len - 1 {
-        let mut current_min = i;
-        for current_idx in i + 1..arr_len {
-            if array[current_min] &gt; array[current_idx] {
-                current_min = current_idx;
-            }
-        }
-        array.swap(current_min, i);
-    }
-    array
-}</code></pre></pre>
-<h3 id="time-and-space-complexity-1"><a class="header" href="#time-and-space-complexity-1">Time and Space Complexity</a></h3>
-<p>The time complexity of selection sort is O(n^2), where n is the number of elements in the array. This is because the algorithm compares each element with every other element in the array, resulting in quadratic time complexity.</p>
-<p>The space complexity of selection sort is O(1), as it does not require any extra space other than the input array itself.</p>
-<h2 id="insertion-sort-algorithm"><a class="header" href="#insertion-sort-algorithm">Insertion sort algorithm</a></h2>
-<p>Insertion sort is another simple sorting algorithm that works by repeatedly inserting an element from the unsorted part of the array into its correct position in the sorted part of the array. The algorithm continues to iterate until the array is sorted.</p>
-<h3 id="algorithm-2"><a class="header" href="#algorithm-2">Algorithm</a></h3>
-<ol>
-<li>The algorithm takes the array as input.</li>
-<li>It iterates over the array.</li>
-<li>It compares the current element with the previous element.</li>
-<li>If the current element is smaller than the previous element, the algorithm swaps them.</li>
-<li>This goes on till the end of the array.</li>
-<li>This process is repeated until the array is sorted.</li>
-</ol>
-<p>Now let's write a function that implements the preceding steps:</p>
-<pre><code class="language-rust ignore">fn insertion_sort(mut array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
-    for i in 1..array.len() {
-        let mut j = i;
-        while j &gt; 0 &amp;&amp; array[j] &lt; array[j - 1] {
-            array.swap(j, j - 1);
-            j -= 1;
-        }
-    }
-    array
-}</code></pre>
-<p>We use a <code>for</code> loop to iterate over the array. Inside the loop, we initialize a variable <code>j</code> to the current index of the array. We then use a <code>while</code> loop to iterate over the array till j is greater than 0 and the current element is smaller than the previous element. If both conditions are true, then we swap current element with the previous element. We then decrement j by 1 to move to the previous element and check if the condition is true again.</p>
-<p>At the end of the function, we return the sorted array.</p>
-<h3 id="result-2"><a class="header" href="#result-2">Result</a></h3>
-<pre><pre class="playground"><code class="language-rust">fn main() {
-    let array = vec![5, 4, 3, 2, 1];
-    let sorted_array = insertion_sort(array);
-    println!("{:?}", sorted_array);
-}
-
-fn insertion_sort(mut array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
-    for i in 1..array.len() {
-        let mut j = i;
-        while j &gt; 0 &amp;&amp; array[j] &lt; array[j - 1] {
-            array.swap(j, j - 1);
-            j -= 1;
-        }
-    }
-    array
-}</code></pre></pre>
-<h3 id="time-and-space-complexity-2"><a class="header" href="#time-and-space-complexity-2">Time and Space Complexity</a></h3>
-<p>The time complexity of insertion sort is O(n^2), where n is the number of elements in the array. This is because the algorithm compares each element with every other element in the array, resulting in quadratic time complexity.</p>
-<p>The space complexity of insertion sort is O(1), as it does not require any extra space other than the input array itself.</p>
 
                     </main>
 
@@ -348,6 +193,9 @@ fn insertion_sort(mut array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next prefetch" href="sorting_algorithms/bubble_sort.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -359,6 +207,9 @@ fn insertion_sort(mut array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next prefetch" href="sorting_algorithms/bubble_sort.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

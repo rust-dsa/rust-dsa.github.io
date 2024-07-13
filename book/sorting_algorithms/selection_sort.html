@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Vector type - Data Structures and Algorithms in Rust</title>
+        <title>Selection sort algorithm - Data Structures and Algorithms in Rust</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html" class="active"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html" class="active"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,85 +176,74 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="vector-type"><a class="header" href="#vector-type">Vector type</a></h1>
-<p>Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store its size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.</p>
-<p>Another thing about vectors is they're generally stored in a heap and they have a large size allocated than being used. As a result, when new values are inserted, the whole vector does not to be relocated to fulfill the size requirements.</p>
-<p>As arrays and vectors, both copy items into another larger array / vector once more element(s) are added, vectors do the copying less often as they already have more capacity than the actual length.</p>
-<p>"A vector is a contiguous growable array type with heap allocated contents".<sup class="footnote-reference"><a href="#1">1</a></sup></p>
-<h2 id="initializing-a-vector"><a class="header" href="#initializing-a-vector">Initializing a vector</a></h2>
-<p>While initializing a primitive array, we had to specify the size of the array before-hand. There is no such constraints with a vector</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // vector from inbuilt macro
-    let vec:Vec &lt;u16&gt; = vec![10, 20, 30, 40, 50];
-    println!("Vector array: {:?}", vec);
-
-    // vector from array
-    let vec = Vec::from([1, 2, 3, 4, 5]);
-    println!("Vector array: {:?}", vec);
-
-    // empty vector
-    let mut _vec: Vec&lt;u8&gt; = Vec::new();
-<span class="boring">}</span></code></pre></pre>
-<h2 id="accessing-and-modifying-a-vector"><a class="header" href="#accessing-and-modifying-a-vector">Accessing and modifying a vector</a></h2>
-<p>Similar to the array, we can access individual elements of a vector using its index and modify them if the vector is mutable.</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    let mut vec = vec![10, 20, 34, 40, 50];
-    // accessing an element
-    let mid = vec[2];
-    println!("Mid element: {mid}");
-
-    // modifying an element
-    vec[2] = 30;
-    println!("Modified vector: {:?}", vec);
-<span class="boring">}</span></code></pre></pre>
-<p>Now, let's delve into some of the vector specific functions that will be helpful in learning and applying algorithms.</p>
-<h2 id="vector-specific-functions"><a class="header" href="#vector-specific-functions">Vector specific functions</a></h2>
+                        <h1 id="selection-sort-algorithm"><a class="header" href="#selection-sort-algorithm">Selection sort algorithm</a></h1>
+<p>Selection sort is another simple sorting algorithm that works by repeatedly finding the minimum/maximum element in the array and swapping it with the current element. The algorithm continues to iterate until the array is sorted.</p>
+<h3 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h3>
 <ol>
-<li><code>push()</code>: This function inserts an element at the end of the vector</li>
-<li><code>pop()</code>: This function removes an element from the end of the vector</li>
-<li><code>len()</code>: This function outputs the number of elements in the vector</li>
+<li>The algorithm takes the array as input.</li>
+<li>It initializes the first element as the current minimum/maximum element in the array. (let's chose the minimum element for this example)</li>
+<li>It compares the current minimum with each element in the array.</li>
+<li>If the current element is smaller than the current minimum, the algorithm swaps them.</li>
+<li>The current minimum (at the end of the iteration) is swapped with element at the beginning of the array.</li>
+<li>This goes on till the end of the array.</li>
 </ol>
-<p>We'll be using these functions extensively. See <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html">docs</a> for all the functions.</p>
-<h2 id="advantages-and-disadvantages-of-vectors"><a class="header" href="#advantages-and-disadvantages-of-vectors">Advantages and disadvantages of vectors</a></h2>
-<div class="table-wrapper"><table><thead><tr><th><strong>Advantages</strong></th><th><strong>Disadvantages</strong></th></tr></thead><tbody>
-<tr><td>Dynamic size</td><td>Slower access due to indirection</td></tr>
-<tr><td>Easy insertion and deletion</td><td>More memory usage due to extra capacity</td></tr>
-<tr><td>Efficient use of memory</td><td>More complex implementation</td></tr>
-<tr><td>Flexibility in size</td><td>Potential for reallocation</td></tr>
-</tbody></table>
-</div>
-<h2 id="2d-vector"><a class="header" href="#2d-vector">2D vector</a></h2>
-<p>As with arrays, vectors are are also two dimensional. The idea of a 2D vector is the same of a <a href="./primitive.html#2d-array">2D array</a>.</p>
-<p><strong>Initializing a 2D array</strong>:</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // empty 2D vector
-    let mut _vec: Vec&lt;Vec&lt;char&gt;&gt; = Vec::new();
+<p>Now let's write a function that implements the preceding steps:</p>
+<pre><code class="language-rust ignore">fn selection_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
+    let mut array = array;
+    let arr_len = array.len();
+    
+    for i in 0..arr_len - 1 {
+        let mut current_min = i;
+        for current_idx in i + 1..arr_len {
+            if array[current_min] &gt; array[current_idx] {
+                current_min = current_idx;
+            }
+        }
+        array.swap(current_min, i);
+    }
+    array
+}</code></pre>
+<p>Here, we created a function that accepts an array and gives out the sorted array.
+We used a <code>for</code> loop to iterate over the array. The first <code>for</code> loop is set to iterate N - 1 times, where N is the length of the array. This is because we need to swap every element to its sorted position. The second <code>for</code> loop starts iterating from i + 1 till the end of the array because the elements before i are already sorted. So, in the second loop, we are only comparing N - i elements.</p>
+<p>The <code>if</code> condition checks if the current element is smaller than the current minimum. If it is, then we swap them. This is done by using the <code>swap</code> function.</p>
+<p>At the end of the function, we return the sorted array.</p>
+<h3 id="result"><a class="header" href="#result">Result</a></h3>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let array = vec![45, 7, 12, 33, 19, 48, 26, 36];
 
-    // method 1:
-    let vec: Vec&lt;Vec&lt;u8&gt;&gt; = Vec::from([Vec::from([1, 2, 3]), Vec::from([4, 5, 6])]);
-    println!("2d vector: {:?}", vec);
+    let sorted_array = selection_sort(array);
 
-    // method 2:
-    let vec: Vec&lt;Vec&lt;u8&gt;&gt; = vec![vec![1, 2, 3], vec![4, 5, 6]];
-    println!("2d vector: {:?}", vec);
-<span class="boring">}</span></code></pre></pre>
-<p>Notice that we have initialized the type inside the fish as another vector. And inside that vector, we have specified the data type.</p>
-<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://doc.rust-lang.org/std/vec/index.html">https://doc.rust-lang.org/std/vec/index.html</a></p>
-</div>
+    println!("Sorted array: {:?}", sorted_array);
+}
+
+fn selection_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
+    let mut array = array;
+    let arr_len = array.len();
+    
+    for i in 0..arr_len - 1 {
+        let mut current_min = i;
+        for current_idx in i + 1..arr_len {
+            if array[current_min] &gt; array[current_idx] {
+                current_min = current_idx;
+            }
+        }
+        array.swap(current_min, i);
+    }
+    array
+}</code></pre></pre>
+<h3 id="time-and-space-complexity"><a class="header" href="#time-and-space-complexity">Time and Space Complexity</a></h3>
+<p>The time complexity of selection sort is O(n^2), where n is the number of elements in the array. This is because the algorithm compares each element with every other element in the array, resulting in quadratic time complexity.</p>
+<p>The space complexity of selection sort is O(1), as it does not require any extra space other than the input array itself.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../array/primitive.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../sorting_algorithms/bubble_sort.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../array/array_or_vector.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../sorting_algorithms/insertion_sort.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -264,11 +253,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../array/primitive.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../sorting_algorithms/bubble_sort.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../array/array_or_vector.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../sorting_algorithms/insertion_sort.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
