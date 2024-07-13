@@ -33,9 +33,9 @@ Sorting algorithm rearrange a given array of elements in a specific order. In ca
 
 **2. [Selection Sort](../sorting_algorithms.md#selection-sort-algorithm):** This algorithm works by iteratively selecting the smallest / largest element from the unsorted portion of the list and moving it to the sorted portion of the array.
 
-**3. Insertion sort:** This sorting algorithm works by iteratively inserting each element of an unsorted array into its correct position in a sorted portion of the list. 
+**3. [Insertion sort](../sorting_algorithms.md#insertion-sort-algorithm):** This sorting algorithm works by iteratively inserting each element of an unsorted array into its correct position in a sorted portion of the list. 
 
-**4. Merge sort:** It is a sorting algorithm that follows the *divide and conquer* strategy. It works by iteratively dividing the input array into smaller subarrays and sorting those subarrays, then merging them back together to obtain the sorted array.
+**4. Merge sort:** It is a sorting algorithm that follows the *divide and conquer* strategy. It works by iteratively dividing the input array into smaller sub-arrays and sorting those sub-arrays, then merging them back together to obtain the sorted array.
 
 **5. Quick sort:** It is a sorting algorithm that implements the divide and conquer strategy and picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted.
 
