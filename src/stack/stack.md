@@ -29,3 +29,5 @@ Let's see how to implement the two fundamental functions of a stack
 ```rust
 {{#include ./../code/ds/stack.rs:operations}}
 ```
+
+There is no `is_full()` provided by Rust, but we can always create a new function.
