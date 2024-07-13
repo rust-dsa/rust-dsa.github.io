@@ -14,6 +14,8 @@
 
 # Algorithms
 - [Search algorithms](./search_algorithms.md)
+  - [Linear search](./search_algorithms/linear_search.md)
+  - [Binary search](./search_algorithms/binary_search.md)
 - [Sorting algorithms](./sorting_algorithms.md)
   - [Bubble sort algorithm](./sorting_algorithms/bubble_sort.md)
   - [Selection sort algorithm](./sorting_algorithms/selection_sort.md)

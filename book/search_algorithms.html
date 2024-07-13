@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms.html" class="active"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li class="chapter-item expanded "><a href="sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms.html" class="active"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="search_algorithms/linear_search.html"><strong aria-hidden="true">5.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="search_algorithms/binary_search.html"><strong aria-hidden="true">5.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -210,34 +210,17 @@
 <li>If the token doesn't match with any element (i.e., it reaches the end of the array), it returns <code>None</code>.</li>
 </ol>
 <p>Now let's write a function that implements the preceding steps:</p>
-<pre><code class="language-rust ignore">fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
-
-    for (idx, element) in array.into_iter().enumerate() {
-        if element == target {
-            return Some(idx);
-        }
-    }
-
-    None
-}</code></pre>
+<pre><code class="language-rust ignore">{{#include ./code/algo/linear_search.rs:search_function}}</code></pre>
 <p>Here, we created a function that accepts an array and the element to be searched and gives out the Option enum.</p>
 <p>Inside the function, a <code>for</code> loop iterates through every element in the array, that element is compared with given token for equality. If equal, the index of the element enclosed inside <code>Some</code> is returned.  When the loop iterates through the array and cannot find the token, then the function returns <code>None</code>.</p>
 <p>Now that we have a function let's give it the inputs</p>
-<pre><code class="language-rust ignore">    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let target = 21;</code></pre>
+<pre><code class="language-rust ignore">{{#include ./code/algo/linear_search.rs:input}}</code></pre>
 <p>Note that the by default type of both these variables is <code>Vec&lt;i32&gt;</code> and <code>i32</code> respectively.</p>
 <p>By setting up the variables and the outputs in the main function</p>
-<pre><pre class="playground"><code class="language-rust">fn main() {
-    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let target = 21;
-
-    let index = linear_search(array, target);
-
-    match index {
-        Some(x) =&gt; println!("The element is at index {x}."),
-        None =&gt; println!("The element is not present in the array."),
-    }
-}</code></pre></pre>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>{{#include ./code/algo/linear_search.rs:main}}
+<span class="boring">}</span></code></pre></pre>
 <details>
   <summary>Visualization of linear search</summary>
   <img src="./images/linear1.jpg" alt="linear search"/>
@@ -248,28 +231,10 @@
   <img src="./images/linear6.jpg" alt="linear search"/>
 </details>
 <h3 id="result-"><a class="header" href="#result-">Result 📦</a></h3>
-<pre><pre class="playground"><code class="language-rust editable">fn main() {
-    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let target = 21;
-
-    let index = linear_search(array, target);
-
-    match index {
-        Some(x) =&gt; println!("The element is at index {x}."),
-        None =&gt; println!("The element is not present in the array."),
-    }
-}
-
-fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
-
-    for (idx, element) in array.into_iter().enumerate() {
-        if element == target {
-            return Some(idx);
-        }
-    }
-
-    None
-}</code></pre></pre>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>{{#include ./code/algo/linear_search.rs:linear_search}}
+<span class="boring">}</span></code></pre></pre>
 <h3 id="time-and-space-complexity"><a class="header" href="#time-and-space-complexity">Time and Space Complexity</a></h3>
 <p>The time complexity of linear search is O(n), where n is the number of elements in the array. This is because in the worst case, the algorithm will have to compare the token with every element in the array.</p>
 <p>The space complexity of linear search is O(1), as it does not require any extra space other than the input array and the token.</p>
@@ -294,57 +259,16 @@ fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
 </ol>
 <p>Binary search is much faster than linear search for large datasets, with a time complexity of O(log n) compared to O(n) for linear search. 🚀</p>
 <p>Let's write the function that implements the preceding steps:</p>
-<pre><code class="language-rust ignore">fn binary_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
-    let mut low = 0;
-    let mut high = array.len() - 1;
-
-    while low &lt;= high {
-        let mid = (low + high) / 2;
-        if array[mid] == token {
-            return Some(mid);
-        } else if token &lt; array[mid] {
-            high = mid - 1;
-        } else {
-            low = mid + 1;
-        }
-    }
-
-    None
-}</code></pre>
+<pre><code class="language-rust ignore">{{#include ./code/algo/binary_search.rs:search_function}}</code></pre>
 <p>Here, we created a function that has the same input and output as the linear search algorithm. The only thing that has changed is the internal working</p>
 <p>Two variables <code>low</code> and <code>high</code> are initialed to extreme points of the array. We then format a while loop which terminates when high is smaller than low. This suggests that we have been through the entire array and haven't found the <code>target</code> element.</p>
 <p>In the loop, we initialize a <code>mid</code> variable which is the mid point of array to be searched in. If the <code>target</code> compared with element in mid index is equal, we return <code>Some(mid)</code>. If not then based on whether the element is smaller or larger than <code>target</code> we either reassign high to mid (new array will be on left side of <code>mid</code>), or low to mid (new array will be on the right side of <code>mid</code>). The visuals below will help.</p>
 <!-- !TODO Add diagrams showing the journey of binary search -->
 <h3 id="result--1"><a class="header" href="#result--1">Result 📦</a></h3>
-<pre><pre class="playground"><code class="language-rust editable">fn main() {
-    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let token = 21;
-
-    let index = binary_search(array, token);
-
-    match index {
-        Some(x) =&gt; println!("The element is at index {x}"),
-        None =&gt; println!("The element is not present in the array"),
-    }
-}
-
-fn binary_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
-    let mut low = 0;
-    let mut high = array.len() - 1;
-
-    while low &lt;= high {
-        let mid = (low + high) / 2;
-        if array[mid] == token {
-            return Some(mid);
-        } else if token &lt; array[mid] {
-            high = mid - 1;
-        } else {
-            low = mid + 1;
-        }
-    }
-
-    None
-}</code></pre></pre>
+<pre><pre class="playground"><code class="language-rust editable"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>{{#include ./code/algo/binary_search.rs:binary_search}}
+<span class="boring">}</span></code></pre></pre>
 <h3 id="time-and-space-complexity-1"><a class="header" href="#time-and-space-complexity-1">Time and Space Complexity</a></h3>
 <p>The time complexity of binary search is O(log n), where n is the number of elements in the array. This is because the algorithm divides the search space in half with each iteration, effectively reducing the number of comparisons needed to find the target element.</p>
 <p>The space complexity of binary search is O(1), as it does not require any extra space other than the input array and the target.</p>
@@ -361,7 +285,7 @@ fn binary_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="sorting_algorithms.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="search_algorithms/linear_search.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -375,7 +299,7 @@ fn binary_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="sorting_algorithms.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="search_algorithms/linear_search.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

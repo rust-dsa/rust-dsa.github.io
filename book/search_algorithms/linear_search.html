@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Data Structures - Data Structures and Algorithms in Rust</title>
+        <title>Linear search - Data Structures and Algorithms in Rust</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html" class="active"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html"><strong aria-hidden="true">5.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">5.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html" class="active"><strong aria-hidden="true">5.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">5.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,32 +176,83 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="data-structure"><a class="header" href="#data-structure">Data Structure</a></h1>
-<p>A data structure is like a blueprint that shows how data is connected and organized.</p>
-<p>To understand this better, let's look at a common data structure called an array.</p>
-<p>An <strong>Array</strong> is a group of similar things. It's a data structure because it helps us see how data is arranged in memory and how they relate to each other.</p>
-<p>In a computer, 'data' is ultimately represented as a sequence of zeros and ones (bits), but this representation is too low level for the human beings operating that computer to discern. Hence, we have data structures that are closer to the way humans can understand and visualize the structure of this data. This is because it is humans who have to develop and maintain the software systems - computers merely run them.</p>
-<p>A more formal definition is:
-'<strong>Data structure</strong> is a particular way of organizing data for particular types of operation.</p>
-<h2 id="operations-on-data-structures"><a class="header" href="#operations-on-data-structures">Operations on Data Structures</a></h2>
-<p>Arrays are a fundamental data structure that requires various operations to function effectively. These operations include:</p>
+                        <h1 id="linear-search-algorithm"><a class="header" href="#linear-search-algorithm">Linear search algorithm</a></h1>
+<p>The most straightforward approach to searching is to examine each element of the data structure sequentially. Concurrently this searching algorithm is called linear search or sequential search.</p>
+<blockquote>
+<p>Imagine you're in a library, searching for a book by your favorite thriller author. You head to the thriller section and start scanning the shelves. You examine each book, one by one, until you find the one you're looking for. This process is akin to a linear search. There are a few possible outcomes: you might find the book you want, reach the end of the section without finding it, or decide to continue searching even after finding one book by the author, looking for additional titles.</p>
+</blockquote>
+<h2 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h2>
 <ol>
-<li><strong>Traversal</strong>: This involves accessing each element of an array in a sequential order, either from start to end or vice versa.</li>
-<li><strong>Insertion</strong>: This is the process of adding a new element to an array. The new element can be inserted at the beginning, end, or any other position within the array, depending on the application. Existing elements may shift to accommodate the new element.</li>
-<li><strong>Deletion</strong>: This operation involves removing an existing element from an array. Similar to insertion, an element can be deleted from any position within the array, and existing elements may shift to fill the gap.</li>
-<li><strong>Search</strong>: This process involves finding a specific element within an array by comparing the target element with each element in the array until a match is found.</li>
-<li><strong>Sorting</strong>: This operation involves arranging elements in a specific order.</li>
+<li>The algorithm takes the array and the token (number to be searched) as input.</li>
+<li>It compares the token with every element in the array.</li>
+<li>If the token and element match, the algorithm returns the index of that element.</li>
+<li>If the token doesn't match with any element (i.e., it reaches the end of the array), it returns <code>None</code>.</li>
 </ol>
+<p>Now let's write a function that implements the preceding steps:</p>
+<pre><code class="language-rust ignore">{{#include ./code/algo/linear_search.rs:search_function}}</code></pre>
+<p>Here, we created a function that accepts an array and the element to be searched and gives out the Option enum.</p>
+<p>Inside the function, a <code>for</code> loop iterates through every element in the array, that element is compared with given token for equality. If equal, the index of the element enclosed inside <code>Some</code> is returned.  When the loop iterates through the array and cannot find the token, then the function returns <code>None</code>.</p>
+<p>Now that we have a function let's give it the inputs</p>
+<pre><code class="language-rust ignore">    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
+    let target = 21;</code></pre>
+<p>Note that the by default type of both these variables is <code>Vec&lt;i32&gt;</code> and <code>i32</code> respectively.</p>
+<p>By setting up the variables and the outputs in the main function</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
+    let target = 21;
+
+    let index = linear_search(array, target);
+
+    match index {
+        Some(x) =&gt; println!("The element is at index {x}."),
+        None =&gt; println!("The element is not present in the array."),
+    }
+}</code></pre></pre>
+<details>
+  <summary>Visualization of linear search</summary>
+  <img src="./../images/linear1.jpg" alt="linear search"/>
+  <img src="./../images/linear2.jpg" alt="linear search"/>
+  <img src="./../images/linear3.jpg" alt="linear search"/>
+  <img src="./../images/linear4.jpg" alt="linear search"/>
+  <img src="./../images/linear5.jpg" alt="linear search"/>
+  <img src="./../images/linear6.jpg" alt="linear search"/>
+</details>
+<h3 id="result-"><a class="header" href="#result-">Result 📦</a></h3>
+<pre><pre class="playground"><code class="language-rust editable">fn main() {
+    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
+    let target = 21;
+
+    let index = linear_search(array, target);
+
+    match index {
+        Some(x) =&gt; println!("The element is at index {x}."),
+        None =&gt; println!("The element is not present in the array."),
+    }
+}
+
+fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
+
+    for (idx, element) in array.into_iter().enumerate() {
+        if element == target {
+            return Some(idx);
+        }
+    }
+
+    None
+}</code></pre></pre>
+<h2 id="time-and-space-complexity"><a class="header" href="#time-and-space-complexity">Time and Space Complexity</a></h2>
+<p>The time complexity of linear search is O(n), where n is the number of elements in the array. This is because in the worst case, the algorithm will have to compare the token with every element in the array.</p>
+<p>The space complexity of linear search is O(1), as it does not require any extra space other than the input array and the token.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../what_is_dsa/what_is_dsa.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../search_algorithms.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../what_is_dsa/algorithms.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../search_algorithms/binary_search.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -211,11 +262,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../what_is_dsa/what_is_dsa.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../search_algorithms.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../what_is_dsa/algorithms.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../search_algorithms/binary_search.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
