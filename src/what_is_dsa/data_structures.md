@@ -1,14 +1,11 @@
 # Data Structure
-A data structure is like a blueprint that shows how data is connected and organized.
+A data structure is a particular way of organizing data for particular types of operation. It is like a blueprint that shows how data is connected and organized.
 
 To understand this better, let's look at a common data structure called an array.
 
 An **Array** is a group of similar things. It's a data structure because it helps us see how data is arranged in memory and how they relate to each other.
 
 In a computer, 'data' is ultimately represented as a sequence of zeros and ones (bits), but this representation is too low level for the human beings operating that computer to discern. Hence, we have data structures that are closer to the way humans can understand and visualize the structure of this data. This is because it is humans who have to develop and maintain the software systems - computers merely run them. 
-
-A more formal definition is:
-'**Data structure** is a particular way of organizing data for particular types of operation.
 
 ## Operations on Data Structures
 Arrays are a fundamental data structure that requires various operations to function effectively. These operations include:
