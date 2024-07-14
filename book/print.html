@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms/search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="search_algorithms/linear_search.html"><strong aria-hidden="true">5.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="search_algorithms/binary_search.html"><strong aria-hidden="true">5.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort algorithm</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort algorithm</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms/search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="search_algorithms/linear_search.html"><strong aria-hidden="true">5.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="search_algorithms/binary_search.html"><strong aria-hidden="true">5.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -458,13 +458,49 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <p><strong>Operations</strong></p>
 <ol>
 <li><code>traverse</code>: This function is used to traverse through the linked list. It takes a pointer to the head node as an argument and traverses through the linked list.</li>
-<li><code>insert</code>: This function is used to insert a node at the end of the linked list. It takes a pointer to the head node and the data to be inserted as arguments.</li>
-<li><code>delete</code>: This function is used to delete a node from the linked list. It takes a pointer to the head node and the pointer to the node to be deleted as arguments.</li>
+<li><code>push</code>: This function is used to insert a node at the end of the linked list. It takes a pointer to the head node and the data to be inserted as arguments.</li>
+<li><code>pop</code>: This function is used to delete a node from the linked list. It takes a pointer to the head node and the pointer to the node to be deleted as arguments.</li>
 </ol>
-<p>There are three ways we can define a linked list in Rust:
-The first way to define a linked list is to use the <code>struct</code> keyword to create node data type. The <code>struct</code> keyword is used to define a custom data type in Rust.</p>
-<p>The second way to define a linked list is to use the <code>enum</code> keyword. The <code>enum</code> keyword is used to define a custom data type that can have multiple variants.</p>
-<p>The third way is to use the in-built linked list data type in Rust.</p>
+<p>There are multiple ways we can define a struct in Rust. We'll see three ways in this section:</p>
+<ol>
+<li>Using the built-in linked list data type in Rust.</li>
+<li>Using the <code>struct</code> keyword to create node data type.</li>
+<li>Using the <code>enum</code> keyword to create node data type.</li>
+</ol>
+<h3 id="1-built-in-linked-list-data-type"><a class="header" href="#1-built-in-linked-list-data-type">1. Built-in linked list data type</a></h3>
+<pre><pre class="playground"><code class="language-rust">use std::collections::LinkedList;
+
+fn main() {
+
+    let mut list = LinkedList::new();
+
+    list.push_back(2);
+    list.push_back(34);
+    list.push_back(8);
+    list.push_back(63);
+    println!("Linked list: {:?}", list);
+
+    let popped = list.pop_back();
+    println!("Popped value: {}", popped.unwrap());
+}</code></pre></pre>
+<p>Rust provides a built-in linked list data type called <code>LinkedList</code>. It is a <a href="linked_list/linked_list.html#2-doubly-linked-list">doubly linked list</a>, but we can use it as a singly linked list as well.</p>
+<p>We need to import the <code>LinkedList</code> from the <code>std::collections</code> module:</p>
+<pre><code class="language-rust ignore">use std::collections::LinkedList;</code></pre>
+<p>To to create a linked list we can use the <code>new</code> function:</p>
+<pre><code class="language-rust ignore">    let mut list = LinkedList::new();</code></pre>
+<h4 id="operations"><a class="header" href="#operations">Operations</a></h4>
+<p>There are two operations in a singly linked list to interact with the data:</p>
+<ol>
+<li><code>push_back</code>: This function is used to insert a node at the end of the linked list.</li>
+</ol>
+<pre><code class="language-rust ignore">    list.push_back(2);
+    list.push_back(34);
+    list.push_back(8);
+    list.push_back(63);</code></pre>
+<ol start="2">
+<li><code>pop_back</code>: This function is used to delete a node from the linked list.</li>
+</ol>
+<pre><code class="language-rust ignore">    let popped = list.pop_back();</code></pre>
 <p>Let's see how we can define a node using the <code>struct</code> keyword:</p>
 <pre><code class="language-rust ignore">struct Node&lt;T&gt; {
     data: T,
@@ -474,7 +510,7 @@ The first way to define a linked list is to use the <code>struct</code> keyword 
 <h3 id="2-doubly-linked-list"><a class="header" href="#2-doubly-linked-list">2. Doubly linked list</a></h3>
 <p>A node in doubly linked list consists of three parts; one part is data, other two parts are previous pointer and next pointer. The previous pointer holds the address of the previous node in linked list, the data part holds the actual data, and the next part holds the address of the next node in the linked list</p>
 <p>As we have the address of the next as well as the previous node we can traverse in both directions in the linked list.</p>
-<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<h2 id="operations-1"><a class="header" href="#operations-1">Operations</a></h2>
 <ol>
 <li><code>insert_first</code>:</li>
 <li><code>insert_last</code>:</li>
