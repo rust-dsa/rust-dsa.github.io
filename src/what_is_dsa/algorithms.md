@@ -13,7 +13,7 @@ We may not realize it, we also use algorithms in our daily lives. Our rituals af
 
 They can be expressed as natural languages, programming languages, pseudo code, flowcharts and control tables.
 
-After we have chosen the representation of data as required, this data has to be processed somehow. This is what leads to the need of algorithms. The process of interest could be searching, sorting, encryption, etc
+After we have chosen the representation of data as required, this data has to be processed somehow. This is what leads to the need of algorithms. The process of interest could be searching, sorting, encryption, etc. We will cover storing, searching, and sorting algorithms in detail, as they underlie much of computer science.
 
 ## Types of Algorithms
 
@@ -33,3 +33,9 @@ After we have chosen the representation of data as required, this data has to be
 **7. Encryption algorithm:** This algorithm takes data and maybe an encryption key as input and outputs an encrypted data. Concurrently a decryption algorithm takes the encrypted data and decryption key as input and outputs the original text.
 
 **8. Recursive algorithm:** This algorithm calls itself repeatedly until a solution emerges. Recursive algorithms call themselves with a smaller values every time a recursive function is involved.
+
+When writing algorithms to solve a problem in programming, or finding a solution to problem in general, we need to think about the following:
+
+1. What is the algorithm supposed to do?
+2. Does the algorithm do what it is supposed to do?
+3. Is the algorithm efficient? And can it be made more efficient?
