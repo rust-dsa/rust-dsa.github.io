@@ -237,26 +237,59 @@ fn main() {
 <li><code>pop_back</code>: This function is used to delete a node from the linked list.</li>
 </ol>
 <pre><code class="language-rust ignore">    let popped = list.pop_back();</code></pre>
-<p>Let's see how we can define a node using the <code>struct</code> keyword:</p>
-<pre><code class="language-rust ignore">struct Node&lt;T&gt; {
+<!-- Let's see how we can define a node using the `struct` keyword:
+
+```rust,ignore
+struct Node<T> {
     data: T,
-    next: Option&lt;Box&lt;Node&lt;T&gt;&gt;&gt;,
-}</code></pre>
-<p>We have defined a node of generic type <code>T</code> which can hold any type of data.</p>
+    next: Option<Box<Node<T>>>,
+}
+```
+We have defined a node of generic type `T` which can hold any type of data. -->
 <h3 id="2-doubly-linked-list"><a class="header" href="#2-doubly-linked-list">2. Doubly linked list</a></h3>
 <p>A node in doubly linked list consists of three parts; one part is data, other two parts are previous pointer and next pointer. The previous pointer holds the address of the previous node in linked list, the data part holds the actual data, and the next part holds the address of the next node in the linked list</p>
 <p>As we have the address of the next as well as the previous node we can traverse in both directions in the linked list.</p>
+<pre><pre class="playground"><code class="language-rust">use std::collections::LinkedList;
+
+fn main() {
+
+    let mut list = LinkedList::new();
+
+    list.push_back(8);
+    list.push_back(63);
+    println!("Linked list: {:?}", list);
+
+    list.push_front(34);
+    list.push_front(2);
+    println!("Linked list: {:?}", list);
+    
+
+    let popped = list.pop_front();
+    println!("Popped value: {}", popped.unwrap());
+}</code></pre></pre>
 <h2 id="operations-1"><a class="header" href="#operations-1">Operations</a></h2>
 <ol>
-<li><code>insert_first</code>:</li>
-<li><code>insert_last</code>:</li>
-<li><code>insert_after</code>:</li>
-<li><code>delete_first</code>:</li>
-<li><code>delete_last</code>:</li>
-<li><code>delete_after</code>:</li>
-<li><code>display_forward</code>: (forward manner)</li>
-<li><code>display backward</code>: (reverse manner)</li>
+<li>
+<p><code>push_back</code>: This function is used to insert a node at the end of the linked list. It has been discussed in the <a href="#1-built-in-linked-list">Built-in linked list data type</a> section.</p>
+</li>
+<li>
+<p><code>pop_back</code>: This function is used to delete a node from the linked list. It has been discussed in the <a href="#1-built-in-linked-list">Built-in linked list data type</a> section.</p>
+</li>
+<li>
+<p><code>push_front</code>: This function is used to insert a node at the beginning of the linked list.</p>
+</li>
 </ol>
+<pre><code class="language-rust ignore">    list.push_front(34);
+    list.push_front(2);
+    println!("Linked list: {:?}", list);</code></pre>
+<p>When you run this code, you will notice that the when you <code>push_back</code> elements, they are stored in the order in which they are pushed. However, when you <code>push_front</code> elements, they are stored in the reverse order. This is because the <code>push_front</code> function is inserting the new node at the beginning of the linked list.</p>
+<pre><code class="language-terminal">Linked list: [2, 34, 8, 63]
+</code></pre>
+<ol start="4">
+<li><code>pop_front</code>: This function is used to delete a node from the linked list.</li>
+</ol>
+<pre><code class="language-rust ignore">    let popped = list.pop_front();</code></pre>
+<p>The <code>pop_front</code> function as the name suggests, removes the first node from the linked list and returns it.</p>
 <hr>
 <h3 id="circular-linked-list"><a class="header" href="#circular-linked-list">Circular linked list</a></h3>
 <p>Circular linked list is an extension of singly and doubly linked list, in that it connects the last node (tail node) with the first node (head node) of the linked list.</p>

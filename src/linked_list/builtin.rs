@@ -23,3 +23,4 @@ fn main() {
     println!("Popped value: {}", popped.unwrap());
 }
 // ANCHOR_END: builtin
+

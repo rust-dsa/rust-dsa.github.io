@@ -36,39 +36,39 @@ There are multiple ways we can define a struct in Rust. We'll see three ways in 
 ### 1. Built-in linked list data type
 
 ```rust
-{{#include ./inbuilt.rs:builtin}}
+{{#include ./builtin.rs:builtin}}
 ```
 
 Rust provides a built-in linked list data type called `LinkedList`. It is a [doubly linked list](#2-doubly-linked-list), but we can use it as a singly linked list as well.
 
 We need to import the `LinkedList` from the `std::collections` module:
 ```rust,ignore
-{{#include ./inbuilt.rs:imports}}
+{{#include ./builtin.rs:imports}}
 ```
 
 To to create a linked list we can use the `new` function:
 ```rust,ignore
-{{#include ./inbuilt.rs:linked_list_definition}}
+{{#include ./builtin.rs:linked_list_definition}}
 ```
 
 #### Operations
 There are two operations in a singly linked list to interact with the data:
 1. `push_back`: This function is used to insert a node at the end of the linked list.
 ```rust,ignore
-{{#include ./inbuilt.rs:push_back}}
+{{#include ./builtin.rs:push_back}}
 ```
 
 2. `pop_back`: This function is used to delete a node from the linked list.
 ```rust,ignore
-{{#include ./inbuilt.rs:pop_back}}
+{{#include ./builtin.rs:pop_back}}
 ```
 
-Let's see how we can define a node using the `struct` keyword:
+<!-- Let's see how we can define a node using the `struct` keyword:
 
 ```rust,ignore
 {{#include ./struct.rs:struct}}
 ```
-We have defined a node of generic type `T` which can hold any type of data.
+We have defined a node of generic type `T` which can hold any type of data. -->
 
 ### 2. Doubly linked list
 
@@ -76,16 +76,29 @@ A node in doubly linked list consists of three parts; one part is data, other tw
 
 As we have the address of the next as well as the previous node we can traverse in both directions in the linked list.
 
+```rust 
+{{#include ./builtin_doubly.rs:builtin}}
+```
 ## Operations
 
-1. `insert_first`:
-2. `insert_last`:
-3. `insert_after`:
-4. `delete_first`:
-5. `delete_last`:
-6. `delete_after`:
-7. `display_forward`: (forward manner)
-8. `display backward`: (reverse manner)
+1. `push_back`: This function is used to insert a node at the end of the linked list. It has been discussed in the [Built-in linked list data type](#1-built-in-linked-list) section.
+2. `pop_back`: This function is used to delete a node from the linked list. It has been discussed in the [Built-in linked list data type](#1-built-in-linked-list) section.
+
+3. `push_front`: This function is used to insert a node at the beginning of the linked list.
+```rust,ignore
+{{#include ./builtin_doubly.rs:push_front}}
+```
+When you run this code, you will notice that the when you `push_back` elements, they are stored in the order in which they are pushed. However, when you `push_front` elements, they are stored in the reverse order. This is because the `push_front` function is inserting the new node at the beginning of the linked list.
+```terminal
+Linked list: [2, 34, 8, 63]
+```
+
+4. `pop_front`: This function is used to delete a node from the linked list.
+```rust,ignore
+{{#include ./builtin_doubly.rs:pop_front}}
+```
+The `pop_front` function as the name suggests, removes the first node from the linked list and returns it.
+
 
 <hr>
 
