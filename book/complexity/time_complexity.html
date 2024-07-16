@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Primitive type - Data Structures and Algorithms in Rust</title>
+        <title>Time Complexity - Data Structures and Algorithms in Rust</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html" class="active"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">4.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">5.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms/search_algorithms.html"><strong aria-hidden="true">6.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html"><strong aria-hidden="true">6.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">6.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">7.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">7.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">7.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">7.3.</strong> Insertion sort</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../complexity/time_complexity.html" class="active"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">4.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">5.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms/search_algorithms.html"><strong aria-hidden="true">6.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html"><strong aria-hidden="true">6.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">6.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">7.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">7.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">7.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">7.3.</strong> Insertion sort</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,88 +176,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="primitive-type"><a class="header" href="#primitive-type">Primitive Type</a></h1>
-<p>In rust primitive data types are those, which are built in and do not need any library to be used.<sup class="footnote-reference"><a href="#1">1</a></sup></p>
-<p>For instance, signed integers (<code>i8</code>, <code>i32</code>, <code>isize</code>, ...), floating point (<code>f32</code>, <code>f64</code>), char, etc are <em>scalar primitive types</em> as they hold only single values.</p>
-<p>On the other hand arrays and tuples are called <em>compound primitive types</em> because they hold multiple values.</p>
-<h2 id="initializing-an-array"><a class="header" href="#initializing-an-array">Initializing an array</a></h2>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // default type is i32
-    let arr = [1, 2, 3, 4, 5];
-    println!("Array: {:?}", arr);
-<span class="boring">}</span></code></pre></pre>
-<h2 id="defining-an-array"><a class="header" href="#defining-an-array">Defining an array</a></h2>
-<p>We can specify type and length in the format of <code>[T; N]</code>, where:<br>
-<code>T</code>: Element Type<br>
-<code>N</code>: Size (it is constant and it should be non-negative)</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // name: [T ; N] = [...
-    let arr: [u8; 3] = [0, 3, 5]; 
-    println!("Array: {:?}", arr);
-<span class="boring">}</span></code></pre></pre>
-<p>We can also repeat values by specifying a value to repeat and the number of times to repeat it<br>
-<code>[E; N]</code><br>
-<code>E</code>: Expression<br>
-<code>N</code>: Number of times to repeat</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // name: [T ; N] = [E; N];
-    let arr: [u8; 4] = [9; 4]; 
-    println!("Array: {:?}", arr); 
-<span class="boring">}</span></code></pre></pre>
-<h2 id="accessing-and-modifying-an-array"><a class="header" href="#accessing-and-modifying-an-array">Accessing and modifying an array</a></h2>
-<p>We can access array elements using their index, and modify the values provided the array is mutable.</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // Accessing an element
-    let mut arr1_mut = [12, 20, 30, 40];
-    let num = arr1_mut[0];
-    println!("First element: {}", num);
-
-    // array_name[index] = new_value;
-    arr1_mut[0]= 10;
-    println!("Modified array 1: {:?}", arr1_mut);
-<span class="boring">}</span></code></pre></pre>
-<h2 id="advantages-and-disadvantages-of-arrays"><a class="header" href="#advantages-and-disadvantages-of-arrays">Advantages and Disadvantages of Arrays</a></h2>
-<div class="table-wrapper"><table><thead><tr><th><strong>Advantages</strong></th><th><strong>Disadvantages</strong></th></tr></thead><tbody>
-<tr><td>Accessing / searching for elements is fast.</td><td>Fixed size</td></tr>
-<tr><td>Can represent multiple elements using single name.</td><td>Memory wastage</td></tr>
-<tr><td>Traversal is easy</td><td>Insertion and deletion is difficult</td></tr>
-<tr><td>Continuous memory allocation</td><td>Sorting is difficult</td></tr>
-</tbody></table>
-</div>
-<h2 id="types-of-array"><a class="header" href="#types-of-array">Types of Array:</a></h2>
-<h3 id="1-1d-array"><a class="header" href="#1-1d-array">1. 1D array:</a></h3>
-<p>One dimensional array refers to an array that contains only a row of elements. A 1D array can be accessed by using a single index.</p>
-<p><strong>Initializing a 1D array</strong>: Arrays are one dimensional by default. When you initialize an array, like you did <a href="#initializing-an-array">at the start</a>, you are initializing a 1D array.</p>
-<p><strong>Use Case</strong>: 1D arrays are used when we have to store similar items contiguously. These items are related in some way.</p>
-<h3 id="2d-array"><a class="header" href="#2d-array">2D array:</a></h3>
-<p>Two Dimensional array refers to an array that contains rows as well as columns of element. A 2D array can be accessed by using two indices; one index specifying the row, the other specifying the column.</p>
-<p><strong>Initializing a 2D array</strong>: While arrays are stored in a single line, they are ideal for a One dimensional relationship. But in some cases you need to store elements that have a Two dimensional relationship. To structure that data in such a way, this is how we do it:</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    const ROWS: usize = 4;
-    const COLS: usize = 5;
-
-    // name: [[ T;    C];    R]
-    let arr: [[u8; COLS]; ROWS] = [[1; COLS]; ROWS];
-    println!("Array: {:?}", arr); 
-<span class="boring">}</span></code></pre></pre>
-<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://doc.rust-lang.org/rust-by-example/primitives.html">https://doc.rust-lang.org/rust-by-example/primitives.html</a></p>
-</div>
+                        <h1 id="time-complexity"><a class="header" href="#time-complexity">Time Complexity</a></h1>
+<p>Time complexity is the time required to set the instruction to execute .</p>
+<p>Time complexity can also be elaborated by estimating the counts of the number of elementary steps that are performed by  any algorithm to finish the execution.</p>
+<p>Asymptotic notation's are used to find the time complexity.</p>
+<p>Asymptotic notation's are the mathematical way to represent Time complexity.</p>
+<ol>
+<li>Big oh [O]:-</li>
+</ol>
+<p>~It is the maximum time taken by an algorithm to consider or execute all the values.</p>
+<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of function is going to grow slower than or at the same rate with respect to the expression.</p>
+<p>~if f(n) and g(n) are the functions defined on a positive integer number 'n' , then</p>
+<pre><code>                     f(n) = Og(n)                   [n=number of input's]   
+</code></pre>
+<p>if n is big-oh of g of n if and only if positive constants c and n exist , such that</p>
+<pre><code>                     f(n)&lt;=Cg(n)&lt;=n
+</code></pre>
+<p>~It means that for large amount of data , f(n) will grow no more that a constant g(n).</p>
+<p>~Hence, g provides upper bound.</p>
+<ol start="2">
+<li>Omega [ Ω ]:-</li>
+</ol>
+<p>~It is used to find the best case of an algorithm's time complexity.</p>
+<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to grow faster than or the same rate with respect to the expression.</p>
+<p>~This also elaborates on the minimum amount of time required by an algorithm considering all input values.</p>
+<pre><code>                         f(n)=ΩCg(n)                       [n=number of input's] 
+</code></pre>
+<p>That means , at larger valuesof n , the lower bound of f(n) and g(n) , there exists positive constants c and n0 ,such that</p>
+<pre><code>                         0&lt;=Cg(n)&lt;=f(n)     for all n &gt;=n0
+</code></pre>
+<p>~Hence , f provieds lower bound.</p>
+<ol start="3">
+<li>Theta [Θ]:-</li>
+</ol>
+<p>~It is used to find the average case of an algorithm's time complexity.</p>
+<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.</p>
+<p>~It is writen as ,</p>
+<pre><code>                        ΘCg(n)=f(n) 
+</code></pre>
+<p>there exits positive constants c1 , c2 and n0 such that,</p>
+<pre><code>                        0&lt;=C1g(n)&lt;=f(n)&lt;=C2g(n)    for all n&gt;=n0 
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../array/array.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../complexity/complexity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../array/vector.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../complexity/space_complexity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -267,11 +236,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../array/array.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../complexity/complexity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../array/vector.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../complexity/space_complexity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

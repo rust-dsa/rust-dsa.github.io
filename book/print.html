@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">2.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">2.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">2.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">2.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">3.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">4.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms/search_algorithms.html"><strong aria-hidden="true">5.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="search_algorithms/linear_search.html"><strong aria-hidden="true">5.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="search_algorithms/binary_search.html"><strong aria-hidden="true">5.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">6.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">6.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/selection_sort.html"><strong aria-hidden="true">6.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">6.3.</strong> Insertion sort</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="stack/stack.html"><strong aria-hidden="true">4.</strong> Stack</a></li><li class="chapter-item expanded "><a href="linked_list/linked_list.html"><strong aria-hidden="true">5.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="search_algorithms/search_algorithms.html"><strong aria-hidden="true">6.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="search_algorithms/linear_search.html"><strong aria-hidden="true">6.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="search_algorithms/binary_search.html"><strong aria-hidden="true">6.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">7.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">7.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/selection_sort.html"><strong aria-hidden="true">7.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">7.3.</strong> Insertion sort</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -227,6 +227,83 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <li>Does the algorithm do what it is supposed to do?</li>
 <li>Is the algorithm efficient? And can it be made more efficient?</li>
 </ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="complexity"><a class="header" href="#complexity">Complexity</a></h1>
+<p>Complexity is the process of comparing minimum 2 algorithms with respect to space and time.</p>
+<p>An algorithm is said to be efficient and fast, if it takes to execute and consumes less memory space.</p>
+<h2 id="types-of-complexity"><a class="header" href="#types-of-complexity">Types of complexity</a></h2>
+<p>There are six types of complexity :-</p>
+<ol>
+<li>Constant Complexity. [O(1)]</li>
+<li>Logarithmic Complexity.[O(logn)]</li>
+<li>Linear Complexity.[O(n)]</li>
+<li>Quadratic Complexity.[O(n<sup>c</sup>)]</li>
+<li>Factorial Complexity.[O(n!)]</li>
+<li>Exponential Complexity.[O(2<sup>n</sup>)]</li>
+</ol>
+<p>To measure complexity there are three step's:-</p>
+<ol>
+<li>Space Complexity.</li>
+<li>Time Complexity.</li>
+<li>Auxiliary Space.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="time-complexity"><a class="header" href="#time-complexity">Time Complexity</a></h1>
+<p>Time complexity is the time required to set the instruction to execute .</p>
+<p>Time complexity can also be elaborated by estimating the counts of the number of elementary steps that are performed by  any algorithm to finish the execution.</p>
+<p>Asymptotic notation's are used to find the time complexity.</p>
+<p>Asymptotic notation's are the mathematical way to represent Time complexity.</p>
+<ol>
+<li>Big oh [O]:-</li>
+</ol>
+<p>~It is the maximum time taken by an algorithm to consider or execute all the values.</p>
+<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of function is going to grow slower than or at the same rate with respect to the expression.</p>
+<p>~if f(n) and g(n) are the functions defined on a positive integer number 'n' , then</p>
+<pre><code>                     f(n) = Og(n)                   [n=number of input's]   
+</code></pre>
+<p>if n is big-oh of g of n if and only if positive constants c and n exist , such that</p>
+<pre><code>                     f(n)&lt;=Cg(n)&lt;=n
+</code></pre>
+<p>~It means that for large amount of data , f(n) will grow no more that a constant g(n).</p>
+<p>~Hence, g provides upper bound.</p>
+<ol start="2">
+<li>Omega [ Ω ]:-</li>
+</ol>
+<p>~It is used to find the best case of an algorithm's time complexity.</p>
+<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to grow faster than or the same rate with respect to the expression.</p>
+<p>~This also elaborates on the minimum amount of time required by an algorithm considering all input values.</p>
+<pre><code>                         f(n)=ΩCg(n)                       [n=number of input's] 
+</code></pre>
+<p>That means , at larger valuesof n , the lower bound of f(n) and g(n) , there exists positive constants c and n0 ,such that</p>
+<pre><code>                         0&lt;=Cg(n)&lt;=f(n)     for all n &gt;=n0
+</code></pre>
+<p>~Hence , f provieds lower bound.</p>
+<ol start="3">
+<li>Theta [Θ]:-</li>
+</ol>
+<p>~It is used to find the average case of an algorithm's time complexity.</p>
+<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.</p>
+<p>~It is writen as ,</p>
+<pre><code>                        ΘCg(n)=f(n) 
+</code></pre>
+<p>there exits positive constants c1 , c2 and n0 such that,</p>
+<pre><code>                        0&lt;=C1g(n)&lt;=f(n)&lt;=C2g(n)    for all n&gt;=n0 
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="space-complexity"><a class="header" href="#space-complexity">Space Complexity</a></h1>
+<p>~Space complexity is the amount of memory space that an algorthm or a problem takes during the execution of that particular algorithm.</p>
+<p>~For example, if we want to compare standard sorting algorithms on the basis of space, then Auxiliary Space would be a better criterion than Space Complexity. Merge Sort uses O(n) auxiliary space, Insertion sort, and Heap Sort use O(1) auxiliary space. The space complexity of all these sorting algorithms is O(n) though.</p>
+<p>~Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will require O(n) space. If we create a two-dimensional array of size n*n, this will require O(n2) space.</p>
+<p>~Space is required for :-</p>
+<ol>
+<li>Instruction space :-</li>
+</ol>
+<p>executable programs - depend on number of lines taken to execute program.</p>
+<ol start="2">
+<li>Data space :-</li>
+</ol>
+<p>Required to store all the constant and varable values.</p>
+<ol start="3">
+<li>Environment space :-</li>
+</ol>
+<p>To store the environment information needed to resume the suspended function.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="array"><a class="header" href="#array">Array</a></h1>
 <p>An array is a collection  of similar data types which are stored in contiguous memory locations. Each location has an index number through which we can access the element of that particular index.</p>
 <p>In programming, we have to use data elements of similar type and similar purpose. Instead of declaring and defining every variable individually, we can use an array to store all of them together.</p>

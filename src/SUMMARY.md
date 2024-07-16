@@ -5,6 +5,9 @@
   - [Algorithms](./what_is_dsa/algorithms.md)
 
 # Data Structures
+- [Complexity](./complexity/complexity.md)
+  - [Time Complexity](./complexity/time_complexity.md)
+  - [Space Complexity](./complexity/space_complexity.md)
 - [Array](./array/array.md)
   - [Primitive type](./array/primitive.md)
   - [Vector type](./array/vector.md)
