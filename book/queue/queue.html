@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Vector type - Data Structures and Algorithms in Rust</title>
+        <title>Queue - Data Structures and Algorithms in Rust</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html" class="active"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">4.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../queue/queue.html"><strong aria-hidden="true">5.</strong> Queue</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">6.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms/search_algorithms.html"><strong aria-hidden="true">7.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html"><strong aria-hidden="true">7.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">7.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">8.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">8.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">8.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">8.3.</strong> Insertion sort</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">4.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../queue/queue.html" class="active"><strong aria-hidden="true">5.</strong> Queue</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">6.</strong> Linked list</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms/search_algorithms.html"><strong aria-hidden="true">7.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html"><strong aria-hidden="true">7.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">7.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">8.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">8.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">8.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">8.3.</strong> Insertion sort</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,85 +176,64 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="vector-type"><a class="header" href="#vector-type">Vector type</a></h1>
-<p>Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store its size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.</p>
-<p>Another thing about vectors is they're generally stored in a heap and they have a large size allocated than being used. As a result, when new values are inserted, the whole vector does not to be relocated to fulfill the size requirements.</p>
-<p>As arrays and vectors, both copy items into another larger array / vector once more element(s) are added, vectors do the copying less often as they already have more capacity than the actual length.</p>
-<p>"A vector is a contiguous growable array type with heap allocated contents".<sup class="footnote-reference"><a href="#1">1</a></sup></p>
-<h2 id="initializing-a-vector"><a class="header" href="#initializing-a-vector">Initializing a vector</a></h2>
-<p>While initializing a primitive array, we had to specify the size of the array before-hand. There is no such constraints with a vector</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // vector from inbuilt macro
-    let vec:Vec &lt;u16&gt; = vec![10, 20, 30, 40, 50];
-    println!("Vector array: {:?}", vec);
+                        <h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
+<p>A quueue is a linear data used to model a First In First Out (FIFO) system. Conceptually, we add elements to the end of the queue and remove elements from the front.</p>
+<p>The queue is used to model a system where the order of elements is important. For example, in a print queue, the order of jobs is important, so we use a queue to manage the jobs.</p>
+<p>In Rust, we use a <code>VecDeque</code> to implement a queue. The <code>VecDeque</code> is a double-ended queue that allows efficient insertion and removal at both ends. It is a wrapper around a <code>Vec</code> that provides additional methods for working with the queue.</p>
+<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<p>To import the <code>VecDeque</code> type, we need to add the following line at the top of our file:</p>
+<pre><code class="language-rust ignore">use std::collections::VecDeque;</code></pre>
+<h3 id="enqueue"><a class="header" href="#enqueue">Enqueue</a></h3>
+<p>Enqueue is the operation of adding an element to the end of the queue. The <code>push_back</code> method is used to add an element to the back of the queue.</p>
+<pre><code class="language-rust  ignore">    // Enqueue operation
+    queue.push_back(2);
+    queue.push_back(34);
+    queue.push_back(8);
+    queue.push_back(63);
+    queue.push_back(12);</code></pre>
+<h3 id="dequeue"><a class="header" href="#dequeue">Dequeue</a></h3>
+<p>Dequeue is the operation of removing an element from the front of the queue. The <code>pop_front</code> method is used to remove an element from the front of the queue.</p>
+<pre><code class="language-rust  ignore">    // Dequeue operation    
+    let popped = queue.pop_front();
+    println!("Popped value: {}", popped.unwrap());</code></pre>
+<h3 id="peek"><a class="header" href="#peek">Peek</a></h3>
+<p>Peek is the operation of viewing the element at the front of the queue without removing it. The <code>front</code> method is used to view the element at the front of the queue.</p>
+<pre><code class="language-rust  ignore">     // Peek operation
+     let front = queue.front();
+     println!("Front value: {}", front.unwrap());</code></pre>
+<h2 id="result"><a class="header" href="#result">Result</a></h2>
+<pre><pre class="playground"><code class="language-rust editable">use std::collections::VecDeque;
 
-    // vector from array
-    let vec = Vec::from([1, 2, 3, 4, 5]);
-    println!("Vector array: {:?}", vec);
+fn main() {
+    let mut queue = VecDeque::new();
 
-    // empty vector
-    let mut _vec: Vec&lt;u8&gt; = Vec::new();
-<span class="boring">}</span></code></pre></pre>
-<h2 id="accessing-and-modifying-a-vector"><a class="header" href="#accessing-and-modifying-a-vector">Accessing and modifying a vector</a></h2>
-<p>Similar to the array, we can access individual elements of a vector using its index and modify them if the vector is mutable.</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    let mut vec = vec![10, 20, 34, 40, 50];
-    // accessing an element
-    let mid = vec[2];
-    println!("Mid element: {mid}");
+    // Enqueue operation
+    queue.push_back(2);
+    queue.push_back(34);
+    queue.push_back(8);
+    queue.push_back(63);
+    queue.push_back(12);
 
-    // modifying an element
-    vec[2] = 30;
-    println!("Modified vector: {:?}", vec);
-<span class="boring">}</span></code></pre></pre>
-<p>Now, let's delve into some of the vector specific functions that will be helpful in learning and applying algorithms.</p>
-<h2 id="vector-specific-functions"><a class="header" href="#vector-specific-functions">Vector specific functions</a></h2>
-<ol>
-<li><code>push()</code>: This function inserts an element at the end of the vector</li>
-<li><code>pop()</code>: This function removes an element from the end of the vector</li>
-<li><code>len()</code>: This function outputs the number of elements in the vector</li>
-</ol>
-<p>We'll be using these functions extensively. See <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html">docs</a> for all the functions.</p>
-<h2 id="advantages-and-disadvantages-of-vectors"><a class="header" href="#advantages-and-disadvantages-of-vectors">Advantages and disadvantages of vectors</a></h2>
-<div class="table-wrapper"><table><thead><tr><th><strong>Advantages</strong></th><th><strong>Disadvantages</strong></th></tr></thead><tbody>
-<tr><td>Dynamic size</td><td>Slower access due to indirection</td></tr>
-<tr><td>Easy insertion and deletion</td><td>More memory usage due to extra capacity</td></tr>
-<tr><td>Efficient use of memory</td><td>More complex implementation</td></tr>
-<tr><td>Flexibility in size</td><td>Potential for reallocation</td></tr>
-</tbody></table>
-</div>
-<h2 id="2d-vector"><a class="header" href="#2d-vector">2D vector</a></h2>
-<p>As with arrays, vectors are are also two dimensional. The idea of a 2D vector is the same of a <a href="./primitive.html#2d-array">2D array</a>.</p>
-<p><strong>Initializing a 2D array</strong>:</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    // empty 2D vector
-    let mut _vec: Vec&lt;Vec&lt;char&gt;&gt; = Vec::new();
+    println!("Queue: {:?}", queue);
 
-    // method 1:
-    let vec: Vec&lt;Vec&lt;u8&gt;&gt; = Vec::from([Vec::from([1, 2, 3]), Vec::from([4, 5, 6])]);
-    println!("2d vector: {:?}", vec);
+    // Dequeue operation    
+    let popped = queue.pop_front();
+    println!("Popped value: {}", popped.unwrap());
 
-    // method 2:
-    let vec: Vec&lt;Vec&lt;u8&gt;&gt; = vec![vec![1, 2, 3], vec![4, 5, 6]];
-    println!("2d vector: {:?}", vec);
-<span class="boring">}</span></code></pre></pre>
-<p>Notice that we have initialized the type inside the fish as another vector. And inside that vector, we have specified the data type.</p>
-<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://doc.rust-lang.org/std/vec/index.html">https://doc.rust-lang.org/std/vec/index.html</a></p>
-</div>
+     // Peek operation
+     let front = queue.front();
+     println!("Front value: {}", front.unwrap());
+}</code></pre></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../array/primitive.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../stack/stack.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../array/array_or_vector.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../linked_list/linked_list.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -264,11 +243,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../array/primitive.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../stack/stack.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../array/array_or_vector.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../linked_list/linked_list.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

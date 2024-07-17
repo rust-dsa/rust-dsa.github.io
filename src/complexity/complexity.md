@@ -20,8 +20,4 @@ To measure complexity there are three step's:-
 
 1. Space Complexity.
 2. Time Complexity.
-3. Auxiliary Space.
-
-
-                    
-                  
+3. Auxiliary Space.    

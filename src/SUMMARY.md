@@ -13,6 +13,7 @@
   - [Vector type](./array/vector.md)
   - [Array or Vector?](./array/array_or_vector.md)
 - [Stack](./stack/stack.md)
+- [Queue](./queue/queue.md)
 - [Linked list](./linked_list/linked_list.md)
 
 # Algorithms
