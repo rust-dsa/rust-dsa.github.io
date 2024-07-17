@@ -15,6 +15,7 @@
 - [Stack](./stack/stack.md)
 - [Queue](./queue/queue.md)
 - [Linked list](./linked_list/linked_list.md)
+- [Trees](./trees/trees.md)
 
 # Algorithms
 - [Search algorithms](./search_algorithms/search_algorithms.md)
