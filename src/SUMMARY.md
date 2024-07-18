@@ -17,6 +17,7 @@
 - [Linked list](./linked_list/linked_list.md)
 - [Trees](./trees/trees.md)
   - [Binary tree](./trees/binary_tree.md)
+  - [Binary search tree](./trees/binary_search_tree.md)
 
 # Algorithms
 - [Search algorithms](./search_algorithms/search_algorithms.md)
