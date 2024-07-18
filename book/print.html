@@ -693,9 +693,35 @@ fn main() {
 <blockquote>
 <p>Solve this <a href="https://leetcode.com/problems/linked-list-components/description/">LeetCode problem</a></p>
 </blockquote>
-<div style="break-before: page; page-break-before: always;"></div><p>A tree is a data structure that consists of nodes (also called points or vertices) and edges (also called lines or arcs) with a tree-like structure. A tree can either be an empty tree, or a node with a list of successor trees.</p>
-<p>Nodes are usually labelled with a data item. It is called <em>value</em>.</p>
-<p>The node at the top of the tree is called as the <em>root node</em>. The root node is at the top because, a tree is always shaped like a, well, tree, and the nodes connected to the root are called children of the root.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>A tree is a collection of entities called 'nodes' linked together to simulate a hierarchical structure.
+In a real tree, root is at the bottom; in our computer science tree, root is at the top.</p>
+<p>e.g. An employee hierarchy in an organization</p>
+<!-- TODO add image of example-->
+<h2 id="entities-of-a-node"><a class="header" href="#entities-of-a-node">Entities of a node:</a></h2>
+<!-- TODO add image of tree with labels -->
+<p>Node:</p>
+<p>Edges:</p>
+<p>Nodes are usually labelled with a data item. It is called <em>value</em>.
+The node at the top of the tree is called as the <em>root node</em>.</p>
+<p>Child nodes: Nodes that are linked to an upper node, that is closer to the root node, are called child nodes.</p>
+<p>Parent nodes: Nodes that link to multiple nodes on a lower level are called parent nodes</p>
+<p>Sibling nodes: Nodes that are on the same level and share a same parent are called sibling nodes</p>
+<p>Leaf nodes: Nodes that do not have any children nodes are called leaf nodes. They are also called terminal nodes.</p>
+<h2 id="relations"><a class="header" href="#relations">Relations</a></h2>
+<h3 id="nodes-and-edges"><a class="header" href="#nodes-and-edges">Nodes and Edges</a></h3>
+<p>If a tree has 'n' nodes, it has 'n - 1' edges.</p>
+<h3 id="depth"><a class="header" href="#depth">Depth:</a></h3>
+<p>Depth of some node <code>N</code> in a tree can be defined as the number of edges in path from <code>root</code> to <code>N</code>.</p>
+<h3 id="height"><a class="header" href="#height">Height:</a></h3>
+<p>Height of some node <code>N</code> is equal to the number of edges in longest path from <code>N</code> to leaf node.</p>
+<h2 id="applications"><a class="header" href="#applications">Applications</a></h2>
+<ul>
+<li>Naturally hierarchical data</li>
+<li>For organizing data (for quick search, insertion, deletion).</li>
+<li>Trie</li>
+<li>Network routing</li>
+<li>Decision-making</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="search-algorithms"><a class="header" href="#search-algorithms">Search algorithms</a></h1>
 <p>An important and recurring problem in computing is locating information. This problem is called as searching. To solve this problem, search algorithms are used.</p>
 <p>As you may have guessed from the name of the algorithms, search algorithms help us locate data in data structures.</p>
