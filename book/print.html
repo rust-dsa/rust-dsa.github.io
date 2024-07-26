@@ -351,7 +351,7 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <p><strong>5. Quick sort:</strong> It is a sorting algorithm that implements the divide and conquer strategy and picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted.</p>
 <p>We'll learn how to implement these algorithms after we have understood what arrays are.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="primitive-type"><a class="header" href="#primitive-type">Primitive Type</a></h1>
-<p>In rust primitive data types are those, which are built in and do not need any library to be used.<sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>In rust, primitive data types are those, which are built in and do not need any library to be used.<sup class="footnote-reference"><a href="#1">1</a></sup></p>
 <p>For instance, signed integers (<code>i8</code>, <code>i32</code>, <code>isize</code>, ...), floating point (<code>f32</code>, <code>f64</code>), char, etc are <em>scalar primitive types</em> as they hold only single values.</p>
 <p>On the other hand arrays and tuples are called <em>compound primitive types</em> because they hold multiple values.</p>
 <h2 id="initializing-an-array"><a class="header" href="#initializing-an-array">Initializing an array</a></h2>
@@ -405,10 +405,18 @@ We use algorithms to create, access, update, and delete data structures.</p>
 <h2 id="types-of-array"><a class="header" href="#types-of-array">Types of Array:</a></h2>
 <h3 id="1-1d-array"><a class="header" href="#1-1d-array">1. 1D array:</a></h3>
 <p>One dimensional array refers to an array that contains only a row of elements. A 1D array can be accessed by using a single index.</p>
+<p><img src="array/../images/1darray.jpg" alt="1d array" /></p>
 <p><strong>Initializing a 1D array</strong>: Arrays are one dimensional by default. When you initialize an array, like you did <a href="array/primitive.html#initializing-an-array">at the start</a>, you are initializing a 1D array.</p>
 <p><strong>Use Case</strong>: 1D arrays are used when we have to store similar items contiguously. These items are related in some way.</p>
 <h3 id="2d-array"><a class="header" href="#2d-array">2D array:</a></h3>
 <p>Two Dimensional array refers to an array that contains rows as well as columns of element. A 2D array can be accessed by using two indices; one index specifying the row, the other specifying the column.</p>
+<p><img src="array/../images//2darray.jpg" alt="2d array" /></p>
+<blockquote>
+<p>Notice that the 1D array and 2D array figures have the same 8 elements. The only difference is how they are accessed.</p>
+<p>We use only one index to access 4 from 1D: <code>array[2]</code>.
+On the other hand, we have to use two two values to access 4 from 2D: <code>array[0][2]</code>.</p>
+<p>In 2D array, we are actually storing arrays in a sequential order, i.e. we are storing an array of arrays. The first index specifies which array we want to access, (<code>0i</code>, <code>1i</code>), then we specify which element from that array we want to specify, (<code>0j</code>, <code>1j</code>, <code>2j</code>, <code>3j</code>).</p>
+</blockquote>
 <p><strong>Initializing a 2D array</strong>: While arrays are stored in a single line, they are ideal for a One dimensional relationship. But in some cases you need to store elements that have a Two dimensional relationship. To structure that data in such a way, this is how we do it:</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
