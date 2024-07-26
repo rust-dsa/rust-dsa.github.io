@@ -179,44 +179,66 @@
                         <h1 id="time-complexity"><a class="header" href="#time-complexity">Time Complexity</a></h1>
 <p>Time complexity is the time required to set the instruction to execute .</p>
 <p>Time complexity can also be elaborated by estimating the counts of the number of elementary steps that are performed by  any algorithm to finish the execution.</p>
-<p>Asymptotic notation's are used to find the time complexity.</p>
-<p>Asymptotic notation's are the mathematical way to represent Time complexity.</p>
+<p>Asymptotic notations are used to find the time complexity.</p>
+<p>Asymptotic notations are the mathematical way to represent Time complexity.</p>
 <ol>
 <li>Big oh [O]:-</li>
 </ol>
-<p>~It is the maximum time taken by an algorithm to consider or execute all the values.</p>
-<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of function is going to grow slower than or at the same rate with respect to the expression.</p>
-<p>~if f(n) and g(n) are the functions defined on a positive integer number 'n' , then</p>
-<pre><code>                     f(n) = Og(n)                   [n=number of input's]   
-</code></pre>
-<p>if n is big-oh of g of n if and only if positive constants c and n exist , such that</p>
-<pre><code>                     f(n)&lt;=Cg(n)&lt;=n
-</code></pre>
-<p>~It means that for large amount of data , f(n) will grow no more that a constant g(n).</p>
-<p>~Hence, g provides upper bound.</p>
+<ul>
+<li>
+<p>It is the maximum time taken by an algorithm to consider or execute all the values.</p>
+</li>
+<li>
+<p>If we consider two functions g(n) and f(n) then it is used to define if the set of function is going to grow slower than or at the same rate with respect to the expression.</p>
+</li>
+<li>
+<p>If f(n) and g(n) are the functions defined on a positive integer number 'n' , then</p>
+<p><em>f(n) = O(g(n))  [n = number of inputs]</em></p>
+</li>
+<li>
+<p>If n is big-oh of g of n if and only if positive constants c and n exist , such that</p>
+<p><em>f(n) &lt;= Cg(n) &lt;= n</em></p>
+</li>
+<li>
+<p>It means that for large amount of data , f(n) will grow no more that a constant g(n).</p>
+</li>
+</ul>
+<p>Hence, g provides upper bound.</p>
 <ol start="2">
 <li>Omega [ Ω ]:-</li>
 </ol>
-<p>~It is used to find the best case of an algorithm's time complexity.</p>
-<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to grow faster than or the same rate with respect to the expression.</p>
-<p>~This also elaborates on the minimum amount of time required by an algorithm considering all input values.</p>
-<pre><code>                         f(n)=ΩCg(n)                       [n=number of input's] 
-</code></pre>
+<ul>
+<li>
+<p>It is used to find the best case of an algorithm's time complexity.</p>
+</li>
+<li>
+<p>If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to grow faster than or the same rate with respect to the expression.</p>
+</li>
+<li>
+<p>This also elaborates on the minimum amount of time required by an algorithm considering all input values.</p>
+<p><em>f(n)=ΩCg(n)    [n=number of input's]</em></p>
+</li>
+</ul>
 <p>That means , at larger valuesof n , the lower bound of f(n) and g(n) , there exists positive constants c and n0 ,such that</p>
-<pre><code>                         0&lt;=Cg(n)&lt;=f(n)     for all n &gt;=n0
-</code></pre>
-<p>~Hence , f provieds lower bound.</p>
+<p><em>0&lt;=Cg(n)&lt;=f(n)     for all n &gt;=n0</em></p>
+<p>Hence , f provieds lower bound.</p>
 <ol start="3">
 <li>Theta [Θ]:-</li>
 </ol>
-<p>~It is used to find the average case of an algorithm's time complexity.</p>
-<p>~If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.</p>
-<p>~It is writen as ,</p>
-<pre><code>                        ΘCg(n)=f(n) 
-</code></pre>
-<p>there exits positive constants c1 , c2 and n0 such that,</p>
-<pre><code>                        0&lt;=C1g(n)&lt;=f(n)&lt;=C2g(n)    for all n&gt;=n0 
-</code></pre>
+<ul>
+<li>
+<p>It is used to find the average case of an algorithm's time complexity.</p>
+</li>
+<li>
+<p>If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.</p>
+</li>
+<li>
+<p>It is writen as ,</p>
+<p><em>ΘCg(n)=f(n)</em></p>
+</li>
+</ul>
+<p>There exits positive constants c1 , c2 and n0 such that,</p>
+<p><em>0&lt;=C1g(n)&lt;=f(n)&lt;=C2g(n)    for all n&gt;=n0</em></p>
 
                     </main>
 

@@ -8,15 +8,15 @@ An algorithm is said to be efficient and fast, if it takes to execute and consum
 
 There are six types of complexity :-
 
-1. Constant Complexity. [O(1)]
-2. Logarithmic Complexity.[O(logn)]
-3. Linear Complexity.[O(n)]
-4. Quadratic Complexity.[O(n<sup>c</sup>)]
-5. Factorial Complexity.[O(n!)]
-6. Exponential Complexity.[O(2<sup>n</sup>)]
+1. Constant Complexity. `[O(1)]`
+2. Logarithmic Complexity. `[O(logn)]`
+3. Linear Complexity. `[O(n)]`
+4. Quadratic Complexity. `[O(n^2)]`
+5. Factorial Complexity. `[O(n!)]`
+6. Exponential Complexity. `[O(2^n)]`
 
 
-To measure complexity there are three step's:-
+To measure complexity there are three steps:-
 
 1. Space Complexity.
 2. Time Complexity.
