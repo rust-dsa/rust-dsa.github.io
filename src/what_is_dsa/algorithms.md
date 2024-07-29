@@ -2,6 +2,18 @@
 
 An algorithm is a set of steps / instructions that leads to solving a problem. Algorithms are a fundamental part of computer science. They are used to accomplish a variety of computational tasks, such as performing calculations, or finding specific information in databases.
 
+> **How to make tea**
+> 
+> Step 1: Boil one cup of water
+> 
+> Step 2: Add one teaspoon of tea leaves (with sugar if desired)
+> 
+> Step 3: if you want milk, add it at the 3 minute mark
+> 
+> Step 4: Heat tea to boiling point
+> 
+> Step 5: Pour into cup
+
 We may not realize it, we also use algorithms in our daily lives. Our rituals after waking up, the specific way we choose to make our coffee, the way we fold our laundry, all these tasks are completed as a result of us following an algorithm which we have chosen to execute.
 
 ## Characteristics of an algorithm
