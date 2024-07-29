@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Trees - Data Structures and Algorithms in Rust</title>
+        <title>Hash map - Data Structures and Algorithms in Rust</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">4.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../queue/queue.html"><strong aria-hidden="true">5.</strong> Queue</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">6.</strong> Linked list</a></li><li class="chapter-item expanded "><a href="../trees/trees.html" class="active"><strong aria-hidden="true">7.</strong> Trees</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../trees/binary_tree.html"><strong aria-hidden="true">7.1.</strong> Binary tree</a></li><li class="chapter-item expanded "><a href="../trees/binary_search_tree.html"><strong aria-hidden="true">7.2.</strong> Binary search tree</a></li></ol></li><li class="chapter-item expanded "><a href="../hashmap/hashmap.html"><strong aria-hidden="true">8.</strong> Hash map</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms/search_algorithms.html"><strong aria-hidden="true">9.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html"><strong aria-hidden="true">9.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">9.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">10.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">10.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">10.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">10.3.</strong> Insertion sort</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li></ol></li><li class="chapter-item expanded "><a href="../stack/stack.html"><strong aria-hidden="true">4.</strong> Stack</a></li><li class="chapter-item expanded "><a href="../queue/queue.html"><strong aria-hidden="true">5.</strong> Queue</a></li><li class="chapter-item expanded "><a href="../linked_list/linked_list.html"><strong aria-hidden="true">6.</strong> Linked list</a></li><li class="chapter-item expanded "><a href="../trees/trees.html"><strong aria-hidden="true">7.</strong> Trees</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../trees/binary_tree.html"><strong aria-hidden="true">7.1.</strong> Binary tree</a></li><li class="chapter-item expanded "><a href="../trees/binary_search_tree.html"><strong aria-hidden="true">7.2.</strong> Binary search tree</a></li></ol></li><li class="chapter-item expanded "><a href="../hashmap/hashmap.html" class="active"><strong aria-hidden="true">8.</strong> Hash map</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../search_algorithms/search_algorithms.html"><strong aria-hidden="true">9.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../search_algorithms/linear_search.html"><strong aria-hidden="true">9.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../search_algorithms/binary_search.html"><strong aria-hidden="true">9.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">10.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">10.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/selection_sort.html"><strong aria-hidden="true">10.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">10.3.</strong> Insertion sort</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,60 +176,55 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>A tree is a collection of entities called 'nodes' linked together to simulate a hierarchical structure.
-In a real tree, root is at the bottom; in our computer science tree, root is at the top.</p>
-<p>e.g. An employee hierarchy in an organization</p>
-<!-- TODO add image of example-->
-<h2 id="entities-of-a-node"><a class="header" href="#entities-of-a-node">Entities of a node:</a></h2>
-<!-- TODO add image of tree with labels -->
-<p>Node:</p>
-<p>Edges:</p>
-<p>Nodes are usually labelled with a data item. It is called <em>value</em>.
-The node at the top of the tree is called as the <em>root node</em>.</p>
-<p>Child nodes: Nodes that are linked to an upper node, that is closer to the root node, are called child nodes.</p>
-<p>Parent nodes: Nodes that link to multiple nodes on a lower level are called parent nodes</p>
-<p>Sibling nodes: Nodes that are on the same level and share a same parent are called sibling nodes</p>
-<p>Leaf nodes: Nodes that do not have any children nodes are called leaf nodes. They are also called terminal nodes.</p>
-<h2 id="relations"><a class="header" href="#relations">Relations</a></h2>
-<h3 id="nodes-and-edges"><a class="header" href="#nodes-and-edges">Nodes and Edges</a></h3>
-<p>If a tree has 'n' nodes, it has 'n - 1' edges.</p>
-<h3 id="depth"><a class="header" href="#depth">Depth:</a></h3>
-<p>Depth of some node <code>N</code> in a tree can be defined as the number of edges in path from <code>root</code> to <code>N</code>.</p>
-<h3 id="height"><a class="header" href="#height">Height:</a></h3>
-<p>Height of some node <code>N</code> is equal to the number of edges in longest path from <code>N</code> to leaf node.</p>
-<h2 id="applications"><a class="header" href="#applications">Applications</a></h2>
-<ul>
-<li>Naturally hierarchical data</li>
-<li>For organizing data (for quick search, insertion, deletion).</li>
-<li>Trie</li>
-<li>Network routing</li>
-<li>Decision-making</li>
-</ul>
-<h2 id="types-of-trees"><a class="header" href="#types-of-trees">Types of Trees</a></h2>
-<ol>
-<li>
-<p>General tree: A general tree is a tree with no constraints. It can have any number of nodes and nodes can have any number of children. A general tree is unordered.</p>
-</li>
-<li>
-<p>Binary Tree: A binary tree is an optimized version of general tree. Every node can have either 0, 1, or 2 children. Hence it is called binary tree.</p>
-</li>
-<li>
-<p>Binary Search Tree: A BST is just like a binary tree except with one difference; the data is ordered. The left child node is always smaller than the parent node, and the right child node is always bigger than parent node.</p>
-</li>
-<li>
-<p>AVL tree: AVL stands for Adelson-Velsky and Landis. AVL tree is an extension of binary search tree in that it is self balancing. It refactors the heights of the left and right subtrees to be as close to each other as possible. The balancing of a tree is measured by something called the balancing factor.</p>
-</li>
-</ol>
+                        <h1 id="hash-map"><a class="header" href="#hash-map">Hash map</a></h1>
+<p>A hash map is a data structure that efficiently stores key-value pairs. Think of it as a dictionary where you can look up words (keys) that point to its meaning (value).</p>
+<!-- TODO add hashmap image -->
+<p>To use Hash map in your Rust code, you'll need to import it from <code>collections</code>. You can do that by adding the following line to your code:</p>
+<pre><code class="language-rust ignore">use std::collections::HashMap;</code></pre>
+<h2 id="creating-a-hashmap"><a class="header" href="#creating-a-hashmap">Creating a HashMap</a></h2>
+<p>To create a hash map, you'll need to use the <code>HashMap::new()</code> method. This method returns an empty hash map. You can also use the <code>HashMap::with_capacity()</code> method to create a hash map with a specific capacity. The capacity is the number of elements the hash map can hold without resizing.</p>
+<pre><code class="language-rust ignore">    let mut map = HashMap::new();</code></pre>
+<h2 id="inserting-a-key-value-pair"><a class="header" href="#inserting-a-key-value-pair">Inserting a key-value pair</a></h2>
+<p>To insert a key-value pair into a hash map, you'll need to use the <code>insert()</code> method. This method takes two arguments: the key and the value.</p>
+<pre><code class="language-rust ignore">    map.insert("apple", 7);
+    map.insert("banana", 5);
+    map.insert("cherry", 3);</code></pre>
+<h2 id="accessing-a-value"><a class="header" href="#accessing-a-value">Accessing a value</a></h2>
+<p>To access a value in a hash map, you'll need to use the <code>get()</code> method. This method returns an <code>Option</code> type, so you'll need to unwrap the value to access it.</p>
+<pre><code class="language-rust ignore">    let fruit = map.get("apple");
+    println!("The fruit is {}", fruit.unwrap());</code></pre>
+<h2 id="removing-a-key-value-pair"><a class="header" href="#removing-a-key-value-pair">Removing a key-value pair</a></h2>
+<p>To remove a key-value pair from a hash map, you'll need to use the <code>remove()</code> method. This method takes the key as an argument and returns the value associated with that key.</p>
+<pre><code class="language-rust ignore">    let apple = map.remove("apple");
+    println!("The apple is {}", apple.unwrap());</code></pre>
+<p>The whole code looks something like this:</p>
+<pre><pre class="playground"><code class="language-rust">use std::collections::HashMap;
+
+fn main() {
+    let mut map = HashMap::new();
+
+    map.insert("apple", 7);
+    map.insert("banana", 5);
+    map.insert("cherry", 3);
+
+    let fruit = map.get("apple");
+    println!("The fruit is {}", fruit.unwrap());
+
+    let apple = map.remove("apple");
+    println!("The apple is {}", apple.unwrap());
+
+    println!("The map is {:?}", map);
+}</code></pre></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../linked_list/linked_list.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../trees/binary_search_tree.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../trees/binary_tree.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../search_algorithms/search_algorithms.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -239,11 +234,11 @@ The node at the top of the tree is called as the <em>root node</em>.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../linked_list/linked_list.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../trees/binary_search_tree.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../trees/binary_tree.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../search_algorithms/search_algorithms.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
