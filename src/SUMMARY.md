@@ -19,6 +19,7 @@
   - [Binary tree](./trees/binary_tree.md)
   - [Binary search tree](./trees/binary_search_tree.md)
 - [Hash map](./hashmap/hashmap.md)
+- [Heap](./heap/heap.md)
 
 # Algorithms
 - [Search algorithms](./search_algorithms/search_algorithms.md)
