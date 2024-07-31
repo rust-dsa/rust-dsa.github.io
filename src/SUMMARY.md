@@ -21,6 +21,7 @@
 - [Hash map](./hashmap/hashmap.md)
 - [Heap](./heap/heap.md)
 - [Graph](./graph/graph.md)
+- [Trie](./trie/trie.md)
 
 # Algorithms
 - [Search algorithms](./search_algorithms/search_algorithms.md)
