@@ -5,5 +5,5 @@ Now that you have understood the basics of arrays, it is time to implement what 
 <hr>
 
 ### Level 1 
-[Arrays 8Kyu](https://www.codewars.com/kata/arrays-8kyu) 
+[Arrays 8Kyu](https://www.codewars.com/collections/rust-dsa-array-8kyu) 
 
