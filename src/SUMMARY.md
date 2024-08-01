@@ -12,6 +12,7 @@
   - [Primitive type](./array/primitive.md)
   - [Vector type](./array/vector.md)
   - [Array or Vector?](./array/array_or_vector.md)
+  - [Problem sets](./array/problem_sets.md)
 - [Stack](./stack/stack.md)
 - [Queue](./queue/queue.md)
 - [Linked list](./linked_list/linked_list.md)
