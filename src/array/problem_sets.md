@@ -7,3 +7,4 @@ Now that you have understood the basics of arrays, it is time to implement what 
 ### Level 1 
 [Arrays 8Kyu](https://www.codewars.com/collections/rust-dsa-array-8kyu) 
 
+[Arrays 7Kyu](https://www.codewars.com/collections/rust-dsa-array-7kyu)
