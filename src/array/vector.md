@@ -11,13 +11,13 @@ As arrays and vectors, both copy items into another larger array / vector once m
 While initializing a primitive array, we had to specify the size of the array before-hand. There is no such constraints with a vector
 
 ```rust
-{{#include ./../code/ds/vectors.rs:initialize}}
+{{#include ./vectors.rs:initialize}}
 ```
 
 ## Accessing and modifying a vector
 Similar to the array, we can access individual elements of a vector using its index and modify them if the vector is mutable.
 ```rust
-{{#include ./../code/ds/vectors.rs:access_and_modify}}
+{{#include ./vectors.rs:access_and_modify}}
 ```
 
 Now, let's delve into some of the vector specific functions that will be helpful in learning and applying algorithms.
@@ -44,7 +44,7 @@ As with arrays, vectors are are also two dimensional. The idea of a 2D vector is
 
 **Initializing a 2D array**:
 ```rust
-{{#include ./../code/ds/vectors.rs:2D_vector}}
+{{#include ./vectors.rs:2D_vector}}
 ```
 
 Notice that we have initialized the type inside the fish as another vector. And inside that vector, we have specified the data type.
