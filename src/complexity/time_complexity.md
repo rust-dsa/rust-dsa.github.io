@@ -1,8 +1,8 @@
 # Time Complexity
 
-Time complexity is the time required to set the instruction to execute .
+Time complexity is the time required to execute an instruction.
 
-Time complexity can also be elaborated by estimating the counts of the number of elementary steps that are performed by  any algorithm to finish the execution.
+Time complexity can also be described by estimating the number of elementary steps performed by an algorithm to complete its execution."
          
 Asymptotic notations are used to find the time complexity.
 
@@ -11,7 +11,7 @@ Asymptotic notations are the mathematical way to represent Time complexity.
  1) Big oh [O]:-
 
 * It is the maximum time taken by an algorithm to consider or execute all the values.
-* If we consider two functions g(n) and f(n) then it is used to define if the set of function is going to grow slower than or at the same rate with respect to the expression.
+* If we consider two functions g(n) and f(n), then it is used to define if the set of functions is going to grow slower than or at the same rate with respect to the expression.
 * If f(n) and g(n) are the functions defined on a positive integer number 'n' , then
 
     *f(n) = O(g(n))  [n = number of inputs]*
@@ -29,7 +29,7 @@ Hence, g provides upper bound.
                                                                             
 * It is used to find the best case of an algorithm's time complexity.
 
-* If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to grow faster than or the same rate with respect to the expression.
+* If we consider two functions g(n) and f(n), then it is used to define if the set of functions is going to grow faster than or at the same rate with respect to the expression.
 
 * This also elaborates on the minimum amount of time required by an algorithm considering all input values.
 
@@ -45,7 +45,7 @@ Hence , f provieds lower bound.
 
 * It is used to find the average case of an algorithm's time complexity.
 
-* If we consider two functions g(n) and f(n) then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.
+* If we consider two functions g(n) and f(n), then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.
 
 * It is writen as ,
 
