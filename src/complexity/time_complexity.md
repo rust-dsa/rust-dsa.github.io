@@ -2,7 +2,7 @@
 
 Time complexity is the time required to execute an instruction.
 
-Time complexity can also be described by estimating the number of elementary steps performed by an algorithm to complete its execution."
+Time complexity can also be described by estimating the number of elementary steps performed by an algorithm to complete its execution.
          
 Asymptotic notations are used to find the time complexity.
 
