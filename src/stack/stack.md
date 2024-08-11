@@ -32,3 +32,5 @@ Let's see how to implement the two fundamental functions of a stack
 ## Visual representation
 ![stack](./../images/stack.png)
 There is no `is_full()` provided by Rust, but we can always create a new function.
+
+In the next chapters, we'll be looking at some tools to solve stack dsa problems.

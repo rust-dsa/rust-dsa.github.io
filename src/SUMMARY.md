@@ -12,7 +12,7 @@
   - [Primitive type](./array/primitive.md)
   - [Vector type](./array/vector.md)
   - [Array or Vector?](./array/array_or_vector.md)
-  - [Preparing for Problem solving](./array/helpful_methods.md)
+  - [Problem solving Preparation](./array/helpful_methods.md)
   - [Problem sets](./array/problem_sets.md)
 - [Stack](./stack/stack.md)
 - [Queue](./queue/queue.md)

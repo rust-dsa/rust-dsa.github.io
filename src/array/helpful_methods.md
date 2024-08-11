@@ -1,4 +1,4 @@
-# Preparing for Problem Solving
+# Problem Solving Preparation
 
 Now that we have learned the theoretical part of arrays and vectors, we'll be moving on to the more practical part, i.e., problem solving. In this section, we'll learn some methods of vectors that will come in handy, especially if you are solving problems in Rust.
 
@@ -14,3 +14,50 @@ In the ['Array or Vector'](./array_or_vector.md) section, we saw the benefits of
 
 ```rust,ignore
 {{#include ./helpful_methods.rs:to_vec}}
+```
+
+## Loops
+
+As we're using vectors as our data structures, it is only natural that we can use loops to iterate over them. 
+
+Let's see some different types of loops that we can use to iterate over vectors based on your needs.
+
+### 1. Iterating over the entire vector
+
+The first situation that we'll encounter is when we want to iterate over the entire vector. Here, we can use loops that fundamentally do not break while iterating.
+
+#### 1.1 for loop
+The `for` loop is the more versatile loop in Rust. It allows us to iterate over the entire vector (or a portion of it). 
+
+> Suppose we have a vector of integers, and we want to complete a function that outputs the sum of all the elements in the vector. Some of the ways we can do this are:
+
+```rust,ignore
+{{#include ./helpful_methods.rs:for_loop}}
+```
+#### 1.2 iter method
+Another way to iterate over the entire array is to use the `iter` method. This method returns an (iterator)[https://doc.rust-lang.org/std/slice/struct.Iter.html], which is an object that we can use to iterate over the vector.
+
+The `iter()` is not helpful alone. So we pair it up with different methods depending on our requirements.
+
+1. using closure
+```rust,ignore
+    {{#include ./helpful_methods.rs:for_each}}
+```
+
+2. using inbuilt method
+```rust,ignore
+{{#include ./helpful_methods.rs:iter_sum}}
+```
+
+
+### 2. Iterating over a portion of the vector
+
+Using `while` loop or `loop` loop, we can iterate over a portion of the vector. 
+
+
+
+
+
+<hr/>
+
+For more helpful vector methods, check out the [Rust documentation](https://doc.rust-lang.org/std/vec/struct.Vec.html#).
