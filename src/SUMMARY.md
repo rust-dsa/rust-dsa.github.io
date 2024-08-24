@@ -17,7 +17,7 @@
 - [String](./string/string.md)
   - [`&str`](./string/string_slice.md)
   - [String](./string/string_struct.md)
-  - [Problem solving preparation](./string/helpful_medhods.md)
+  - [Problem solving Preparation](./string/helpful_medhods.md)
   - [Problem sets](./string/problem_sets.md)
 - [Stack](./stack/stack.md)
   - [Problem sets](./stack/problem_sets.md)

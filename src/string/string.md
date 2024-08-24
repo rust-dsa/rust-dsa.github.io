@@ -13,5 +13,17 @@ A string is a data structure that holds a sequence of character. Strings very si
 <br/><br/>
 Strings are a fundamental data structure of any programming language. In Rust, there are three types of strings:
 
-1. The string slice: `str`
+1. The string slice: `str` which usually comes in its borrowed form `&str`
 2. The string struct: `String`
+
+### Why does Rust have two string types?
+
+On the surface level, string types are pretty simple. You write something in quotation marks, you assign it to a variable, and Voila! , you have a string type variable.
+
+```rust
+let hawai = "Knock Knock";
+```
+
+But there is a lot going on behind the scenes, when we use a string. Luckily, Rust provides us two level of controls through its string types. These types are necessary to continue Rust's priority on safety and performance.
+
+We'll be delving deeper into the two types of strings in rust in later sections
