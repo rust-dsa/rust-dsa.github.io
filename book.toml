@@ -8,3 +8,4 @@ title = "Data Structures and Algorithms in Rust"
 [output.html]
 git-repository-url = "https://github.com/abdulshaikh55/abdulshaikh55.github.io/"
 git-repository-icon = "fa-github"
+default-theme = "ayu"
