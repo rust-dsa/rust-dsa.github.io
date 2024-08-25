@@ -662,6 +662,29 @@ Strings are a fundamental data structure of any programming language. In Rust, t
 <span class="boring">}</span></code></pre></pre>
 <!-- Add more when you have more information --><div style="break-before: page; page-break-before: always;"></div><h1 id="problem-solving-preparation-1"><a class="header" href="#problem-solving-preparation-1">Problem Solving Preparation</a></h1>
 <p>Let's look at some helpful methods that will help you in solving coding problems on strings.</p>
+<h4 id="convert-string-to-str"><a class="header" href="#convert-string-to-str">Convert String to &amp;str</a></h4>
+<pre><code class="language-rust ignore">    let string = String::from("Hello World");
+    let slice = string.as_str();</code></pre>
+<h4 id="convert-str-to-string"><a class="header" href="#convert-str-to-string">Convert &amp;str to String</a></h4>
+<pre><code class="language-rust ignore">    let slice = "Hello World";
+    let string = slice.to_string();</code></pre>
+<h4 id="create-a-string-with-given-values"><a class="header" href="#create-a-string-with-given-values">Create a String with given values</a></h4>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>    let name = "Hashirama";
+    let sentence = format!("I've been waiting for you, {}!", name);
+    println!("{sentence}");
+<span class="boring">}</span></code></pre></pre>
+<blockquote>
+<p>Learn more about Hashirama <a href="https://naruto.fandom.com/wiki/Hashirama_Senju">here</a>.</p>
+</blockquote>
+<h4 id="replace-a-slice-or-a-character-in-a-string"><a class="header" href="#replace-a-slice-or-a-character-in-a-string">Replace a slice or a character in a string</a></h4>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>    let mut sentence = "mife is movemy";
+    let new_sentence =  sentence.replace("m", "l");
+    println!("{new_sentence}");
+<span class="boring">}</span></code></pre></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="problem-sets-1"><a class="header" href="#problem-sets-1">Problem sets</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stack"><a class="header" href="#stack">Stack</a></h1>
 <p>A stack is a linear data structure that follows the principle of <em>Last In First Out (LIFO)</em>. This means that the last element inserted inside the stack is removed first.</p>
