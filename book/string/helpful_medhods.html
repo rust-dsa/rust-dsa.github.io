@@ -201,6 +201,29 @@
     let new_sentence =  sentence.replace("m", "l");
     println!("{new_sentence}");
 <span class="boring">}</span></code></pre></pre>
+<h4 id="convert-a-str-into-vec"><a class="header" href="#convert-a-str-into-vec">Convert a &amp;str into Vec<char></a></h4>
+<p>If you want to access individual values in a string slice, it is better to convert it into a vector of chars</p>
+<pre><code class="language-rust ignore">    let my_str: &amp;str = "123456789";
+    let char_vec: Vec&lt;char&gt; = my_str.chars().collect();</code></pre>
+<p>The <code>chars</code> method returns an iterator over the individual characters of the slice and the <code>collect</code> method takes the characters and turn them into a collection.</p>
+<h4 id="access-nth-character-in-a-string"><a class="header" href="#access-nth-character-in-a-string">Access nth character in a string</a></h4>
+<p>The <code>nth()</code> is used to return the nth element of the iterator. This means <code>nth</code> must be used with an iterator or in case of a string, <code>chars()</code>.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>    let my_str: &amp;str = "Secret no: 4";
+    let num = my_str.chars().nth(11).unwrap();
+    println!("{num}");
+<span class="boring">}</span></code></pre></pre>
+<h4 id="split-a-string"><a class="header" href="#split-a-string">Split a string</a></h4>
+<p>The <code>split</code><sup class="footnote-reference"><a href="#2">1</a></sup> method in Rust is used to divide a string slice into an iterator of substrings based on a specified delimiter.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>    let v: Vec&lt;&amp;str&gt; = "Mary had a little lamb".split(' ').collect();
+    assert_eq!(v, ["Mary", "had", "a", "little", "lamb"]);
+<span class="boring">}</span></code></pre></pre>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">1</sup>
+<p>https://doc.rust-lang.org/std/primitive.str.html#method.split</p>
+</div>
 
                     </main>
 

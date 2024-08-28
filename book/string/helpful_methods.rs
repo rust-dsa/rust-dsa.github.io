@@ -20,4 +20,20 @@ fn main() {
     let new_sentence =  sentence.replace("m", "l");
     println!("{new_sentence}");
     // ANCHOR_END: replace
+
+    // ANCHOR: to_vector
+    let my_str: &str = "123456789";
+    let char_vec: Vec<char> = my_str.chars().collect();
+    // ANCHOR_END: to_vector
+
+    // ANCHOR: nth
+    let my_str: &str = "Secret no: 4";
+    let num = my_str.chars().nth(11).unwrap();
+    println!("{num}");
+    // ANCHOR_END: nth
+
+    // ANCHOR: split
+    let v: Vec<&str> = "Mary had a little lamb".split(' ').collect();
+    assert_eq!(v, ["Mary", "had", "a", "little", "lamb"]);
+    // ANCHOR_END: split
 }
