@@ -11,8 +11,8 @@ fn main() {
 
     // ANCHOR: format
     let name = "Hashirama";
-    let sentence = format!("I've been waiting for you, {}!", name);
-    println!("{sentence}");
+    let dialogue = format!("I've been waiting for you, {}!", name);
+    println!("{dialogue}");
     // ANCHOR_END: format
 
     // ANCHOR: replace
