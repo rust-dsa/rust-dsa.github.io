@@ -17,8 +17,6 @@ Let's look at some helpful methods that will help you in solving coding problems
 {{#include ./helpful_methods.rs:format}}
 ```
 
-> Learn more about Hashirama [here](https://naruto.fandom.com/wiki/Hashirama_Senju).
-
 ### Replace a slice or a character in a string
 ```rust
 {{#include ./helpful_methods.rs:replace}}
