@@ -663,13 +663,13 @@ Strings are a fundamental data structure of any programming language. In Rust, t
 <span class="boring">}</span></code></pre></pre>
 <!-- Add more when you have more information --><div style="break-before: page; page-break-before: always;"></div><h1 id="problem-solving-preparation-1"><a class="header" href="#problem-solving-preparation-1">Problem Solving Preparation</a></h1>
 <p>Let's look at some helpful methods that will help you in solving coding problems on strings.</p>
-<h4 id="convert-string-to-str"><a class="header" href="#convert-string-to-str">Convert String to &amp;str</a></h4>
+<h3 id="convert-string-to-str"><a class="header" href="#convert-string-to-str">Convert String to &amp;str</a></h3>
 <pre><code class="language-rust ignore">    let string = String::from("Hello World");
     let slice = string.as_str();</code></pre>
-<h4 id="convert-str-to-string"><a class="header" href="#convert-str-to-string">Convert &amp;str to String</a></h4>
+<h3 id="convert-str-to-string"><a class="header" href="#convert-str-to-string">Convert &amp;str to String</a></h3>
 <pre><code class="language-rust ignore">    let slice = "Hello World";
     let string = slice.to_string();</code></pre>
-<h4 id="create-a-string-with-given-values"><a class="header" href="#create-a-string-with-given-values">Create a String with given values</a></h4>
+<h3 id="create-a-string-with-given-values"><a class="header" href="#create-a-string-with-given-values">Create a String with given values</a></h3>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>    let name = "Hashirama";
@@ -679,19 +679,19 @@ Strings are a fundamental data structure of any programming language. In Rust, t
 <blockquote>
 <p>Learn more about Hashirama <a href="https://naruto.fandom.com/wiki/Hashirama_Senju">here</a>.</p>
 </blockquote>
-<h4 id="replace-a-slice-or-a-character-in-a-string"><a class="header" href="#replace-a-slice-or-a-character-in-a-string">Replace a slice or a character in a string</a></h4>
+<h3 id="replace-a-slice-or-a-character-in-a-string"><a class="header" href="#replace-a-slice-or-a-character-in-a-string">Replace a slice or a character in a string</a></h3>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>    let mut sentence = "mife is movemy";
     let new_sentence =  sentence.replace("m", "l");
     println!("{new_sentence}");
 <span class="boring">}</span></code></pre></pre>
-<h4 id="convert-a-str-into-vec"><a class="header" href="#convert-a-str-into-vec">Convert a &amp;str into Vec<char></a></h4>
+<h3 id="convert-a-str-into-vec"><a class="header" href="#convert-a-str-into-vec">Convert a &amp;str into Vec<char></a></h3>
 <p>If you want to access individual values in a string slice, it is better to convert it into a vector of chars</p>
 <pre><code class="language-rust ignore">    let my_str: &amp;str = "123456789";
     let char_vec: Vec&lt;char&gt; = my_str.chars().collect();</code></pre>
 <p>The <code>chars</code> method returns an iterator over the individual characters of the slice and the <code>collect</code> method takes the characters and turn them into a collection.</p>
-<h4 id="access-nth-character-in-a-string"><a class="header" href="#access-nth-character-in-a-string">Access nth character in a string</a></h4>
+<h3 id="access-nth-character-in-a-string"><a class="header" href="#access-nth-character-in-a-string">Access nth character in a string</a></h3>
 <p>The <code>nth()</code> is used to return the nth element of the iterator. This means <code>nth</code> must be used with an iterator or in case of a string, <code>chars()</code>.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
@@ -699,7 +699,7 @@ Strings are a fundamental data structure of any programming language. In Rust, t
     let num = my_str.chars().nth(11).unwrap();
     println!("{num}");
 <span class="boring">}</span></code></pre></pre>
-<h4 id="split-a-string"><a class="header" href="#split-a-string">Split a string</a></h4>
+<h3 id="split-a-string"><a class="header" href="#split-a-string">Split a string</a></h3>
 <p>The <code>split</code><sup class="footnote-reference"><a href="#2">1</a></sup> method in Rust is used to divide a string slice into an iterator of substrings based on a specified delimiter.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
