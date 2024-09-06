@@ -3,6 +3,7 @@
 Let's look at some helpful methods that will help you in solving coding problems on strings.
 
 ### Convert String to &str
+
 ```rust,ignore
 {{#include ./helpful_methods.rs:as_str}}
 ```
@@ -42,4 +43,4 @@ The `split`[^2] method in Rust is used to divide a string slice into an iterator
 {{#include ./helpful_methods.rs:split}}
 ```
 
-[^2]: https://doc.rust-lang.org/std/primitive.str.html#method.split
+[^2]: <https://doc.rust-lang.org/std/primitive.str.html#method.split>
