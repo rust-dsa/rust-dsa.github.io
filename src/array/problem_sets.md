@@ -4,7 +4,9 @@ Now that you have understood the basics of arrays, it is time to implement what 
 
 <hr>
 
-### Level 1 
-[Arrays 8Kyu](https://www.codewars.com/collections/rust-dsa-array-8kyu) 
+### Level 1
+[Arrays 8Kyu](https://www.codewars.com/collections/rust-dsa-array-8kyu)
 
 [Arrays 7Kyu](https://www.codewars.com/collections/rust-dsa-array-7kyu)
+
+[Arrays 6Kyu](https://www.codewars.com/collections/rust-dsa-array-6kyu)
