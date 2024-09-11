@@ -8,7 +8,7 @@ In order to simplify matters, we'll search through items in a array. Recalling w
 
 Let's discuss what a search algorithm will take as input and will give out as output.
 
-* Input:
+* Input: 
    1. the array
    2. element to be searched
 

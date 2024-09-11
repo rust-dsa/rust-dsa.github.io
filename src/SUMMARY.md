@@ -32,10 +32,10 @@
 - [Trie](./trie/trie.md)
 
 # Algorithms
-- [Search algorithms](.algorithms/search_algorithms/search_algorithms.md)
-  - [Linear search](.algorithms/search_algorithms/linear_search.md)
-  - [Binary search](.algorithms/search_algorithms/binary_search.md)
-- [Sorting algorithms](.algorithms/sorting_algorithms/sorting_algorithms.md)
-  - [Bubble sort](.algorithms/sorting_algorithms/bubble_sort.md)
-  - [Selection sort](.algorithms/sorting_algorithms/selection_sort.md)
-  - [Insertion sort](.algorithms/sorting_algorithms/insertion_sort.md)
+- [Search algorithms](./algorithms/search_algorithms/search_algorithms.md)
+  - [Linear search](./algorithms/search_algorithms/linear_search.md)
+  - [Binary search](./algorithms/search_algorithms/binary_search.md)
+- [Sorting algorithms](./algorithms/sorting_algorithms/sorting_algorithms.md)
+  - [Bubble sort](./algorithms/sorting_algorithms/bubble_sort.md)
+  - [Selection sort](./algorithms/sorting_algorithms/selection_sort.md)
+  - [Insertion sort](./algorithms/sorting_algorithms/insertion_sort.md)

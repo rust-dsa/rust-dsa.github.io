@@ -1,11 +1,11 @@
 ## Binary search algorithm
-When we write an algorithm, we have to consider the possibility that it can be improved in terms of performance. Performance may be improved as a result of less time required, and/or less space occupied.  Binary search algorithm is the improvement of linear search in that it reduces the time required to search for an element.
+When we write an algorithm, we have to consider the possibility that it can be improved in terms of performance. Performance may be improved as a result of less time required, and/or less space occupied.  Binary search algorithm is the improvement of linear search in that it reduces the time required to search for an element. 
 
 You may ask yourself, "Why not stick with linear search? It gets the work done." While we're working with minimal data in our examples, real-world scenarios often involve dealing with billions of units of data. In such cases, linear search would take O(5,000,000,000) on average and O(10,000,000,000) at worst. Those numbers don't look good, do they? That's why we need a more efficient algorithm for large datasets.
 
-> You recently stumbled upon a word - Facet: a distinct feature or element in a problem - that you don't know the meaning of. And as you are a sane person, chose to find your answer in a dictionary.
->
-> You start by opening the dictionary right in the middle section. You see words starting with 'M'. Now you know that 'F', the first letter in you word, comes before 'M'. So you discard the letters after 'M'. Now the word you are looking for is somewhere between 'A' and 'M'.
+> You recently stumbled upon a word - Facet: a distinct feature or element in a problem - that you don't know the meaning of. And as you are a sane person, chose to find your answer in a dictionary. 
+> 
+> You start by opening the dictionary right in the middle section. You see words starting with 'M'. Now you know that 'F', the first letter in you word, comes before 'M'. So you discard the letters after 'M'. Now the word you are looking for is somewhere between 'A' and 'M'. 
 >
 > You open the section roughly between 'A' and 'M', your new, smaller dictionary. You have found the 'F' section of the dictionary. Now you can choose to linearly search through the words.
 >
