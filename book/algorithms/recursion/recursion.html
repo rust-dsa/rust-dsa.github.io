@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Linear search - Data Structures and Algorithms in Rust</title>
+        <title>Recursion - Data Structures and Algorithms in Rust</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../../array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li><li class="chapter-item expanded "><a href="../../array/helpful_methods.html"><strong aria-hidden="true">3.4.</strong> Problem solving Preparation</a></li><li class="chapter-item expanded "><a href="../../array/problem_sets.html"><strong aria-hidden="true">3.5.</strong> Problem sets</a></li></ol></li><li class="chapter-item expanded "><a href="../../string/string.html"><strong aria-hidden="true">4.</strong> String</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../string/string_slice.html"><strong aria-hidden="true">4.1.</strong> &str</a></li><li class="chapter-item expanded "><a href="../../string/string_struct.html"><strong aria-hidden="true">4.2.</strong> String</a></li><li class="chapter-item expanded "><a href="../../string/helpful_medhods.html"><strong aria-hidden="true">4.3.</strong> Problem solving Preparation</a></li><li class="chapter-item expanded "><a href="../../string/problem_sets.html"><strong aria-hidden="true">4.4.</strong> Problem sets</a></li></ol></li><li class="chapter-item expanded "><a href="../../stack/stack.html"><strong aria-hidden="true">5.</strong> Stack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../stack/problem_sets.html"><strong aria-hidden="true">5.1.</strong> Problem sets</a></li></ol></li><li class="chapter-item expanded "><a href="../../queue/queue.html"><strong aria-hidden="true">6.</strong> Queue</a></li><li class="chapter-item expanded "><a href="../../linked_list/linked_list.html"><strong aria-hidden="true">7.</strong> Linked list</a></li><li class="chapter-item expanded "><a href="../../trees/trees.html"><strong aria-hidden="true">8.</strong> Trees</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../trees/binary_tree.html"><strong aria-hidden="true">8.1.</strong> Binary tree</a></li><li class="chapter-item expanded "><a href="../../trees/binary_search_tree.html"><strong aria-hidden="true">8.2.</strong> Binary search tree</a></li></ol></li><li class="chapter-item expanded "><a href="../../hashmap/hashmap.html"><strong aria-hidden="true">9.</strong> Hash map</a></li><li class="chapter-item expanded "><a href="../../heap/heap.html"><strong aria-hidden="true">10.</strong> Heap</a></li><li class="chapter-item expanded "><a href="../../graph/graph.html"><strong aria-hidden="true">11.</strong> Graph</a></li><li class="chapter-item expanded "><a href="../../trie/trie.html"><strong aria-hidden="true">12.</strong> Trie</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../../algorithms/recursion/recursion.html"><strong aria-hidden="true">13.</strong> Recursion</a></li><li class="chapter-item expanded "><a href="../../algorithms/search_algorithms/search_algorithms.html"><strong aria-hidden="true">14.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../algorithms/search_algorithms/linear_search.html" class="active"><strong aria-hidden="true">14.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../../algorithms/search_algorithms/binary_search.html"><strong aria-hidden="true">14.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">15.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">15.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/selection_sort.html"><strong aria-hidden="true">15.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">15.3.</strong> Insertion sort</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../what_is_dsa/what_is_dsa.html"><strong aria-hidden="true">1.</strong> What is DSA?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../what_is_dsa/data_structures.html"><strong aria-hidden="true">1.1.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../../what_is_dsa/algorithms.html"><strong aria-hidden="true">1.2.</strong> Algorithms</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Data Structures</li><li class="chapter-item expanded "><a href="../../complexity/complexity.html"><strong aria-hidden="true">2.</strong> Complexity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../complexity/time_complexity.html"><strong aria-hidden="true">2.1.</strong> Time Complexity</a></li><li class="chapter-item expanded "><a href="../../complexity/space_complexity.html"><strong aria-hidden="true">2.2.</strong> Space Complexity</a></li></ol></li><li class="chapter-item expanded "><a href="../../array/array.html"><strong aria-hidden="true">3.</strong> Array</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../array/primitive.html"><strong aria-hidden="true">3.1.</strong> Primitive type</a></li><li class="chapter-item expanded "><a href="../../array/vector.html"><strong aria-hidden="true">3.2.</strong> Vector type</a></li><li class="chapter-item expanded "><a href="../../array/array_or_vector.html"><strong aria-hidden="true">3.3.</strong> Array or Vector?</a></li><li class="chapter-item expanded "><a href="../../array/helpful_methods.html"><strong aria-hidden="true">3.4.</strong> Problem solving Preparation</a></li><li class="chapter-item expanded "><a href="../../array/problem_sets.html"><strong aria-hidden="true">3.5.</strong> Problem sets</a></li></ol></li><li class="chapter-item expanded "><a href="../../string/string.html"><strong aria-hidden="true">4.</strong> String</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../string/string_slice.html"><strong aria-hidden="true">4.1.</strong> &str</a></li><li class="chapter-item expanded "><a href="../../string/string_struct.html"><strong aria-hidden="true">4.2.</strong> String</a></li><li class="chapter-item expanded "><a href="../../string/helpful_medhods.html"><strong aria-hidden="true">4.3.</strong> Problem solving Preparation</a></li><li class="chapter-item expanded "><a href="../../string/problem_sets.html"><strong aria-hidden="true">4.4.</strong> Problem sets</a></li></ol></li><li class="chapter-item expanded "><a href="../../stack/stack.html"><strong aria-hidden="true">5.</strong> Stack</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../stack/problem_sets.html"><strong aria-hidden="true">5.1.</strong> Problem sets</a></li></ol></li><li class="chapter-item expanded "><a href="../../queue/queue.html"><strong aria-hidden="true">6.</strong> Queue</a></li><li class="chapter-item expanded "><a href="../../linked_list/linked_list.html"><strong aria-hidden="true">7.</strong> Linked list</a></li><li class="chapter-item expanded "><a href="../../trees/trees.html"><strong aria-hidden="true">8.</strong> Trees</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../trees/binary_tree.html"><strong aria-hidden="true">8.1.</strong> Binary tree</a></li><li class="chapter-item expanded "><a href="../../trees/binary_search_tree.html"><strong aria-hidden="true">8.2.</strong> Binary search tree</a></li></ol></li><li class="chapter-item expanded "><a href="../../hashmap/hashmap.html"><strong aria-hidden="true">9.</strong> Hash map</a></li><li class="chapter-item expanded "><a href="../../heap/heap.html"><strong aria-hidden="true">10.</strong> Heap</a></li><li class="chapter-item expanded "><a href="../../graph/graph.html"><strong aria-hidden="true">11.</strong> Graph</a></li><li class="chapter-item expanded "><a href="../../trie/trie.html"><strong aria-hidden="true">12.</strong> Trie</a></li><li class="chapter-item expanded affix "><li class="part-title">Algorithms</li><li class="chapter-item expanded "><a href="../../algorithms/recursion/recursion.html" class="active"><strong aria-hidden="true">13.</strong> Recursion</a></li><li class="chapter-item expanded "><a href="../../algorithms/search_algorithms/search_algorithms.html"><strong aria-hidden="true">14.</strong> Search algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../algorithms/search_algorithms/linear_search.html"><strong aria-hidden="true">14.1.</strong> Linear search</a></li><li class="chapter-item expanded "><a href="../../algorithms/search_algorithms/binary_search.html"><strong aria-hidden="true">14.2.</strong> Binary search</a></li></ol></li><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/sorting_algorithms.html"><strong aria-hidden="true">15.</strong> Sorting algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/bubble_sort.html"><strong aria-hidden="true">15.1.</strong> Bubble sort</a></li><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/selection_sort.html"><strong aria-hidden="true">15.2.</strong> Selection sort</a></li><li class="chapter-item expanded "><a href="../../algorithms/sorting_algorithms/insertion_sort.html"><strong aria-hidden="true">15.3.</strong> Insertion sort</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,83 +176,61 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="linear-search-algorithm"><a class="header" href="#linear-search-algorithm">Linear search algorithm</a></h1>
-<p>The most straightforward approach to searching is to examine each element of the data structure sequentially. Concurrently this searching algorithm is called linear search or sequential search.</p>
-<blockquote>
-<p>Imagine you're in a library, searching for a book by your favorite thriller author. You head to the thriller section and start scanning the shelves. You examine each book, one by one, until you find the one you're looking for. This process is akin to a linear search. There are a few possible outcomes: you might find the book you want, reach the end of the section without finding it, or decide to continue searching even after finding one book by the author, looking for additional titles.</p>
-</blockquote>
-<h2 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h2>
+                        <h1 id="recursion"><a class="header" href="#recursion">Recursion</a></h1>
+<p>Recursion is a fundamental concept used in designing algorithms. It allows a function to call itself. This technique allows us to break down complex problems into smaller, more manageable sub-problems.</p>
+<p>At its core, recursion is a method in which the solution to a problem depends on solutions to smaller instances of the same problem. These sub-problems, after being solved individually provide a sub-solution that can be used to create the solution to the original problem.</p>
+<p>There are two sections to recursion</p>
 <ol>
-<li>The algorithm takes the array and the token (number to be searched) as input.</li>
-<li>It compares the token with every element in the array.</li>
-<li>If the token and element match, the algorithm returns the index of that element.</li>
-<li>If the token doesn't match with any element (i.e., it reaches the end of the array), it returns <code>None</code>.</li>
+<li>If the given problem can be solved directly, solve it.</li>
+<li>Else divide it to one or more simpler instances of the same problem.</li>
 </ol>
-<p>Now let's write a function that implements the preceding steps:</p>
-<pre><code class="language-rust ignore">{{#include ./code/algo/linear_search.rs:search_function}}</code></pre>
-<p>Here, we created a function that accepts an array and the element to be searched and gives out the Option enum.</p>
-<p>Inside the function, a <code>for</code> loop iterates through every element in the array, that element is compared with given token for equality. If equal, the index of the element enclosed inside <code>Some</code> is returned.  When the loop iterates through the array and cannot find the token, then the function returns <code>None</code>.</p>
-<p>Now that we have a function let's give it the inputs</p>
-<pre><code class="language-rust ignore">    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let target = 21;</code></pre>
-<p>Note that the by default type of both these variables is <code>Vec&lt;i32&gt;</code> and <code>i32</code> respectively.</p>
-<p>By setting up the variables and the outputs in the main function</p>
-<pre><pre class="playground"><code class="language-rust">fn main() {
-    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let target = 21;
-
-    let index = linear_search(array, target);
-
-    match index {
-        Some(x) =&gt; println!("The element is at index {x}."),
-        None =&gt; println!("The element is not present in the array."),
+<p>But what if the simpler problem has to be broken down into a simpler-ler problem. And again again for infinity because it cannot be solved directly?</p>
+<p>To avoid the infinity loop, a recursive solution has to have a base case that can be reached at the end.</p>
+<p>Our only task is to reduce a problem into a recursive instance and a base case.</p>
+<p><strong>Let's write a recursive function that outputs the factorial of a number n.</strong></p>
+<p>A factorial of a number n is the multiplication of every number from 1 to n (inclusive). It is indicated by exclamation mark after the number. (n!)</p>
+<p>So the factorial of 4 would be: 4 * 3 * 2 * 1 = 24.  <br/>
+And the factorial of 5 would be: 5 * 4 * 3 * 2 * 1 = 120.</p>
+<p>Huh, I see a pattern here. 🤔 <br/>
+If I want the factorial of n, I could just multiply n with factorial of n - 1. i.e.</p>
+<p><code>n! = n * (n - 1)!</code></p>
+<p>6! = 6 * (6 - 1)! <br/>
+5! = 5 * (5 - 1)! <br/>
+... <br/>
+1! = 1
+<br/></p>
+<p>I think we have the base case and the recursive case for making our function. The base case would be when n reaches 1, and the recursive case would be multiplying n with factorial of n - 1.</p>
+<p>This is the function</p>
+<pre><code class="language-rust ignore">fn factorial(n: u32) -&gt; u32 {
+    if n == 1 {                       // base case
+        return 1;
     }
-}</code></pre></pre>
-<details>
-  <summary>Visualization of linear search</summary>
-  <img src="./../images/linear1.jpg" alt="linear search"/>
-  <img src="./../images/linear2.jpg" alt="linear search"/>
-  <img src="./../images/linear3.jpg" alt="linear search"/>
-  <img src="./../images/linear4.jpg" alt="linear search"/>
-  <img src="./../images/linear5.jpg" alt="linear search"/>
-  <img src="./../images/linear6.jpg" alt="linear search"/>
-</details>
-<h3 id="result-"><a class="header" href="#result-">Result 📦</a></h3>
+    else {
+        return n * factorial(n - 1);  // recursive case
+    }
+}</code></pre>
+<p>Run the below code for different values of <code>n</code>.</p>
 <pre><pre class="playground"><code class="language-rust editable">fn main() {
-    let array = vec![2, 9, 12, 18, 21, 26, 32, 37];
-    let target = 21;
-
-    let index = linear_search(array, target);
-
-    match index {
-        Some(x) =&gt; println!("The element is at index {x}."),
-        None =&gt; println!("The element is not present in the array."),
-    }
+    print!("{} ", factorial(5));
 }
 
-fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
-
-    for (idx, element) in array.into_iter().enumerate() {
-        if element == target {
-            return Some(idx);
-        }
+fn factorial(n: u32) -&gt; u32 {
+    if n == 1 {
+        return 1
+    } else {
+        return n * factorial(n - 1);
     }
-
-    None
 }</code></pre></pre>
-<h2 id="time-and-space-complexity"><a class="header" href="#time-and-space-complexity">Time and Space Complexity</a></h2>
-<p>The time complexity of linear search is O(n), where n is the number of elements in the array. This is because in the worst case, the algorithm will have to compare the token with every element in the array.</p>
-<p>The space complexity of linear search is O(1), as it does not require any extra space other than the input array and the token.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../algorithms/search_algorithms/search_algorithms.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../trie/trie.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../algorithms/search_algorithms/binary_search.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../algorithms/search_algorithms/search_algorithms.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -262,11 +240,11 @@ fn linear_search(array: Vec&lt;i32&gt;, target: i32) -&gt; Option&lt;usize&gt; {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../algorithms/search_algorithms/search_algorithms.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../trie/trie.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../algorithms/search_algorithms/binary_search.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../algorithms/search_algorithms/search_algorithms.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

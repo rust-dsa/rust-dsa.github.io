@@ -9,3 +9,6 @@ title = "Data Structures and Algorithms in Rust"
 git-repository-url = "https://github.com/abdulshaikh55/abdulshaikh55.github.io/"
 git-repository-icon = "fa-github"
 default-theme = "ayu"
+
+[output.html.playground]
+editable = true

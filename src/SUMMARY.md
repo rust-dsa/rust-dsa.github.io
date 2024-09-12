@@ -32,6 +32,7 @@
 - [Trie](./trie/trie.md)
 
 # Algorithms
+- [Recursion](./algorithms/recursion/recursion.md)
 - [Search algorithms](./algorithms/search_algorithms/search_algorithms.md)
   - [Linear search](./algorithms/search_algorithms/linear_search.md)
   - [Binary search](./algorithms/search_algorithms/binary_search.md)
