@@ -1069,29 +1069,29 @@ fn main() {
 <li>Deletion: Delete a string from the trie.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="recursion"><a class="header" href="#recursion">Recursion</a></h1>
-<p>Recursion is a fundamental concept used in designing algorithms. It allows a function to call itself. This technique allows us to break down complex problems into smaller, more manageable sub-problems.</p>
-<p>At its core, recursion is a method in which the solution to a problem depends on solutions to smaller instances of the same problem. These sub-problems, after being solved individually provide a sub-solution that can be used to create the solution to the original problem.</p>
-<p>There are two sections to recursion</p>
+<p>Recursion is a fundamental concept in algorithm design that allows a function to call itself. This technique enables us to break down complex problems into smaller, more manageable sub-problems.</p>
+<p>At its core, recursion is a method where the solution to a problem depends on solutions to smaller instances of the same problem. These sub-problems, after being solved individually, provide a sub-solution that can be used to create the solution to the original problem.</p>
+<p>There are two key sections to recursion:</p>
 <ol>
 <li>If the given problem can be solved directly, solve it.</li>
-<li>Else divide it to one or more simpler instances of the same problem.</li>
+<li>Otherwise, divide it into one or more simpler instances of the same problem.</li>
 </ol>
-<p>But what if the simpler problem has to be broken down into a simpler-ler problem. And again again for infinity because it cannot be solved directly?</p>
-<p>To avoid the infinity loop, a recursive solution has to have a base case that can be reached at the end.</p>
-<p>Our only task is to reduce a problem into a recursive instance and a base case.</p>
+<p>But what if the simpler problem needs to be broken down into an even simpler problem, and again and again, potentially leading to an infinite loop because it cannot be solved directly?</p>
+<p>To avoid this infinite loop, a recursive solution must have a base case that can be reached at the end.</p>
+<p>Our task is to reduce a problem into a recursive instance and a base case.</p>
 <p><strong>Let's write a recursive function that outputs the factorial of a number n.</strong></p>
-<p>A factorial of a number n is the multiplication of every number from 1 to n (inclusive). It is indicated by exclamation mark after the number. (n!)</p>
+<p>A factorial of a number n is the multiplication of every number from 1 to n (inclusive). It is indicated by an exclamation mark after the number. (n!)</p>
 <p>So the factorial of 4 would be: 4 * 3 * 2 * 1 = 24.  <br/>
 And the factorial of 5 would be: 5 * 4 * 3 * 2 * 1 = 120.</p>
 <p>Huh, I see a pattern here. 🤔 <br/>
-If I want the factorial of n, I could just multiply n with factorial of n - 1. i.e.</p>
+If I want the factorial of n, I could just multiply n with the factorial of n - 1. i.e.</p>
 <p><code>n! = n * (n - 1)!</code></p>
 <p>6! = 6 * (6 - 1)! <br/>
 5! = 5 * (5 - 1)! <br/>
 ... <br/>
 1! = 1
 <br/></p>
-<p>I think we have the base case and the recursive case for making our function. The base case would be when n reaches 1, and the recursive case would be multiplying n with factorial of n - 1.</p>
+<p>I think we have the base case and the recursive case for making our function. The base case would be when n reaches 1, and the recursive case would be multiplying n with the factorial of n - 1.</p>
 <p>This is the function</p>
 <pre><code class="language-rust ignore">fn factorial(n: u32) -&gt; u32 {
     if n == 1 {                       // base case
@@ -1108,12 +1108,36 @@ If I want the factorial of n, I could just multiply n with factorial of n - 1. i
 
 fn factorial(n: u32) -&gt; u32 {
     if n == 1 {
-        return 1
+        return 1;
     } else {
         return n * factorial(n - 1);
     }
 }</code></pre></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="divide-and-conquer-algorithms"><a class="header" href="#divide-and-conquer-algorithms">Divide and conquer algorithms</a></h1>
+<!-- diagram -->
+<p>Now let's write one more recursive problem to solidify our understanding.</p>
+<h2 id="fibonacci-series"><a class="header" href="#fibonacci-series">Fibonacci Series</a></h2>
+<p>The Fibonacci series is a series of numbers where a number is the addition of the last two numbers, starting with 0 and 1.</p>
+<p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, and so forth.</p>
+<p>We need to make a function that outputs the nth number in the Fibonacci series.</p>
+<p>Here's what we know:</p>
+<ol>
+<li>The series starts with 0 and 1.</li>
+<li>To find the ith number, we need to add the (i - 1)th with the (i - 2)th number.</li>
+</ol>
+<p>These are our cases</p>
+<pre><pre class="playground"><code class="language-rust editable">fn main() {
+    print!("{} ", fibonacci(7));
+}
+
+fn fibonacci(n: u32) -&gt; u32 {
+    // base case: number is 0 or 1
+    if n &lt; 2 {
+        return n;
+    }
+    // recursive case: add previous two numbers to find the current fibonacci number
+    fibonacci(n - 1) + fibonacci(n - 2)
+}</code></pre></pre>
+<!-- diagram --><div style="break-before: page; page-break-before: always;"></div><h1 id="divide-and-conquer-algorithms"><a class="header" href="#divide-and-conquer-algorithms">Divide and conquer algorithms</a></h1>
 <p>Divide and conquer is a design strategy which is well known to breaking down efficiency barriers. When the method applies, it often leads to a large improvement in time complexity. For example,
 from O (n2) to O (n log n) to sort theelements.</p>
 <h1 id="how-its-done"><a class="header" href="#how-its-done">How its Done</a></h1>
