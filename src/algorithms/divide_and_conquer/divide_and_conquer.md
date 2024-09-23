@@ -1,6 +1,6 @@
-# Divide-and-conquer algorithms
+# Divide and conquer algorithms
 
-Divide and conquer is a design strategy which is well known to breaking down efficiency barriers. When the method applies, it often leads to a large improvement in time complexity. For example, 
+Divide and conquer is a design strategy which is well known to breaking down efficiency barriers. When the method applies, it often leads to a large improvement in time complexity. For example,
             from O (n2) to O (n log n) to sort theelements.
 
 # How its Done
@@ -16,14 +16,8 @@ problem
 
 # Example:-
 
-![stack](./../images\Divide And Conquer.jpg)
+![divide and conquer diagram](./../../images/divide_and_conquer.jpg)
 
 In the above figure the array of integer's is divided into equal groups, then the groups are again further divided the same way.
 When the integer's are eqyally distributed , the values are compaired and sorted.
 the same happens further till all the elements are sorted in increasing order.
-
-
-
-
-
-

@@ -33,6 +33,7 @@
 
 # Algorithms
 - [Recursion](./algorithms/recursion/recursion.md)
+- [Divide and Conquer](./algorithms/divide_and_conquer/divide_and_conquer.md)
 - [Search algorithms](./algorithms/search_algorithms/search_algorithms.md)
   - [Linear search](./algorithms/search_algorithms/linear_search.md)
   - [Binary search](./algorithms/search_algorithms/binary_search.md)
