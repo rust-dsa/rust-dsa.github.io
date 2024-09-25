@@ -232,7 +232,7 @@ fn factorial(n: u32) -&gt; u32 {
 <li>The series starts with 0 and 1.</li>
 <li>To find the ith number, we need to add the (i - 1)th with the (i - 2)th number.</li>
 </ol>
-<p>These are our cases</p>
+<p>The first could be our base case, and the second could be our recursive case.</p>
 <pre><pre class="playground"><code class="language-rust editable">fn main() {
     print!("{} ", fibonacci(7));
 }
@@ -245,7 +245,16 @@ fn fibonacci(n: u32) -&gt; u32 {
     // recursive case: add previous two numbers to find the current fibonacci number
     fibonacci(n - 1) + fibonacci(n - 2)
 }</code></pre></pre>
+<p>Try running the preceding code for different inputs.</p>
 <!-- diagram -->
+<h2 id="drawbacks"><a class="header" href="#drawbacks">Drawbacks</a></h2>
+<p>While recursive algorithms seem powerful, they have some drawbacks:</p>
+<ul>
+<li>Risk of stack overflow for deep recursion</li>
+<li>May be less efficient tha iterative solutions for certain problems</li>
+<li>May be harder to debug and understand for complex designs</li>
+</ul>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

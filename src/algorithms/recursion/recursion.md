@@ -72,7 +72,7 @@ Here's what we know:
 1. The series starts with 0 and 1.
 2. To find the ith number, we need to add the (i - 1)th with the (i - 2)th number.
 
-These are our cases
+The first could be our base case, and the second could be our recursive case.
 
 ```rust,editable
 fn main() {
@@ -88,5 +88,12 @@ fn fibonacci(n: u32) -> u32 {
     fibonacci(n - 1) + fibonacci(n - 2)
 }
 ```
+Try running the preceding code for different inputs.
 
 <!-- diagram -->
+
+## Drawbacks
+While recursive algorithms seem powerful, they have some drawbacks:
+* Risk of stack overflow for deep recursion
+* May be less efficient tha iterative solutions for certain problems
+* May be harder to debug and understand for complex designs
