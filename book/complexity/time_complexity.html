@@ -177,12 +177,11 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="time-complexity"><a class="header" href="#time-complexity">Time Complexity</a></h1>
-<p>Time complexity is the time required to execute an instruction.</p>
-<p>Time complexity can also be described by estimating the number of elementary steps performed by an algorithm to complete its execution.</p>
+<p>Time complexity is the time required to execute an instruction. Time complexity can also be described by estimating the number of elementary steps performed by an algorithm to complete its execution.</p>
 <p>Asymptotic notations are used to find the time complexity.</p>
-<p>Asymptotic notations are the mathematical way to represent Time complexity.</p>
+<p>Asymptotic notations are the mathematical way to represent time complexity.</p>
 <ol>
-<li>Big oh [O]:-</li>
+<li>Big O [O]:</li>
 </ol>
 <ul>
 <li>
@@ -192,20 +191,20 @@
 <p>If we consider two functions g(n) and f(n), then it is used to define if the set of functions is going to grow slower than or at the same rate with respect to the expression.</p>
 </li>
 <li>
-<p>If f(n) and g(n) are the functions defined on a positive integer number 'n' , then</p>
+<p>If f(n) and g(n) are the functions defined on a positive integer number 'n', then</p>
 <p><em>f(n) = O(g(n))  [n = number of inputs]</em></p>
 </li>
 <li>
-<p>If n is big-oh of g of n if and only if positive constants c and n exist , such that</p>
-<p><em>f(n) &lt;= Cg(n) &lt;= n</em></p>
+<p>f(n) is big-O of g(n) if and only if positive constants c and n exist, such that</p>
+<p><em>f(n) &lt;= Cg(n) for all n &gt;= n0</em></p>
 </li>
 <li>
-<p>It means that for large amount of data , f(n) will grow no more that a constant g(n).</p>
+<p>It means that for a large amount of data, f(n) will grow no more than a constant multiple of g(n).</p>
 </li>
 </ul>
-<p>Hence, g provides upper bound.</p>
+<p>Hence, g provides an upper bound.</p>
 <ol start="2">
-<li>Omega [ Ω ]:-</li>
+<li>Omega [Ω]:</li>
 </ol>
 <ul>
 <li>
@@ -216,14 +215,14 @@
 </li>
 <li>
 <p>This also elaborates on the minimum amount of time required by an algorithm considering all input values.</p>
-<p><em>f(n)=ΩCg(n)    [n=number of input's]</em></p>
+<p><em>f(n) = Ω(g(n))  [n = number of inputs]</em></p>
 </li>
 </ul>
-<p>That means , at larger values of n , the lower bound of f(n) and g(n) , there exists positive constants c and n0 ,such that</p>
-<p><em>0&lt;=Cg(n)&lt;=f(n)     for all n &gt;=n0</em></p>
-<p>Hence , f provides lower bound.</p>
+<p>That means, at larger values of n, the lower bound of f(n) and g(n), there exist positive constants c and n0, such that</p>
+<p><em>0 &lt;= Cg(n) &lt;= f(n) for all n &gt;= n0</em></p>
+<p>Hence, g provides a lower bound.</p>
 <ol start="3">
-<li>Theta [Θ]:-</li>
+<li>Theta [Θ]:</li>
 </ol>
 <ul>
 <li>
@@ -233,12 +232,12 @@
 <p>If we consider two functions g(n) and f(n), then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.</p>
 </li>
 <li>
-<p>It is written as ,</p>
-<p><em>ΘCg(n)=f(n)</em></p>
+<p>It is written as,</p>
+<p><em>Θ(g(n)) = f(n)</em></p>
 </li>
 </ul>
-<p>There exits positive constants c1 , c2 and n0 such that,</p>
-<p><em>0&lt;=C1g(n)&lt;=f(n)&lt;=C2g(n)    for all n&gt;=n0</em></p>
+<p>There exist positive constants c1, c2, and n0 such that,</p>
+<p><em>0 &lt;= c1g(n) &lt;= f(n) &lt;= c2g(n) for all n &gt;= n0</em></p>
 
                     </main>
 

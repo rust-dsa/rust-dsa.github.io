@@ -1,23 +1,21 @@
 # Complexity
 
-Complexity is the process of comparing minimum 2 algorithms with respect to space and time. 
+Complexity is the process of comparing a minimum of 2 algorithms with respect to space and time. Complexity also measures how much more time and space are required as the input of said algorithms grows in size.
 
-An algorithm is said to be efficient and fast, if it takes to execute and consumes less memory space.
+An algorithm is said to be efficient and fast if it takes less time to execute and consumes less memory space.
 
-## Types of complexity
+## Types of Complexity
 
-There are six types of complexity :-
+There are six types of complexity:
 
-1. Constant Complexity. `[O(1)]`
-2. Logarithmic Complexity. `[O(logn)]`
-3. Linear Complexity. `[O(n)]`
-4. Quadratic Complexity. `[O(n^2)]`
-5. Factorial Complexity. `[O(n!)]`
-6. Exponential Complexity. `[O(2^n)]`
+1. Constant Complexity `[O(1)]`
+2. Logarithmic Complexity `[O(log n)]`
+3. Linear Complexity `[O(n)]`
+4. Quadratic Complexity `[O(n^2)]`
+5. Factorial Complexity `[O(n!)]`
+6. Exponential Complexity `[O(2^n)]`
 
+To measure complexity, there are two steps:
 
-To measure complexity there are three steps:-
-
-1. Space Complexity.
-2. Time Complexity.
-3. Auxiliary Space.    
+1. Space Complexity
+2. Time Complexity

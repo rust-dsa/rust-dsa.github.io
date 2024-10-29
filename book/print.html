@@ -241,31 +241,29 @@ To remove any confusion, we can only store the names of the members in the data 
 <li>Is the algorithm efficient? And can it be made more efficient?</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="complexity"><a class="header" href="#complexity">Complexity</a></h1>
-<p>Complexity is the process of comparing minimum 2 algorithms with respect to space and time.</p>
-<p>An algorithm is said to be efficient and fast, if it takes to execute and consumes less memory space.</p>
-<h2 id="types-of-complexity"><a class="header" href="#types-of-complexity">Types of complexity</a></h2>
-<p>There are six types of complexity :-</p>
+<p>Complexity is the process of comparing a minimum of 2 algorithms with respect to space and time. Complexity also measures how much more time and space are required as the input of said algorithms grows in size.</p>
+<p>An algorithm is said to be efficient and fast if it takes less time to execute and consumes less memory space.</p>
+<h2 id="types-of-complexity"><a class="header" href="#types-of-complexity">Types of Complexity</a></h2>
+<p>There are six types of complexity:</p>
 <ol>
-<li>Constant Complexity. <code>[O(1)]</code></li>
-<li>Logarithmic Complexity. <code>[O(logn)]</code></li>
-<li>Linear Complexity. <code>[O(n)]</code></li>
-<li>Quadratic Complexity. <code>[O(n^2)]</code></li>
-<li>Factorial Complexity. <code>[O(n!)]</code></li>
-<li>Exponential Complexity. <code>[O(2^n)]</code></li>
+<li>Constant Complexity <code>[O(1)]</code></li>
+<li>Logarithmic Complexity <code>[O(log n)]</code></li>
+<li>Linear Complexity <code>[O(n)]</code></li>
+<li>Quadratic Complexity <code>[O(n^2)]</code></li>
+<li>Factorial Complexity <code>[O(n!)]</code></li>
+<li>Exponential Complexity <code>[O(2^n)]</code></li>
 </ol>
-<p>To measure complexity there are three steps:-</p>
+<p>To measure complexity, there are two steps:</p>
 <ol>
-<li>Space Complexity.</li>
-<li>Time Complexity.</li>
-<li>Auxiliary Space.</li>
+<li>Space Complexity</li>
+<li>Time Complexity</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="time-complexity"><a class="header" href="#time-complexity">Time Complexity</a></h1>
-<p>Time complexity is the time required to execute an instruction.</p>
-<p>Time complexity can also be described by estimating the number of elementary steps performed by an algorithm to complete its execution.</p>
+<p>Time complexity is the time required to execute an instruction. Time complexity can also be described by estimating the number of elementary steps performed by an algorithm to complete its execution.</p>
 <p>Asymptotic notations are used to find the time complexity.</p>
-<p>Asymptotic notations are the mathematical way to represent Time complexity.</p>
+<p>Asymptotic notations are the mathematical way to represent time complexity.</p>
 <ol>
-<li>Big oh [O]:-</li>
+<li>Big O [O]:</li>
 </ol>
 <ul>
 <li>
@@ -275,20 +273,20 @@ To remove any confusion, we can only store the names of the members in the data 
 <p>If we consider two functions g(n) and f(n), then it is used to define if the set of functions is going to grow slower than or at the same rate with respect to the expression.</p>
 </li>
 <li>
-<p>If f(n) and g(n) are the functions defined on a positive integer number 'n' , then</p>
+<p>If f(n) and g(n) are the functions defined on a positive integer number 'n', then</p>
 <p><em>f(n) = O(g(n))  [n = number of inputs]</em></p>
 </li>
 <li>
-<p>If n is big-oh of g of n if and only if positive constants c and n exist , such that</p>
-<p><em>f(n) &lt;= Cg(n) &lt;= n</em></p>
+<p>f(n) is big-O of g(n) if and only if positive constants c and n exist, such that</p>
+<p><em>f(n) &lt;= Cg(n) for all n &gt;= n0</em></p>
 </li>
 <li>
-<p>It means that for large amount of data , f(n) will grow no more that a constant g(n).</p>
+<p>It means that for a large amount of data, f(n) will grow no more than a constant multiple of g(n).</p>
 </li>
 </ul>
-<p>Hence, g provides upper bound.</p>
+<p>Hence, g provides an upper bound.</p>
 <ol start="2">
-<li>Omega [ Ω ]:-</li>
+<li>Omega [Ω]:</li>
 </ol>
 <ul>
 <li>
@@ -299,14 +297,14 @@ To remove any confusion, we can only store the names of the members in the data 
 </li>
 <li>
 <p>This also elaborates on the minimum amount of time required by an algorithm considering all input values.</p>
-<p><em>f(n)=ΩCg(n)    [n=number of input's]</em></p>
+<p><em>f(n) = Ω(g(n))  [n = number of inputs]</em></p>
 </li>
 </ul>
-<p>That means , at larger values of n , the lower bound of f(n) and g(n) , there exists positive constants c and n0 ,such that</p>
-<p><em>0&lt;=Cg(n)&lt;=f(n)     for all n &gt;=n0</em></p>
-<p>Hence , f provides lower bound.</p>
+<p>That means, at larger values of n, the lower bound of f(n) and g(n), there exist positive constants c and n0, such that</p>
+<p><em>0 &lt;= Cg(n) &lt;= f(n) for all n &gt;= n0</em></p>
+<p>Hence, g provides a lower bound.</p>
 <ol start="3">
-<li>Theta [Θ]:-</li>
+<li>Theta [Θ]:</li>
 </ol>
 <ul>
 <li>
@@ -316,29 +314,24 @@ To remove any confusion, we can only store the names of the members in the data 
 <p>If we consider two functions g(n) and f(n), then it is used to define if the set of functions is going to lie in both 'O' and 'Omega'.</p>
 </li>
 <li>
-<p>It is written as ,</p>
-<p><em>ΘCg(n)=f(n)</em></p>
+<p>It is written as,</p>
+<p><em>Θ(g(n)) = f(n)</em></p>
 </li>
 </ul>
-<p>There exits positive constants c1 , c2 and n0 such that,</p>
-<p><em>0&lt;=C1g(n)&lt;=f(n)&lt;=C2g(n)    for all n&gt;=n0</em></p>
+<p>There exist positive constants c1, c2, and n0 such that,</p>
+<p><em>0 &lt;= c1g(n) &lt;= f(n) &lt;= c2g(n) for all n &gt;= n0</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="space-complexity"><a class="header" href="#space-complexity">Space Complexity</a></h1>
 <p>Space complexity is the amount of memory space that an algorithm or a problem takes during the execution of that particular algorithm.</p>
-<p>Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will require O(n) space. If we create a two-dimensional array of size n*n, this will require O(n2) space.</p>
+<p>Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will require O(n) space. If we create a two-dimensional array of size n*n, this will require O(n²) space.</p>
 <blockquote>
-<p>If we want to compare standard sorting algorithms on the basis of space, then Auxiliary Space would be a better criterion than Space Complexity. Merge Sort uses O(n) auxiliary space, Insertion sort, and Heap Sort use O(1) auxiliary space. The space complexity of all these sorting algorithms is O(n) though.</p>
+<p>If we want to compare standard sorting algorithms on the basis of space, then Auxiliary Space would be a better criterion than Space Complexity.</p>
+<p>Merge Sort uses O(n) auxiliary space, while Insertion Sort and Heap Sort use O(1) auxiliary space. The space complexity of all these sorting algorithms is O(n) though.</p>
 </blockquote>
-<p>Space is required for:-</p>
+<p>Space is required for:</p>
 <ol>
-<li>
-<p>Instruction space: Executable programs depend on number of lines taken to execute program.</p>
-</li>
-<li>
-<p>Data space: Required to store all the constant and variable values.</p>
-</li>
-<li>
-<p>Environment space: To store the environment information needed to resume the suspended function.</p>
-</li>
+<li><strong>Instruction space</strong>: Executable programs depend on the number of lines taken to execute the program.</li>
+<li><strong>Data space</strong>: Required to store all the constant and variable values.</li>
+<li><strong>Environment space</strong>: To store the environment information needed to resume the suspended function.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="array"><a class="header" href="#array">Array</a></h1>
 <p>An array is a collection  of similar data types which are stored in contiguous memory locations. Each location has an index number through which we can access the element of that particular index.</p>
