@@ -176,11 +176,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="vector-type"><a class="header" href="#vector-type">Vector type</a></h1>
-<p>Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store its size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.</p>
-<p>Another thing about vectors is they're generally stored in a heap and they have a large size allocated than being used. As a result, when new values are inserted, the whole vector does not to be relocated to fulfill the size requirements.</p>
-<p>As arrays and vectors, both copy items into another larger array / vector once more element(s) are added, vectors do the copying less often as they already have more capacity than the actual length.</p>
-<p>"A vector is a contiguous growable array type with heap allocated contents".<sup class="footnote-reference"><a href="#1">1</a></sup></p>
+                        <h1 id="vector-type"><a class="header" href="#vector-type">Vector Type</a></h1>
+<p>Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store their size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.</p>
+<p>Another thing about vectors is that they're generally stored in a heap, and they have a larger size allocated than is being used. As a result, when new values are inserted, the whole vector does not need to be relocated to fulfill the size requirements.</p>
+<p>As with arrays, both arrays and vectors copy items into another larger array/vector once more element(s) are added; however, vectors do the copying less often as they already have more capacity than the actual length.</p>
+<p>"A vector is a contiguous growable array type with heap-allocated contents."<sup class="footnote-reference"><a href="#1">1</a></sup></p>
 <h2 id="initializing-a-vector"><a class="header" href="#initializing-a-vector">Initializing a vector</a></h2>
 <p>While initializing a primitive array, we had to specify the size of the array before-hand. There is no such constraints with a vector</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]

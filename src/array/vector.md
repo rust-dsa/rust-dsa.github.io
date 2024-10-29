@@ -1,11 +1,11 @@
-# Vector type
-Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store its size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.
+# Vector Type
+Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store their size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.
 
-Another thing about vectors is they're generally stored in a heap and they have a large size allocated than being used. As a result, when new values are inserted, the whole vector does not to be relocated to fulfill the size requirements.
+Another thing about vectors is that they're generally stored in a heap, and they have a larger size allocated than is being used. As a result, when new values are inserted, the whole vector does not need to be relocated to fulfill the size requirements.
 
-As arrays and vectors, both copy items into another larger array / vector once more element(s) are added, vectors do the copying less often as they already have more capacity than the actual length.
+As with arrays, both arrays and vectors copy items into another larger array/vector once more element(s) are added; however, vectors do the copying less often as they already have more capacity than the actual length.
 
-"A vector is a contiguous growable array type with heap allocated contents".[^1]
+"A vector is a contiguous growable array type with heap-allocated contents."[^1]
 
 ## Initializing a vector
 While initializing a primitive array, we had to specify the size of the array before-hand. There is no such constraints with a vector

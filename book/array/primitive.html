@@ -180,14 +180,14 @@
 <p>In rust, primitive data types are those, which are built in and do not need any library to be used.<sup class="footnote-reference"><a href="#1">1</a></sup></p>
 <p>For instance, signed integers (<code>i8</code>, <code>i32</code>, <code>isize</code>, ...), floating point (<code>f32</code>, <code>f64</code>), char, etc are <em>scalar primitive types</em> as they hold only single values.</p>
 <p>On the other hand arrays and tuples are called <em>compound primitive types</em> because they hold multiple values.</p>
-<h2 id="initializing-an-array"><a class="header" href="#initializing-an-array">Initializing an array</a></h2>
+<h2 id="initializing-an-array"><a class="header" href="#initializing-an-array">Initializing a primitive array</a></h2>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>    // default type is i32
     let arr = [1, 2, 3, 4, 5];
     println!("Array: {:?}", arr);
 <span class="boring">}</span></code></pre></pre>
-<h2 id="defining-an-array"><a class="header" href="#defining-an-array">Defining an array</a></h2>
+<h2 id="defining-a-primitive-array"><a class="header" href="#defining-a-primitive-array">Defining a primitive array</a></h2>
 <p>We can specify type and length in the format of <code>[T; N]</code>, where:<br>
 <code>T</code>: Element Type<br>
 <code>N</code>: Size (it is constant and it should be non-negative)</p>
@@ -207,7 +207,7 @@
     let arr: [u8; 4] = [9; 4]; 
     println!("Array: {:?}", arr); 
 <span class="boring">}</span></code></pre></pre>
-<h2 id="accessing-and-modifying-an-array"><a class="header" href="#accessing-and-modifying-an-array">Accessing and modifying an array</a></h2>
+<h2 id="accessing-and-modifying-a-primitive-array"><a class="header" href="#accessing-and-modifying-a-primitive-array">Accessing and modifying a primitive array</a></h2>
 <p>We can access array elements using their index, and modify the values provided the array is mutable.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
@@ -220,7 +220,7 @@
     arr1_mut[0]= 10;
     println!("Modified array 1: {:?}", arr1_mut);
 <span class="boring">}</span></code></pre></pre>
-<h2 id="advantages-and-disadvantages-of-arrays"><a class="header" href="#advantages-and-disadvantages-of-arrays">Advantages and Disadvantages of Arrays</a></h2>
+<h2 id="advantages-and-disadvantages-of-primitive-arrays"><a class="header" href="#advantages-and-disadvantages-of-primitive-arrays">Advantages and disadvantages of primitive arrays</a></h2>
 <div class="table-wrapper"><table><thead><tr><th><strong>Advantages</strong></th><th><strong>Disadvantages</strong></th></tr></thead><tbody>
 <tr><td>Accessing / searching for elements is fast.</td><td>Fixed size</td></tr>
 <tr><td>Can represent multiple elements using single name.</td><td>Memory wastage</td></tr>

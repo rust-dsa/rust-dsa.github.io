@@ -1,17 +1,18 @@
 # Primitive Type
-In rust, primitive data types are those, which are built in and do not need any library to be used.[^1] 
+In rust, primitive data types are those, which are built in and do not need any library to be used.[^1]
 
 For instance, signed integers (`i8`, `i32`, `isize`, ...), floating point (`f32`, `f64`), char, etc are *scalar primitive types* as they hold only single values.
 
 On the other hand arrays and tuples are called *compound primitive types* because they hold multiple values.
 
 
-## Initializing an array {#initializing-an-array}
+## Initializing a primitive array {#initializing-an-array}
+
 ```rust
 {{#include ./arrays.rs:initialize}}
 ```
 
-## Defining an array
+## Defining a primitive array
 We can specify type and length in the format of `[T; N]`, where:<br>
 `T`: Element Type<br>
 `N`: Size (it is constant and it should be non-negative)
@@ -27,13 +28,13 @@ We can also repeat values by specifying a value to repeat and the number of time
 {{#include ./arrays.rs:repeat}}
 ```
 
-## Accessing and modifying an array
+## Accessing and modifying a primitive array
 We can access array elements using their index, and modify the values provided the array is mutable.
 ```rust
 {{#include ./arrays.rs:access_one_array_element}}
 ```
 
-## Advantages and Disadvantages of Arrays
+## Advantages and disadvantages of primitive arrays
 | **Advantages** | **Disadvantages** |
 | --- | --- |
 | Accessing / searching for elements is fast. | Fixed size |
@@ -42,12 +43,12 @@ We can access array elements using their index, and modify the values provided t
 | Continuous memory allocation | Sorting is difficult |
 
 ## Types of Array:
-### 1. 1D array: 
+### 1. 1D array:
 One dimensional array refers to an array that contains only a row of elements. A 1D array can be accessed by using a single index.
 
 ![1d array](../images/1darray.jpg)
 
-**Initializing a 1D array**: Arrays are one dimensional by default. When you initialize an array, like you did [at the start](#initializing-an-array), you are initializing a 1D array. 	
+**Initializing a 1D array**: Arrays are one dimensional by default. When you initialize an array, like you did [at the start](#initializing-an-array), you are initializing a 1D array.
 
 **Use Case**: 1D arrays are used when we have to store similar items contiguously. These items are related in some way.
 
@@ -56,8 +57,8 @@ Two Dimensional array refers to an array that contains rows as well as columns o
 
 ![2d array](../images//2darray.jpg)
 
-> Notice that the 1D array and 2D array figures have the same 8 elements. The only difference is how they are accessed. 
-> 
+> Notice that the 1D array and 2D array figures have the same 8 elements. The only difference is how they are accessed.
+>
 > We use only one index to access 4 from 1D: `array[2]`.
 > On the other hand, we have to use two two values to access 4 from 2D: `array[0][2]`.
 >
