@@ -439,7 +439,12 @@ On the other hand, we have to use two two values to access 4 from 2D: <code>arra
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vector-type"><a class="header" href="#vector-type">Vector Type</a></h1>
 <p>Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store their size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.</p>
 <p>Another thing about vectors is that they're generally stored in a heap, and they have a larger size allocated than is being used. As a result, when new values are inserted, the whole vector does not need to be relocated to fulfill the size requirements.</p>
+<p><img src="array/../images/vector_a.jpg" alt="vector with capacity 10" /></p>
 <p>As with arrays, both arrays and vectors copy items into another larger array/vector once more element(s) are added; however, vectors do the copying less often as they already have more capacity than the actual length.</p>
+<p><img src="array/../images/vector_b.jpg" alt="vector with capacity 20" /></p>
+<blockquote>
+<p>Note: the vectors in both the figures are the same on high level, but have different names (<code>a</code> and <code>b</code>) because they are different on the low level.</p>
+</blockquote>
 <p>"A vector is a contiguous growable array type with heap-allocated contents."<sup class="footnote-reference"><a href="#1">1</a></sup></p>
 <h2 id="initializing-a-vector"><a class="header" href="#initializing-a-vector">Initializing a vector</a></h2>
 <p>While initializing a primitive array, we had to specify the size of the array before-hand. There is no such constraints with a vector</p>
