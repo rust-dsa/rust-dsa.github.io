@@ -3,14 +3,14 @@ A data structure is a particular way of organizing data for particular types of 
 
 To understand this better, we'll create a data structure of our own.
 
-> Suppose we are a part of a club that focuses on competitive programming. We want to store the names of our members in our computer. The best programmer in our team creates a data structure keeping in mind some of the requirements. 
+> Suppose we are a part of a club that focuses on competitive programming. We want to store the names of our members in our computer. Talia, one of our members, suggests we  create a data structure that will help us do that. We'll keep in mind some of the requirements:
 > Since we have a low turnover rate, we do not have to update the data structure often and as a result, we can afford to store it in a contiguous block of memory.
-> We need to be able to access the data structure quickly and efficiently. So, he assigns each entry a unique index number. Through this number we can access the name of the member.
+> We need to be able to access the data structure quickly and efficiently. So, she'll need to assign each entry a unique index number. Through this number we can access the name of the member.
 > To remove any confusion, we can only store the names of the members in the data structure. This means only strings are allowed.
 >
 > The data structure that satisfies all the preceding requirements already exists. It is called an array. We'll learn more about arrays in the next sections.
 
-In a computer, 'data' is ultimately represented as a sequence of zeros and ones (bits), but this representation is too low level for the human beings operating that computer to discern. Hence, we have data structures that are closer to the way humans can understand and visualize the structure of this data. This is because it is humans who have to develop and maintain the software systems - computers merely run them. 
+In a computer, 'data' is ultimately represented as a sequence of zeros and ones (bits), but this representation is too low level for the human beings operating that computer to discern. Hence, we have data structures that are closer to the way humans can understand and visualize the structure of this data. This is because it is humans who have to develop and maintain the software systems - computers merely run them.
 
 ## Operations on Data Structures
 Data structures need to have certain operations that help us to modify or access the content. These operations include:

@@ -18,3 +18,16 @@ fn fibonacci(n: u32) -> u32 {
 
     fibonacci(n - 1) + fibonacci(n - 2)
 }
+
+fn peasant_multiplication(mut x: u8, mut y: u8) -> u8 {
+    let mut prod = 0;
+
+    while x > 0 {
+        if x % 2 == 1 {
+            prod += y;
+        }
+        x /= 2;
+        y += y;
+    }
+    prod
+}
