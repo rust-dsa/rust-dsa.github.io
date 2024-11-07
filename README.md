@@ -1,6 +1,6 @@
 # Data Structures and Algorithms in Rust
 
-This repository contains the source for the [rust-dsa.github.io](https:/rust-dsa.github.io) website.
+This repository contains the source for the [rust-dsa.github.io](https://rust-dsa.github.io) website.
 
 ## Host locally using mdbook
 **Prerequisites:** `cargo` must be installed
