@@ -9,7 +9,7 @@ As with arrays, both arrays and vectors copy items into another larger array/vec
 
 ![vector with capacity 20](../images/vector_b.jpg)
 
-> Note: the vectors in both the figures are the same on high level, but have different names (`a` and `b`) because they are different on the low level.
+> Note: the vectors in both the figures are the same on high level, but have different names (`a` and `b`) because they are different on the low level in the sense that they have different locations in memory.
 >
 >
 "A vector is a contiguous growable array type with heap-allocated contents."[^1]

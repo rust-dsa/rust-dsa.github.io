@@ -1,6 +1,6 @@
 # &str
 
-`&str` is a primitive string type in Rust. Another name for type is 'string slice'. It is called a string slice because it *is* a slice of a string.
+`&str` is a primitive string type in Rust. Another name for this type is 'string slice'. It is called a string slice because it *is* a slice of a string.
 
 Slices are references to the original string, so they don't own the data. This prevents unnecessary copying of data.
 
@@ -15,5 +15,3 @@ When you extract a portion of a string which is `String` or a `&str` type, you c
 ```rust
 {{#include ./slice.rs:slice_from_string}}
 ```
-
-<!-- IF you have the knowledge, add more information here -->

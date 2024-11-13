@@ -177,7 +177,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="string"><a class="header" href="#string">String</a></h1>
-<p>A string is a data structure that holds a sequence of character. Strings very similar to arrays. On an application level, let's compare strings to arrays.</p>
+<p>A string is a data structure that holds a sequence of characters. Strings are very similar to arrays. On an application level, let's compare strings to arrays.</p>
 <div class="table-wrapper"><table><thead><tr><th>Array</th><th>String</th></tr></thead><tbody>
 <tr><td>Contains similar data items in contiguous locations</td><td>Contains characters in contiguous locations</td></tr>
 <tr><td>Elements can be accessed using an index</td><td>Characters can be accessed using an index (e.g., <code>chars()</code> or indexing with <code>[]</code> in <code>&amp;str</code>)</td></tr>
@@ -187,19 +187,19 @@
 </tbody></table>
 </div>
 <p><br/><br/>
-Strings are a fundamental data structure of any programming language. In Rust, there are three types of strings:</p>
+Strings are a fundamental data structure in any programming language. In Rust, there are two types of strings:</p>
 <ol>
-<li>The string slice: <code>str</code> which usually comes in its borrowed form <code>&amp;str</code></li>
+<li>The string slice: <code>str</code>, which usually comes in its borrowed form <code>&amp;str</code></li>
 <li>The string struct: <code>String</code></li>
 </ol>
 <h3 id="why-does-rust-have-two-string-types"><a class="header" href="#why-does-rust-have-two-string-types">Why does Rust have two string types?</a></h3>
 <p>On the surface level, string types are pretty simple. You write something in quotation marks, you assign it to a variable, and Voila! , you have a string type variable.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
-</span>let hawai = "Knock Knock";
+</span>let init = "Knock Knock";
 <span class="boring">}</span></code></pre></pre>
 <p>But there is a lot going on behind the scenes, when we use a string. Luckily, Rust provides us two level of controls through its string types. These types are necessary to continue Rust's priority on safety and performance.</p>
-<p>We'll be delving deeper into the two types of strings in rust in later sections</p>
+<p>We'll be delving deeper into the two types of strings in rust in later sections.</p>
 
                     </main>
 

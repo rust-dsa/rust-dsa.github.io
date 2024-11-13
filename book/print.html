@@ -443,7 +443,7 @@ On the other hand, we have to use two two values to access 4 from 2D: <code>arra
 <p>As with arrays, both arrays and vectors copy items into another larger array/vector once more element(s) are added; however, vectors do the copying less often as they already have more capacity than the actual length.</p>
 <p><img src="array/../images/vector_b.jpg" alt="vector with capacity 20" /></p>
 <blockquote>
-<p>Note: the vectors in both the figures are the same on high level, but have different names (<code>a</code> and <code>b</code>) because they are different on the low level.</p>
+<p>Note: the vectors in both the figures are the same on high level, but have different names (<code>a</code> and <code>b</code>) because they are different on the low level in the sense that they have different locations in memory.</p>
 </blockquote>
 <p>"A vector is a contiguous growable array type with heap-allocated contents."<sup class="footnote-reference"><a href="#1">1</a></sup></p>
 <h2 id="initializing-a-vector"><a class="header" href="#initializing-a-vector">Initializing a vector</a></h2>
@@ -589,7 +589,7 @@ On the other hand, we have to use two two values to access 4 from 2D: <code>arra
 <p><a href="https://www.codewars.com/collections/rust-dsa-array-7kyu">Arrays 7Kyu</a></p>
 <p><a href="https://www.codewars.com/collections/rust-dsa-array-6kyu">Arrays 6Kyu</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="string"><a class="header" href="#string">String</a></h1>
-<p>A string is a data structure that holds a sequence of character. Strings very similar to arrays. On an application level, let's compare strings to arrays.</p>
+<p>A string is a data structure that holds a sequence of characters. Strings are very similar to arrays. On an application level, let's compare strings to arrays.</p>
 <div class="table-wrapper"><table><thead><tr><th>Array</th><th>String</th></tr></thead><tbody>
 <tr><td>Contains similar data items in contiguous locations</td><td>Contains characters in contiguous locations</td></tr>
 <tr><td>Elements can be accessed using an index</td><td>Characters can be accessed using an index (e.g., <code>chars()</code> or indexing with <code>[]</code> in <code>&amp;str</code>)</td></tr>
@@ -599,21 +599,21 @@ On the other hand, we have to use two two values to access 4 from 2D: <code>arra
 </tbody></table>
 </div>
 <p><br/><br/>
-Strings are a fundamental data structure of any programming language. In Rust, there are three types of strings:</p>
+Strings are a fundamental data structure in any programming language. In Rust, there are two types of strings:</p>
 <ol>
-<li>The string slice: <code>str</code> which usually comes in its borrowed form <code>&amp;str</code></li>
+<li>The string slice: <code>str</code>, which usually comes in its borrowed form <code>&amp;str</code></li>
 <li>The string struct: <code>String</code></li>
 </ol>
 <h3 id="why-does-rust-have-two-string-types"><a class="header" href="#why-does-rust-have-two-string-types">Why does Rust have two string types?</a></h3>
 <p>On the surface level, string types are pretty simple. You write something in quotation marks, you assign it to a variable, and Voila! , you have a string type variable.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
-</span>let hawai = "Knock Knock";
+</span>let init = "Knock Knock";
 <span class="boring">}</span></code></pre></pre>
 <p>But there is a lot going on behind the scenes, when we use a string. Luckily, Rust provides us two level of controls through its string types. These types are necessary to continue Rust's priority on safety and performance.</p>
-<p>We'll be delving deeper into the two types of strings in rust in later sections</p>
+<p>We'll be delving deeper into the two types of strings in rust in later sections.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="str"><a class="header" href="#str">&amp;str</a></h1>
-<p><code>&amp;str</code> is a primitive string type in Rust. Another name for type is 'string slice'. It is called a string slice because it <em>is</em> a slice of a string.</p>
+<p><code>&amp;str</code> is a primitive string type in Rust. Another name for this type is 'string slice'. It is called a string slice because it <em>is</em> a slice of a string.</p>
 <p>Slices are references to the original string, so they don't own the data. This prevents unnecessary copying of data.</p>
 <p>Every type of string in Rust is utf-8 encoded. That means we can initialize a string in any languages. We can also include emoticons. Now let's see how it's done.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -633,8 +633,8 @@ Strings are a fundamental data structure of any programming language. In Rust, t
     println!("{}", greeting);
     println!("{}", sub_str);
 <span class="boring">}</span></code></pre></pre>
-<!-- IF you have the knowledge, add more information here --><div style="break-before: page; page-break-before: always;"></div><h1 id="string-1"><a class="header" href="#string-1">String</a></h1>
-<p>The <code>String</code> type is a heap-allocated, mutable, sequence of UTF-8 encoded bytes. What this means is that the <code>String</code> type is stored on the heap, it can be modified, and it can store any character that is valid UTF-8 including emojis.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="string-1"><a class="header" href="#string-1">String</a></h1>
+<p>The <code>String</code> type is a heap-allocated, mutable sequence of UTF-8 encoded bytes. What this means is that the <code>String</code> type is stored on the heap, it can be modified, and it can store any character that is valid UTF-8 including emojis.</p>
 <h2 id="creating-a-string"><a class="header" href="#creating-a-string">Creating a String</a></h2>
 <p>There are two ways to initialize a <code>String</code> type. The first is by using the <code>String::from</code> method which takes a string slice as an argument. The second is converting a string literal to a <code>String</code> type using the <code>to_string</code> method.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -658,7 +658,7 @@ Strings are a fundamental data structure of any programming language. In Rust, t
     greet_mutable.push('!');
     println!("{}", greet_mutable);
 <span class="boring">}</span></code></pre></pre>
-<!-- Add more when you have more information --><div style="break-before: page; page-break-before: always;"></div><h1 id="problem-solving-preparation-1"><a class="header" href="#problem-solving-preparation-1">Problem Solving Preparation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="problem-solving-preparation-1"><a class="header" href="#problem-solving-preparation-1">Problem Solving Preparation</a></h1>
 <p>Let's look at some helpful methods that will help you in solving coding problems on strings.</p>
 <h3 id="convert-string-to-str"><a class="header" href="#convert-string-to-str">Convert String to &amp;str</a></h3>
 <pre><code class="language-rust ignore">    let string = String::from("Hello World");
@@ -704,7 +704,6 @@ Strings are a fundamental data structure of any programming language. In Rust, t
 <p><a href="https://doc.rust-lang.org/std/primitive.str.html#method.split">https://doc.rust-lang.org/std/primitive.str.html#method.split</a></p>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="problem-sets-1"><a class="header" href="#problem-sets-1">Problem sets</a></h1>
-<p>Easy</p>
 <p><a href="https://www.codewars.com/collections/rust-dsa-string-8kyu">Strings 8Kyu</a></p>
 <p><a href="https://www.codewars.com/collections/rust-dsa-string-7kyu">Strings 7Kyu</a></p>
 <p><a href="https://www.codewars.com/collections/rust-dsa-string-6kyu">Strings 6Kyu</a></p>

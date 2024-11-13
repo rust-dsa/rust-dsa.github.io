@@ -1,6 +1,6 @@
 # String
 
-The `String` type is a heap-allocated, mutable, sequence of UTF-8 encoded bytes. What this means is that the `String` type is stored on the heap, it can be modified, and it can store any character that is valid UTF-8 including emojis.
+The `String` type is a heap-allocated, mutable sequence of UTF-8 encoded bytes. What this means is that the `String` type is stored on the heap, it can be modified, and it can store any character that is valid UTF-8 including emojis.
 
 ## Creating a String
 
@@ -22,5 +22,3 @@ There are two ways to insert a string into an existing `String` type. The first 
 ```rust
 {{#include struct.rs:string_push}}
 ```
-
-<!-- Add more when you have more information -->
