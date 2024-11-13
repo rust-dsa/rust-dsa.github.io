@@ -1,9 +1,9 @@
 # Stack
-A stack is a linear data structure that follows the principle of *Last In First Out (LIFO)*. This means that the last element inserted inside the stack is removed first.
+A stack is a linear data structure that follows the principle of *Last In First Out (LIFO)*. This means that the last element inserted into the stack is removed first.
 
-Stacks can be visualized as a stack of plates on a table. Only the top plate is accessible by the user. The plates below cannot be accessed until they are at the top i.e., the plates above them have been removed.
+Stacks can be visualized as a stack of plates on a table. Only the top plate is accessible to the user. The plates below cannot be accessed until they are at the top, i.e., the plates above them have been removed.
 
-The way in which we define stack in rust is the same as we define a vector. The vector data structure can be used as both an array and a stack in rust. For instance, the operations provided for vector include the operations on stack. 
+The way in which we define a stack in Rust is the same as we define a vector. The vector data structure can be used as both an array and a stack in Rust. For instance, the operations provided for a vector include the operations on a stack.
 
 ## Initializing a stack.
 Since we'll be using vector as a stack, we initialize it the same way.
@@ -11,7 +11,7 @@ Since we'll be using vector as a stack, we initialize it the same way.
 {{#include ./../code/ds/stack.rs:initialize}}
 ```
 
-Let's see the operations of stack and those functions in rust. 
+Let's see the operations of stack and those functions in rust.
 
 ## Operations on a Stack
 **1. push:** Add an element to the top of a stack.
