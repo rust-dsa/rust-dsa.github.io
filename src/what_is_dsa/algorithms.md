@@ -1,14 +1,14 @@
 # Algorithms
 
-An algorithm is a set of steps/instructions that leads to solving a problem. Algorithms are a fundamental part of computer science. They are used to accomplish a variety of computational tasks, such as performing calculations or finding specific information in databases.
+Computer Science is built on two pillars, one of which is algorithms. An algorithm is a set of steps or instructions that leads to solving a problem. This problem could involve a need for improvement in previous technologies or a completely new challenge. Algorithms are a fundamental part of computer science, used to accomplish a variety of computational tasks, such as performing calculations or finding specific information in databases.
 
 > **How to make tea**
 >
-> Step 1: Boil one cup of water.
+> Step 1: Boil a cup of water.
 >
-> Step 2: Add one teaspoon of tea leaves (with sugar if desired).
+> Step 2: Add one teaspoon of tea powder (with sugar if desired).
 >
-> Step 3: If you want milk, add it at the 3-minute mark.
+> Step 3: If you enjoy milk in your tea, add it after 3 minutes of steeping.
 >
 > Step 4: Heat tea to boiling point.
 >
@@ -44,6 +44,9 @@ After we have chosen the representation of data as required, this data has to be
 **7. Encryption algorithm:** This algorithm takes data and maybe an encryption key as input and outputs encrypted data. Concurrently, a decryption algorithm takes the encrypted data and decryption key as input and outputs the original text.
 
 **8. Recursive algorithm:** This algorithm calls itself repeatedly until a solution emerges. Recursive algorithms call themselves with smaller values every time a recursive function is involved.
+
+
+## Key Considerations for Algorithm Design
 
 When writing algorithms to solve a problem in programming, or finding a solution to a problem in general, we need to think about the following:
 

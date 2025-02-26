@@ -1,9 +1,9 @@
 pub fn vector_array() {
     //* INITIALIZING A VECTOR
-    
+
     // ANCHOR: initialize
     // vector from inbuilt macro
-    let vec:Vec <u16> = vec![10, 20, 30, 40, 50];
+    let vec: Vec<u16> = vec![10, 20, 30, 40, 50];
     println!("Vector array: {:?}", vec);
 
     // vector from array
@@ -12,6 +12,9 @@ pub fn vector_array() {
 
     // empty vector
     let mut _vec: Vec<u8> = Vec::new();
+
+    // vector with a specific size
+    let vec: Vec<u8> = Vec::with_capacity(5);
     // ANCHOR_END: initialize
 
     //* ACCESSING AND MODIFYING A VECTOR
@@ -26,7 +29,6 @@ pub fn vector_array() {
     vec[2] = 30;
     println!("Modified vector: {:?}", vec);
     // ANCHOR_END: access_and_modify
-
 
     // inserting and removing an element
     let mut vec = vec![12, 23, 34, 45];
@@ -50,5 +52,4 @@ pub fn vector_array() {
     let vec: Vec<Vec<u8>> = vec![vec![1, 2, 3], vec![4, 5, 6]];
     println!("2d vector: {:?}", vec);
     // ANCHOR_END: 2D_vector
-
 }

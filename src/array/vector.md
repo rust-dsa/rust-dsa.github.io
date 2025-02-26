@@ -15,7 +15,7 @@ As with arrays, both arrays and vectors copy items into another larger array/vec
 "A vector is a contiguous growable array type with heap-allocated contents."[^1]
 
 ## Initializing a vector
-While initializing a primitive array, we had to specify the size of the array before-hand. There is no such constraints with a vector
+When initializing a primitive array, we must specify its size beforehand. However, vectors do not have such constraints. We can define the capacity of a vector manually using the `with_capacity` function.
 
 ```rust
 {{#include ./vectors.rs:initialize}}

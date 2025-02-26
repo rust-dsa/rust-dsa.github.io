@@ -1,5 +1,7 @@
-A tree is a collection of entities called 'nodes' linked together to simulate a hierarchical structure. 
+A tree is a collection of entities called 'nodes' linked together to simulate a hierarchical structure. It efficiently stores and organizes data for fast searching, insertion, and deletion.
 In a real tree, root is at the bottom; in our computer science tree, root is at the top.
+
+Trees are widely used in various applications, including databases, file systems
 
 e.g. An employee hierarchy in an organization
 <!-- TODO add image of example-->
@@ -8,14 +10,14 @@ e.g. An employee hierarchy in an organization
 
 <!-- TODO add image of tree with labels -->
 
-Node: 
+Node:
 
-Edges: 
+Edges:
 
-Nodes are usually labelled with a data item. It is called *value*. 
-The node at the top of the tree is called as the *root node*. 
+Nodes are usually labelled with a data item. It is called *value*.
+The node at the top of the tree is called as the *root node*.
 
-Child nodes: Nodes that are linked to an upper node, that is closer to the root node, are called child nodes. 
+Child nodes: Nodes that are linked to an upper node, that is closer to the root node, are called child nodes.
 
 Parent nodes: Nodes that link to multiple nodes on a lower level are called parent nodes
 
@@ -28,8 +30,8 @@ Leaf nodes: Nodes that do not have any children nodes are called leaf nodes. The
 ### Nodes and Edges
 If a tree has 'n' nodes, it has 'n - 1' edges.
 
-### Depth: 
-Depth of some node `N` in a tree can be defined as the number of edges in path from `root` to `N`. 
+### Depth:
+Depth of some node `N` in a tree can be defined as the number of edges in path from `root` to `N`.
 
 ### Height:
 Height of some node `N` is equal to the number of edges in longest path from `N` to leaf node.
@@ -50,4 +52,4 @@ Height of some node `N` is equal to the number of edges in longest path from `N`
 
 3. Binary Search Tree: A BST is just like a binary tree except with one difference; the data is ordered. The left child node is always smaller than the parent node, and the right child node is always bigger than parent node.
 
-4. AVL tree: AVL stands for Adelson-Velsky and Landis. AVL tree is an extension of binary search tree in that it is self balancing. It refactors the heights of the left and right subtrees to be as close to each other as possible. The balancing of a tree is measured by something called the balancing factor. 
+4. AVL tree: AVL stands for Adelson-Velsky and Landis. AVL tree is an extension of binary search tree in that it is self balancing. It refactors the heights of the left and right subtrees to be as close to each other as possible. The balancing of a tree is measured by something called the balancing factor.

@@ -5,6 +5,8 @@ For instance, signed integers (`i8`, `i32`, `isize`, ...), floating point (`f32`
 
 On the other hand arrays and tuples are called *compound primitive types* because they hold multiple values.
 
+<!-- kaisa primitve heap me nai store hote isliye, unko size define karna padata. -->
+
 
 ## Initializing a primitive array {#initializing-an-array}
 

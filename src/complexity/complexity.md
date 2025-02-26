@@ -1,8 +1,8 @@
 # Complexity
 
-Complexity is the process of comparing a minimum of 2 algorithms with respect to space and time. Complexity also measures how much more time and space are required as the input of said algorithms grows in size.
+Complexity is the unit of measurement of an algorithm to examine the time and space (memory) it requires to execute successfully. Complexity also measures how much more time and space are required as the input of said algorithms grows in size. An algorithm is said to be efficient and fast if it takes less time to execute and consumes less memory space.
 
-An algorithm is said to be efficient and fast if it takes less time to execute and consumes less memory space.
+Generally, complexity is used to compare two or more algorithms to evaluate which one will be more suitable for the task at hand.
 
 ## Types of Complexity
 
@@ -17,5 +17,5 @@ There are six types of complexity:
 
 To measure complexity, there are two steps:
 
-1. Space Complexity
-2. Time Complexity
+1. Time Complexity
+2. Space Complexity
