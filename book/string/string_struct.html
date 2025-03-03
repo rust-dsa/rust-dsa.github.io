@@ -179,7 +179,8 @@
                         <h1 id="string"><a class="header" href="#string">String</a></h1>
 <p>The <code>String</code> type is a heap-allocated, mutable sequence of UTF-8 encoded bytes. What this means is that the <code>String</code> type is stored on the heap, it can be modified, and it can store any character that is valid UTF-8 including emojis.</p>
 <h2 id="creating-a-string"><a class="header" href="#creating-a-string">Creating a String</a></h2>
-<p>There are two ways to initialize a <code>String</code> type. The first is by using the <code>String::from</code> method which takes a string slice as an argument. The second is converting a string literal to a <code>String</code> type using the <code>to_string</code> method.</p>
+<p>There are two ways to initialize a <code>String</code> type.
+The first is by converting a string literal to a <code>String</code> type using the <code>to_string</code> method. The second is by using the <code>String::from</code> method which takes a string slice as an argument.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>    // let greet = "Hello world!".to_string();

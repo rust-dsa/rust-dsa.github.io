@@ -4,7 +4,8 @@ The `String` type is a heap-allocated, mutable sequence of UTF-8 encoded bytes. 
 
 ## Creating a String
 
-There are two ways to initialize a `String` type. The first is by using the `String::from` method which takes a string slice as an argument. The second is converting a string literal to a `String` type using the `to_string` method.
+There are two ways to initialize a `String` type.
+The first is by converting a string literal to a `String` type using the `to_string` method. The second is by using the `String::from` method which takes a string slice as an argument.
 
 ```rust
 {{#include struct.rs:string_init}}
