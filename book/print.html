@@ -931,17 +931,15 @@ fn main() {
 <p>Solve this <a href="https://leetcode.com/problems/linked-list-components/description/">LeetCode problem</a></p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-you-came-for"><a class="header" href="#what-you-came-for">What you came for</a></h1>
-<p>In the previous chapter, we saw practical examples of Linked Lists could be implemented using the collections provided by the Rust collections. Using the <code>use std::collections::LinkedList;</code> line of code, we were able to access an inbuilt Linked list and use its corresponding methods in order to manipulate data inside the list. But you may have realized that Linked Lists are similar in usage to vectors. To be more precise, singly linked list are akin to <code>Vec</code> data structure in Rust, and doubly linked list are akin to <code>VecDeque</code>.</p>
-<p>So why do we have two ways to represent a structure of data, which could be represented with the help of a single data structure? And which one is a better way to represent data?</p>
-<p>Data structures are engineered for human beings as opposed to computers. What I mean is data structures represent data in such a way, that it becomes intelligible to understand the relationship and accessibility between data points. Data structures are solely there for our understanding at a high level. Computers store data one after other. It is literally one big array.
-Even if we create a tree in our program, at the low level, the data will still be stored one after the other if the space is present.
-The accessiblity of one data point from other data point may change with each data structure, but the overall low level view of data does not change.</p>
-<p>Array and linked lists serve different purposes and in a sense overcome each others drawbacks. While we can use arrays in most situations, some cases require the advantages provided by linked lists.</p>
+<p>In the previous chapter, we explored practical examples of how Linked Lists can be implemented using the collections provided by Rust. By using the <code>use std::collections::LinkedList;</code> line of code, we accessed an inbuilt Linked List and utilized its corresponding methods to manipulate the data within the list. You may have noticed that Linked Lists are similar in usage to vectors. To be more precise, singly linked lists are akin to the <code>Vec</code> data structure in Rust, while doubly linked lists are similar to <code>VecDeque</code>.</p>
+<p>So, why do we have two ways to represent a structure of data that could be represented with a single data structure? Which one is the better way to represent data?</p>
+<p>Data structures are engineered for human beings rather than computers. What I mean is that data structures represent data in a way that makes it intelligible to understand the relationships and accessibility between data points. Data structures exist solely for our understanding at a high level. Computers store data one after another; it is literally one big array. Even if we create a tree in our program, at the low level, the data will still be stored sequentially if space is available. The accessibility of one data point from another may change with each data structure, but the overall low-level view of data does not change.</p>
+<p>Arrays and linked lists serve different purposes and, in a sense, overcome each other's drawbacks. While we can use arrays in most situations, some cases require the advantages provided by linked lists.</p>
 <h2 id="creating-your-own-linked-list"><a class="header" href="#creating-your-own-linked-list">Creating your own linked list</a></h2>
-<p>In the next sections we'll be going low level and creating our own linked lists. Since Rust has features and rules unique to it, our linked list will look different (on the low level) than the linked lists in languages such as C or Python.</p>
+<p>In the next sections, we'll delve into the low-level details and create our own linked lists. Since Rust has features and rules unique to it, our linked list will look different (at the low level) from the linked lists in languages such as C or Python.</p>
 <p>Let's dive in!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="building-a-node"><a class="header" href="#building-a-node">Building a Node</a></h1>
-<p>As we saw in the <a href="linked_list/./linked_list.html">introduction</a>, a linked list is made up of nodes that are linked to each other, or rather one node points to the next. A node consists of data and the pointer to the next node. This is what we will create first.</p>
+<p>As we saw in the <a href="linked_list/./linked_list.html">introduction</a>, a linked list is made up of nodes that are linked to each other, meaning one node points to the next. A node consists of data and a pointer to the next node. This is what we will create first.</p>
 <h2 id="how-to-create-a-node"><a class="header" href="#how-to-create-a-node">How to create a Node</a></h2>
 <p>We'll create a struct that holds data and next Node pointer first:</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -1016,9 +1014,7 @@ The next node will contain the value, <em>and</em> the node after it.</p>
 <h3 id="linking-a-node"><a class="header" href="#linking-a-node">Linking a node</a></h3>
 <p>Here, we create a head pointer that points to Node that contains <code>val = 1</code> and is not linked to next Node.
 The next step is to link one more node to our list. We do this by updating the value of <code>next</code> to that of the newly created node.</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    let mut head = Box::new(Node {
+<pre><code class="language-rust ignore">    let mut head = Box::new(Node {
         val: 1,
         next: None
     });
@@ -1029,8 +1025,7 @@ The next step is to link one more node to our list. We do this by updating the v
 
     head.next = node;
 
-    println!("{:?}", head);
-<span class="boring">}</span></code></pre></pre>
+    println!("{:?}", head);</code></pre>
 <p>We can also link another node, but before we do that, let's write a method for <code>Node</code> that will help us initialize a node.</p>
 <h3 id="important-methods"><a class="header" href="#important-methods">Important Methods</a></h3>
 <h4 id="new"><a class="header" href="#new"><code>new</code></a></h4>

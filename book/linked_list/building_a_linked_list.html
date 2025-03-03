@@ -187,9 +187,7 @@
 <h3 id="linking-a-node"><a class="header" href="#linking-a-node">Linking a node</a></h3>
 <p>Here, we create a head pointer that points to Node that contains <code>val = 1</code> and is not linked to next Node.
 The next step is to link one more node to our list. We do this by updating the value of <code>next</code> to that of the newly created node.</p>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>    let mut head = Box::new(Node {
+<pre><code class="language-rust ignore">    let mut head = Box::new(Node {
         val: 1,
         next: None
     });
@@ -200,8 +198,7 @@ The next step is to link one more node to our list. We do this by updating the v
 
     head.next = node;
 
-    println!("{:?}", head);
-<span class="boring">}</span></code></pre></pre>
+    println!("{:?}", head);</code></pre>
 <p>We can also link another node, but before we do that, let's write a method for <code>Node</code> that will help us initialize a node.</p>
 <h3 id="important-methods"><a class="header" href="#important-methods">Important Methods</a></h3>
 <h4 id="new"><a class="header" href="#new"><code>new</code></a></h4>

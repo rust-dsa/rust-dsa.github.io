@@ -1,6 +1,6 @@
 # Building a Node
 
-As we saw in the [introduction](./linked_list.md/#linked-list), a linked list is made up of nodes that are linked to each other, or rather one node points to the next. A node consists of data and the pointer to the next node. This is what we will create first.
+As we saw in the [introduction](./linked_list.md/#linked-list), a linked list is made up of nodes that are linked to each other, meaning one node points to the next. A node consists of data and a pointer to the next node. This is what we will create first.
 
 ## How to create a Node
 

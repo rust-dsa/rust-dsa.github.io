@@ -17,7 +17,7 @@ let head = Box::new(Node {
 Here, we create a head pointer that points to Node that contains `val = 1` and is not linked to next Node.
 The next step is to link one more node to our list. We do this by updating the value of `next` to that of the newly created node.
 
-```rust
+```rust,ignore
     let mut head = Box::new(Node {
         val: 1,
         next: None
