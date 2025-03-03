@@ -2,18 +2,18 @@
 
 Let's look at some helpful methods that will help you in solving coding problems on strings.
 
-### Convert String to &str
+### Convert `String` to `&str`
 
 ```rust,ignore
 {{#include ./helpful_methods.rs:as_str}}
 ```
 
-### Convert &str to String
+### Convert `&str` to `String`
 ```rust,ignore
 {{#include ./helpful_methods.rs:to_string}}
 ```
 
-### Create a String with given values
+### Create a `String` with given values
 ```rust
 {{#include ./helpful_methods.rs:format}}
 ```
@@ -22,7 +22,7 @@ Let's look at some helpful methods that will help you in solving coding problems
 ```rust
 {{#include ./helpful_methods.rs:replace}}
 ```
-### Convert a &str into Vec<char>
+### Convert a `&str` into `Vec<char>`
 If you want to access individual values in a string slice, it is better to convert it into a vector of chars
 ```rust,ignore
 {{#include ./helpful_methods.rs:to_vector}}

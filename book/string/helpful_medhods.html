@@ -178,13 +178,13 @@
                     <main>
                         <h1 id="problem-solving-preparation"><a class="header" href="#problem-solving-preparation">Problem Solving Preparation</a></h1>
 <p>Let's look at some helpful methods that will help you in solving coding problems on strings.</p>
-<h3 id="convert-string-to-str"><a class="header" href="#convert-string-to-str">Convert String to &amp;str</a></h3>
+<h3 id="convert-string-to-str"><a class="header" href="#convert-string-to-str">Convert <code>String</code> to <code>&amp;str</code></a></h3>
 <pre><code class="language-rust ignore">    let string = String::from("Hello World");
     let slice = string.as_str();</code></pre>
-<h3 id="convert-str-to-string"><a class="header" href="#convert-str-to-string">Convert &amp;str to String</a></h3>
+<h3 id="convert-str-to-string"><a class="header" href="#convert-str-to-string">Convert <code>&amp;str</code> to <code>String</code></a></h3>
 <pre><code class="language-rust ignore">    let slice = "Hello World";
     let string = slice.to_string();</code></pre>
-<h3 id="create-a-string-with-given-values"><a class="header" href="#create-a-string-with-given-values">Create a String with given values</a></h3>
+<h3 id="create-a-string-with-given-values"><a class="header" href="#create-a-string-with-given-values">Create a <code>String</code> with given values</a></h3>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>    let name = "Hashirama";
@@ -198,7 +198,7 @@
     let new_sentence =  sentence.replace("m", "l");
     println!("{new_sentence}");
 <span class="boring">}</span></code></pre></pre>
-<h3 id="convert-a-str-into-vec"><a class="header" href="#convert-a-str-into-vec">Convert a &amp;str into Vec<char></a></h3>
+<h3 id="convert-a-str-into-vecchar"><a class="header" href="#convert-a-str-into-vecchar">Convert a <code>&amp;str</code> into <code>Vec&lt;char&gt;</code></a></h3>
 <p>If you want to access individual values in a string slice, it is better to convert it into a vector of chars</p>
 <pre><code class="language-rust ignore">    let my_str: &amp;str = "123456789";
     let char_vec: Vec&lt;char&gt; = my_str.chars().collect();</code></pre>
