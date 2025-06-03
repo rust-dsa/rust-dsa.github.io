@@ -4,13 +4,12 @@ Bubble sort is a simple sorting algorithm that works by repeatedly swapping the 
 
 ### Algorithm
 
-1. The algorithm takes the array as input.
-2. It compares the first two elements of the array.
-3. If the first element is greater than the second, the algorithm swaps them.
-4. It compares the second and third elements of the array.
-5. If the second element is greater than the third, the algorithm swaps them.
-6. This goes on till the end of the array. At this point, the largest element is in its correct position.
-7. This process is repeated until the array is sorted. 
+1. Take the array as input.
+2. Compare the first two elements of the array.
+3. If the first element (j) is greater than the next (j + 1), swap them.
+4. This goes on till the end of the array. At this point, the largest element is in its correct position.
+5. In the second iteration, compare only n - 1 elements, as the last one in its position.
+6. This process is repeated until the array is sorted.
 
 Now let's write a function that implements the preceding steps:
 

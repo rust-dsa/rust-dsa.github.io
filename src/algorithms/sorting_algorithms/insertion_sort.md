@@ -5,10 +5,10 @@ Insertion sort is another simple sorting algorithm that works by repeatedly inse
 
 ### Algorithm
 
-1. The algorithm takes the array as input.
-2. It iterates over the array.
-3. It compares the current element with the previous element.
-4. If the current element is smaller than the previous element, the algorithm swaps them.
+1. Take the array as input.
+2. Iterate over the array.
+3. Compares the current element with the previous element.
+4. If the current element is smaller than the previous element, swap them.
 5. This goes on till the end of the array.
 6. This process is repeated until the array is sorted.
 

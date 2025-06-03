@@ -4,10 +4,10 @@ Selection sort is another simple sorting algorithm that works by repeatedly find
 
 ### Algorithm
 
-1. The algorithm takes the array as input.
-2. It initializes the first element as the current minimum/maximum element in the array. (let's chose the minimum element for this example)
-3. It compares the current minimum with each element in the array.
-4. If the current element is smaller than the current minimum, the algorithm swaps them.
+1. Take the array as input.
+2. Initialize the first element as the current minimum element in the array.
+3. Compare the current minimum with each element in the array.
+4. If the current element is smaller than the current minimum, swap them.
 5. The current minimum (at the end of the iteration) is swapped with element at the beginning of the array.
 6. This goes on till the end of the array.
 
