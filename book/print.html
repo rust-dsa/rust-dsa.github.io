@@ -241,6 +241,11 @@ To keep things simple, we will only store the titles of the books in our data st
 <li>Does the algorithm do what it is supposed to do?</li>
 <li>Is the algorithm efficient? And can it be made more efficient?</li>
 </ol>
+<blockquote>
+<h2 id="flowcharts"><a class="header" href="#flowcharts">Flowcharts</a></h2>
+<p>If you prefer your algorithms to be visual, you can also use flowcharts. <a href="https://tettra.com/article/flowcharts/">Here's a resource to get you started</a>. While you don't need to know how to build flowcharts, it is a nice tool that will help you see your problem in a different perspective.</p>
+<p>You don't necessarily have to stick to the rules of drawing flowcharts if you understand what your are doing. But you can't go your own way when you are working with a group of people to solve a problem. Then a standardization of drawing components is necessary.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="complexity"><a class="header" href="#complexity">Complexity</a></h1>
 <p>Complexity is the unit of measurement of an algorithm to examine the time and space (memory) it requires to execute successfully. Complexity also measures how much more time and space are required as the input of said algorithms grows in size. An algorithm is said to be efficient and fast if it takes less time to execute and consumes less memory space.</p>
 <p>Generally, complexity is used to compare two or more algorithms to evaluate which one will be more suitable for the task at hand.</p>
@@ -1560,12 +1565,11 @@ fn binary_search(array: Vec&lt;i32&gt;, token: i32) -&gt; Option&lt;usize&gt; {
 <p>Bubble sort is a simple sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. The algorithm continues to iterate until the array is sorted. Since it compares N elements to N - 1, it is not efficient for large arrays.</p>
 <h3 id="algorithm-2"><a class="header" href="#algorithm-2">Algorithm</a></h3>
 <ol>
-<li>The algorithm takes the array as input.</li>
-<li>It compares the first two elements of the array.</li>
-<li>If the first element is greater than the second, the algorithm swaps them.</li>
-<li>It compares the second and third elements of the array.</li>
-<li>If the second element is greater than the third, the algorithm swaps them.</li>
+<li>Take the array as input.</li>
+<li>Compare the first two elements of the array.</li>
+<li>If the first element (j) is greater than the next (j + 1), swap them.</li>
 <li>This goes on till the end of the array. At this point, the largest element is in its correct position.</li>
+<li>In the second iteration, compare only n - 1 elements, as the last one in its position.</li>
 <li>This process is repeated until the array is sorted.</li>
 </ol>
 <p>Now let's write a function that implements the preceding steps:</p>
@@ -1613,10 +1617,10 @@ fn bubble_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
 <p>Selection sort is another simple sorting algorithm that works by repeatedly finding the minimum/maximum element in the array and swapping it with the current element. The algorithm continues to iterate until the array is sorted.</p>
 <h3 id="algorithm-3"><a class="header" href="#algorithm-3">Algorithm</a></h3>
 <ol>
-<li>The algorithm takes the array as input.</li>
-<li>It initializes the first element as the current minimum/maximum element in the array. (let's chose the minimum element for this example)</li>
-<li>It compares the current minimum with each element in the array.</li>
-<li>If the current element is smaller than the current minimum, the algorithm swaps them.</li>
+<li>Take the array as input.</li>
+<li>Initialize the first element as the current minimum element in the array.</li>
+<li>Compare the current minimum with each element in the array.</li>
+<li>If the current element is smaller than the current minimum, swap them.</li>
 <li>The current minimum (at the end of the iteration) is swapped with element at the beginning of the array.</li>
 <li>This goes on till the end of the array.</li>
 </ol>
@@ -1671,10 +1675,10 @@ fn selection_sort(array: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
 <p>Insertion sort is another simple sorting algorithm that works by repeatedly inserting an element from the unsorted part of the array into its correct position in the sorted part of the array. The algorithm continues to iterate until the array is sorted.</p>
 <h3 id="algorithm-4"><a class="header" href="#algorithm-4">Algorithm</a></h3>
 <ol>
-<li>The algorithm takes the array as input.</li>
-<li>It iterates over the array.</li>
-<li>It compares the current element with the previous element.</li>
-<li>If the current element is smaller than the previous element, the algorithm swaps them.</li>
+<li>Take the array as input.</li>
+<li>Iterate over the array.</li>
+<li>Compares the current element with the previous element.</li>
+<li>If the current element is smaller than the previous element, swap them.</li>
 <li>This goes on till the end of the array.</li>
 <li>This process is repeated until the array is sorted.</li>
 </ol>

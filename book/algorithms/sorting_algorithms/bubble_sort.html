@@ -180,12 +180,11 @@
 <p>Bubble sort is a simple sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. The algorithm continues to iterate until the array is sorted. Since it compares N elements to N - 1, it is not efficient for large arrays.</p>
 <h3 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h3>
 <ol>
-<li>The algorithm takes the array as input.</li>
-<li>It compares the first two elements of the array.</li>
-<li>If the first element is greater than the second, the algorithm swaps them.</li>
-<li>It compares the second and third elements of the array.</li>
-<li>If the second element is greater than the third, the algorithm swaps them.</li>
+<li>Take the array as input.</li>
+<li>Compare the first two elements of the array.</li>
+<li>If the first element (j) is greater than the next (j + 1), swap them.</li>
 <li>This goes on till the end of the array. At this point, the largest element is in its correct position.</li>
+<li>In the second iteration, compare only n - 1 elements, as the last one in its position.</li>
 <li>This process is repeated until the array is sorted.</li>
 </ol>
 <p>Now let's write a function that implements the preceding steps:</p>

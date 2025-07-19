@@ -53,3 +53,9 @@ When writing algorithms to solve a problem in programming, or finding a solution
 1. What is the algorithm supposed to do?
 2. Does the algorithm do what it is supposed to do?
 3. Is the algorithm efficient? And can it be made more efficient?
+
+
+> ## Flowcharts
+> If you prefer your algorithms to be visual, you can also use flowcharts. [Here's a resource to get you started](https://tettra.com/article/flowcharts/). While you don't need to know how to build flowcharts, it is a nice tool that will help you see your problem in a different perspective.
+>
+> You don't necessarily have to stick to the rules of drawing flowcharts if you understand what your are doing. But you can't go your own way when you are working with a group of people to solve a problem. Then a standardization of drawing components is necessary.
