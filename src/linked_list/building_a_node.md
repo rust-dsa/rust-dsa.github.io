@@ -15,7 +15,7 @@ struct Node {
 
 After running the preceding codeblock you'll get an error saying `Node` has infinite size. What does that mean exactly?
 
-Because, you are technically saving the value of Node inside itself, not the address. This means that node will contain its value, *and* the next node.
+Here, you are technically saving the *value* of Node inside itself, not the address. This means that node will contain its value, *and* the next node.
 The next node will contain the value, *and* the node after it.
 
 <figure>
@@ -64,7 +64,7 @@ struct Node {
 }
 ```
 
-There we go! Did I mention making a linked list in rust is going to be compilcated?
+There we go! Did I mention making a linked list in rust is going to be compilcated? That's why we're doing it!
 
 Anyway, let's initialize it again:
 
