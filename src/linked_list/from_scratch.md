@@ -13,9 +13,3 @@ Arrays and linked lists serve different purposes and, in a sense, overcome each 
 In the next sections, we'll delve into the low-level details and create our own linked lists. Since Rust has features and rules unique to it, our linked list will look different (at the low level) from the linked lists in languages such as C or Python.
 
 Let's dive in!
-
-There are multiple ways we can define a struct in Rust. We'll see three ways in this section:
-
-1. Using the built-in linked list data type in Rust.
-2. Using the `struct` keyword to create node data type.
-3. Using the `enum` keyword to create node data type.

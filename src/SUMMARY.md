@@ -24,7 +24,7 @@
 - [Queue](./queue/queue.md)
 - [Linked list](./linked_list/linked_list.md)
   - [Built In](./linked_list/built_in.md)
-    - [From Scratch](./linked_list/from_scratch.md)
+  - [From Scratch](./linked_list/from_scratch.md)
     - [Building a Node](./linked_list/building_a_node.md)
     - [Building a Linked list](./linked_list/building_a_linked_list.md)
 - [Trees](./trees/trees.md)

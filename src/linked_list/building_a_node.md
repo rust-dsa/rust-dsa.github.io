@@ -27,7 +27,7 @@ As you can see from the diagram, the head node has to store all the nodes (n - 1
 
 ### How to store the address of next node
 
-To overcome the problem of infinite size, we'll have to store the address of the next Node, which can be allocated at runtime. To do that, we'll use the `Box<>` smart pointer.
+To overcome the problem of infinite size, we'll have to store the address of the next Node, which can be allocated at runtime. To do that, we'll use the [`Box<>`](https://doc.rust-lang.org/book/ch15-01-box.html) smart pointer.
 
 ```rust
 struct Node {
