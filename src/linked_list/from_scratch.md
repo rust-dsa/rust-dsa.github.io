@@ -1,4 +1,4 @@
-# What you came for
+# Building a Linked list from scratch
 
 In the previous chapter, we explored practical examples of how Linked Lists can be implemented using the collections provided by Rust. By using the `use std::collections::LinkedList;` line of code, we accessed an inbuilt Linked List and utilized its corresponding methods to manipulate the data within the list. You may have noticed that Linked Lists are similar in usage to vectors. To be more precise, singly linked lists are akin to the `Vec` data structure in Rust, while doubly linked lists are similar to `VecDeque`.
 
