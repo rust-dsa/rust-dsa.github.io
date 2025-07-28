@@ -1,48 +1,50 @@
 // ANCHOR: so_far
+use std::mem;
+
 #[derive(Debug)]
 #[allow(dead_code)]
+
+struct List {
+    head: Option<Box<Node>>,
+}
+
 struct Node {
     val: i32,
     next: Option<Box<Node>>,
 }
 
-impl Node {
-    fn new(val: i32) -> Option<Box<Node>> {
-        Some(Box::new(Node { val, next: None }))
+impl List {
+    // ANCHOR: new
+    pub fn new() -> Self {
+        List { head: None }
     }
+    // ANCHOR_END: new
 
-    fn push(&mut self, new_node: Option<Box<Node>>) {
-        let mut current = self;
-        while let Some(ref mut next) = current.next {
-            current = next;
-        }
-        current.next = new_node;
+    // ANCHOR: push
+    pub fn push(&mut self, val: i32) {
+        let new_node = Box::new(Node {
+            val: val,
+            next: mem::replace(&mut self.head, None),
+        });
+        self.head = Some(new_node);
     }
+    // ANCHOR_END: push
 
-    fn print_list(&self) {
-        let mut current = Some(self);
-        while let Some(node) = current {
-            print!("{} -> ", node.val);
-            current = node.next.as_deref();
+    // ANCHOR: pop
+    pub fn pop(&mut self) -> Option<i32> {
+        match &self.head {
+            None => {
+                return None;
+            },
+            Some(node) {
+
+            }
         }
-        println!("None"); // Indicate the end of the list
     }
 }
 
 fn main() {
-    let mut head = Box::new(Node { val: 1, next: None });
-    let node = Some(Box::new(Node { val: 2, next: None }));
-
-    head.next = node;
-
-    let new_node = Node::new(3);
-
-    head.push(new_node);
-
-    println!("{:?}", head);
-
-    head.push(Node::new(4));
-
-    head.print_list();
+    let mut ll = List::new();
+    ll.push(7);
 }
 // ANCHOR_END: so_far

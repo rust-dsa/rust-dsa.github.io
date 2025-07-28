@@ -13,6 +13,9 @@ struct Node {
 }
 ```
 
+> Note on struct:
+> We could have used an enum instead of a struct, but for our initial example, a struct is simpler to understand. In practice, Rust linked lists often use enums to represent the possibility of an empty node or the end of the list, but here we start with a struct for clarity.[^1]
+
 After running the preceding codeblock you'll get an error saying `Node` has infinite size. What does that mean exactly?
 
 Here, you are technically saving the *value* of Node inside itself, not the address. This means that node will contain its value, *and* the next node.
@@ -82,3 +85,8 @@ let node = Node {
 ```
 
 The codeblock above looks an awful lot like our diagram, but the difference is, that `next` actually stores an address in heap.
+
+
+<hr>
+
+[^1]: <https://rust-unofficial.github.io/too-many-lists/first-layout.html>

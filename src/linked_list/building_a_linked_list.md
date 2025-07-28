@@ -32,97 +32,30 @@ The next step is to link one more node to our list. We do this by updating the v
     println!("{:?}", head);
 ```
 
-We can also link another node, but before we do that, let's write a method for `Node` that will help us initialize a node.
+Let's see what we are doing in order to add another node to our linked list.
+1. Create a node: `Node` and initialize its value
+2. Create another next_node: `Node`, which will hold another value.
+3. Make the node mutable so that we can change its `next` value.
+4. Assign the address of next_node to the `node.next`.
+5. Repeat steps 2 - 4 for every addtion of a node.
 
-### Important Methods
+This seems is not the optimal way at all. This is not the engineerin way.
+So what we'll do is we'll create a new struct which will hold the address of the head node, and also hold the methods that we'll use on the linked list.
 
-#### `new`
+## Linked list
+
+To make a linked list more accessible, we'll create another struct called List, which will contain the address of a head node. This head will be of `Option<Box<Node>>` type. We have used the Option enum here so that we could represent an empty list using `None` variant.
+
 ```rust,ignore
-impl Node {
-    fn new(val: i32) -> Option<Box<Node>> {
-        Some(Box::new(Node { val, next: None }))
-    }
+pub struct List {
+    head: Option<Box<Node>>
 }
 ```
 
-We'll create a node using our new method. Since, we cannot directly assign this value to head as it will overwrite the address of the previous node. We will have to access `node` through head and then link the new node to the previous node. We first check if the pattern matches of head node, i.e., if it hold Some value or None. Next we'll borrow the inner value of Some mutably. This will allows us ot modify the contents of `next_node`.
-
-```rust
-    let new_node: Option<Box<Node>> = Node::new(3);
-
-    if let Some(ref mut next_node) = head.next {
-        next_node.next = new_node;
-    }
-    println!("{:?}", head);
-```
-
-#### `push`
-
-Do you see the pattern for inserting a node in a linked list? Let's articulate it:
-
-1. Start at the head node of the linked list.
-2. Traverse the list:
-   - Check if the current node's `next` is `None`.
-   - If not, move to the next node by reassigning the current node to its `next`.
-3. Continue until you find a node where `node.next` is `None` (the last node).
-4. Create a new node with the desired value and set the `next` of the last node to point to this new node.
-
-Let's try to write this algorithm by creating the `insert` method
-
-```rust,ignore
-    fn push(&mut self, new_node: Option<Box<Node>>) {
-        let mut current = self;
-        while let Some(ref mut next) = current.next {
-            current = next;
-        }
-        current.next = new_node;
-    }
-```
-
-#### `print_list`
-
-We'll create a method that helps us traverse through the list.
-Since the method is part of `struct Node` and not `Option<Box<Node>>`, we'll turn it into an Option, so that it is easier to access through `while let` loop. Then using said loop, we'll access `val` and print it, and then assign `next` as current node.
-
-```rust,ignore
-fn print_list(&self) {
-    let mut current = Some(self);
-        while let Some(node) = current {
-            print!("{} -> ", node.val);
-            current = node.next.as_deref();
-        }
-        println!("None");
-    }
-```
-> The `node.next` is of type `Option<Box<Node>>`, but `current` is expected to be of type `Option<&Node>`. Without `as_deref()`, you can't directly assign `node.next` to `current` because they are different types.
+The `pub` keyword implies the struct can be acessed by anyone.
 
 
-#### `remove_last`
+Let's see what we have created til now.
+1. a Node data structure that holds a value, and the address of next node
+2. a List data structure that holds the value of the first node.
 
-The idea is simple: unlink the last node with the second last node.
-
-```rust,ignore
-fn remove_last(&mut self) {
-    if self.next.is_none() {
-        // If the list is empty or has only one node
-        return;
-    }
-
-    let mut current = self;
-    while let Some(ref mut next) = current.next {
-        if next.next.is_none() {
-            // We found the second last node
-            current.next = None; // Unlink the last node
-            return;
-        }
-        current = next;
-    }
-}
-```
-
-Alright, now that we have written a function that creates, reads, updates and deletes a list node, we'll move on to the next step of design: optimization.
-
-Let's take a look at the code we've written so far:
-
-```rust
-{{#include ./linked_list.rs:so_far}}
