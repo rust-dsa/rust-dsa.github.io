@@ -26,6 +26,14 @@ All contributors and editors working on documentation or book content.
    - ✅SUMMARY.md: The Meaning | Heading: The Meaning of Life
    - ❌SUMMARY.md: The Meaning | Heading: The Three Stooges
 
+#### For diagrams
+1. Treat each diagram as an isolated component. the reader should not have to read the surrounding content to understand the diagram.
+2. Use white or light color as background
+3. Use black or dark color for content
+4. Describe the shorthands use in diagram somewhere *in diagram*.
+5. Diagram should have a caption with the diagram number
+   - The second diagram in chapter 3, subchapter 2 will be: 3.2.2: <caption>.
+
 ## Formatting
 - Code samples should be in fenced code blocks.
 - Use bulleted or numbered lists where appropriate.
