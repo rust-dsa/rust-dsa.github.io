@@ -5,11 +5,21 @@ Trees are widely used in various applications such as databases, file systems, e
 
 e.g. An employee hierarchy in an organization
 
-![Organization hierarchy](./../images//org_hierarchy.png)
+<p align="center">
+  <img src="./../images/org_hierarchy.png" alt="Organization Hierarchy" />
+  <br>
+  <em>Figure 8.1: Visual representation of an organizational hierarchy to depict the use case of a tree data structure</em>
+</p>
 
-## Entities of a graph:
+In later chapters we'll learn about graph data structures which will be made up of the same materials as a tree. The reason we choose to learn trees first instead of graphs is that trees are a simpler, more structured subset of graph, and therefore it will be easier to understand graphs later on.
 
-![Parts of Graph](./../images/parts_of_graph.png)
+## Entities of a tree / graph:
+
+<p align="center">
+  <img src="./../images/parts_of_tree.png" alt="Parts of a tree" />
+  <br>
+  <em>Figure 8.2: A labeled diagram showing the main parts of a tree data structure (root, parent, child, sibling, leaf, edge)</em>
+</p>
 
 ### Nodes
 
