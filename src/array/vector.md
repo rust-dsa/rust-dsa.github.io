@@ -3,11 +3,19 @@ Unlike arrays, a vector stores the size of the array as well. Arrays don't need 
 
 Another thing about vectors is that they're generally stored in a heap, and they have a larger size allocated than is being used. As a result, when new values are inserted, the whole vector does not need to be relocated to fulfill the size requirements.
 
-![vector with capacity 10](../images/vector_a.jpg)
+<p align="center">
+  <img src="../images/vector_a.jpg" alt="Vector with capacity 10" />
+  <br>
+  <em>Figure 3.2.1: A vector with capacity 10 and 6 elements filled, whose capacity is about to double because it has more elements than half of its capacity: 10/ 2 < 6</em>
+</p>
 
 As with arrays, both arrays and vectors copy items into another larger array/vector once more element(s) are added; however, vectors do the copying less often as they already have more capacity than the actual length.
 
-![vector with capacity 20](../images/vector_b.jpg)
+<p align="center">
+  <img src="../images/vector_b.jpg" alt="Vector with capacity 20" />
+  <br>
+  <em>Figure 3.2.2: A vector with capacity 20 and 10 elements filled</em>
+</p>
 
 > Note: the vectors in both the figures are the same on high level, but have different names (`a` and `b`) because they are different on the low level in the sense that they have different locations in memory.
 >

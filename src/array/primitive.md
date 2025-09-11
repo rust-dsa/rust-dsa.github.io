@@ -48,7 +48,11 @@ We can access array elements using their index, and modify the values provided t
 ### 1. 1D array:
 One dimensional array refers to an array that contains only a row of elements. A 1D array can be accessed by using a single index.
 
-![1d array](../images/1darray.jpg)
+<p align="center">
+  <img src="../images/1darray.jpg" alt="1D array" />
+  <br>
+  <em>Figure 3.1.1: Visual representation of a one dimensional array with contiguous memory and indices</em>
+</p>
 
 **Initializing a 1D array**: Arrays are one dimensional by default. When you initialize an array, like you did [at the start](#initializing-an-array), you are initializing a 1D array.
 
@@ -57,7 +61,11 @@ One dimensional array refers to an array that contains only a row of elements. A
 ### 2D array:
 Two Dimensional array refers to an array that contains rows as well as columns of element. A 2D array can be accessed by using two indices; one index specifying the row, the other specifying the column.
 
-![2d array](../images//2darray.jpg)
+<p align="center">
+  <img src="../images/2darray.jpg" alt="2D array " />
+  <br>
+  <em>Figure 3.1.2: Visual representation of a two dimensional array with contiguous memory and indices</em>
+</p>
 
 > Notice that the 1D array and 2D array figures have the same 8 elements. The only difference is how they are accessed.
 >

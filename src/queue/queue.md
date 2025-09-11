@@ -4,7 +4,11 @@ A queue is a linear data used to model a First In First Out (FIFO) system. Conce
 
 The queue is used to model a system where the order of elements is important. For example, in a print queue, the order of jobs is important, so we use a queue to manage the jobs.
 
-![queue](../images/queue.jpg)
+<p align="center">
+  <img src="../images/queue.jpg" alt="Queue" />
+  <br>
+  <em>Figure 6.1: Visual representation of a queue</em>
+</p>
 
 In Rust, we use a `VecDeque` to implement a queue. The `VecDeque` is a double-ended queue that allows efficient insertion and removal at both ends. It is a wrapper around a `Vec` that provides additional methods for working with the queue.
 

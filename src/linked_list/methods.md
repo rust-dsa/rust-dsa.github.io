@@ -45,21 +45,43 @@ Two things are happening in our push method:
 
 This is before our first push operation:
 We've initialized a List, but haven't yet pushed a Node into it.
-![Before Push](./../images/linked_list/list1.jpg)
+
+<p align="center">
+  <img src="./../images/linked_list/list1.jpg" alt="Before Push" />
+  <br>
+  <em>Figure 7.2.3.1: State of memory before a Node is pushed in the initialized linked list</em>
+</p>
 
 
 We create a node and insert 78 as val. Using mem::replace, we also move the value in head (currently `None`) into next and insert `None` into head temporarily.
-![Changes in new node](./../images/linked_list/list2.jpg)
+<p align="center">
+  <img src="./../images/linked_list/list2.jpg" alt="In Push" />
+  <br>
+  <em>Figure 7.2.3.2: State of memory after a Node is initialized in the push method</em>
+</p>
+
 
 After the new node is created we wrap the address in a Option, and then assign it to head.
-![Changes in List](./../images/linked_list/list3.jpg)
+<p align="center">
+  <img src="./../images/linked_list/list3.jpg" alt="In Push" />
+  <br>
+  <em>Figure 7.2.3.3: State of memory after address of Node is stored in the head of linked list</em>
+</p>
 
 
 We push one more value into the list (36). We also update next by assigning the current value of head. And replace the value in head with `None` temporarily.
-![Changes in List](./../images/linked_list/list4.jpg)
+<p align="center">
+  <img src="./../images/linked_list/list4.jpg" alt="After Push" />
+  <br>
+  <em>Figure 7.2.3.4: State of memory after a new value is pushed in the linked list</em>
+</p>
 
 At last we wrap the address in our option, and insert into the head.
-![Changes in List](./../images/linked_list/list5.jpg)
+<p align="center">
+  <img src="./../images/linked_list/list5.jpg" alt="After Push" />
+  <br>
+  <em>Figure 7.2.3.5: State of memory after address of new Node is stored in the head of linked list</em>
+</p>
 
 
 ## `pop`

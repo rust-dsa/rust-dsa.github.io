@@ -21,10 +21,11 @@ After running the preceding codeblock you'll get an error saying `Node` has infi
 Here, you are technically saving the *value* of Node inside itself, not the address. This means that node will contain its value, *and* the next node.
 The next node will contain the value, *and* the node after it.
 
-<figure>
-  <img src="../images/recursive_node.jpg" alt="Recursiveness of Node struct">
-  <figcaption style="text-align:center">Recursive Node</figcaption>
-</figure>
+<p align="center">
+  <img src="../images/recursive_node.jpg" alt="Recursiveness of Node struct" />
+  <br>
+  <em>Figure 7.2.1.1: The recursive nature of a Node that is stored in a stack</em>
+</p>
 
 As you can see from the diagram, the head node has to store all the nodes (n - 1) in it. And since we do not actually know how many nodes there are in a particular linked list, rust won't be able to assign the storage at compile time. Therefore the error presented for `Node` describes it as having infinite size.
 

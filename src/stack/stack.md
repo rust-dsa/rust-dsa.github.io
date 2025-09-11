@@ -30,7 +30,13 @@ Let's see how to implement the two fundamental functions of a stack
 {{#include ./../code/ds/stack.rs:operations}}
 ```
 ## Visual representation
-![stack](./../images/stack.png)
+
+<p align="center">
+  <img src="../images/stack.png" alt="stack" />
+  <br>
+  <em>Figure 5.1: Visual representation of a stack</em>
+</p>
+
 There is no `is_full()` provided by Rust, but we can always create a new function.
 
 In the next chapters, we'll be looking at some tools to solve stack dsa problems.

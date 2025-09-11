@@ -194,10 +194,11 @@ We could have used an enum instead of a struct, but for our initial example, a s
 <p>After running the preceding codeblock you'll get an error saying <code>Node</code> has infinite size. What does that mean exactly?</p>
 <p>Here, you are technically saving the <em>value</em> of Node inside itself, not the address. This means that node will contain its value, <em>and</em> the next node.
 The next node will contain the value, <em>and</em> the node after it.</p>
-<figure>
-  <img src="../images/recursive_node.jpg" alt="Recursiveness of Node struct">
-  <figcaption style="text-align:center">Recursive Node</figcaption>
-</figure>
+<p align="center">
+  <img src="../images/recursive_node.jpg" alt="Recursiveness of Node struct" />
+  <br>
+  <em>Figure 7.2.1.1: The recursive nature of a Node that is stored in a stack</em>
+</p>
 <p>As you can see from the diagram, the head node has to store all the nodes (n - 1) in it. And since we do not actually know how many nodes there are in a particular linked list, rust won't be able to assign the storage at compile time. Therefore the error presented for <code>Node</code> describes it as having infinite size.</p>
 <h3 id="how-to-store-the-address-of-next-node"><a class="header" href="#how-to-store-the-address-of-next-node">How to store the address of next node</a></h3>
 <p>To overcome the problem of infinite size, we'll have to store the address of the next Node, which can be allocated at runtime. To do that, we'll use the <a href="https://doc.rust-lang.org/book/ch15-01-box.html"><code>Box&lt;&gt;</code></a> smart pointer.</p>

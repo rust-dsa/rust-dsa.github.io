@@ -3,7 +3,11 @@ An array is a collection of similar data types that are stored in contiguous mem
 
 In programming, we often need to use data elements of similar type and purpose. Instead of declaring and defining every variable individually, we can use an array to store all of them together.
 
-![Array representation](../images/array.jpg)
+<p align="center">
+  <img src="../images/array.jpg" alt="Array representation" />
+  <br>
+  <em>Figure 3.1: Visual representation of an array with contiguous memory and indices</em>
+</p>
 
 The array in the diagram has 8 elements, and hence we say its size is 8 (length in terms of Rust).
 

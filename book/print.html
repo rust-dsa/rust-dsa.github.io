@@ -342,7 +342,11 @@ To keep things simple, we will only store the titles of the books in our data st
 <div style="break-before: page; page-break-before: always;"></div><h1 id="array"><a class="header" href="#array">Array</a></h1>
 <p>An array is a collection of similar data types that are stored in contiguous memory locations. Each location has an index number through which we can access the element at that particular index.</p>
 <p>In programming, we often need to use data elements of similar type and purpose. Instead of declaring and defining every variable individually, we can use an array to store all of them together.</p>
-<p><img src="array/../images/array.jpg" alt="Array representation" /></p>
+<p align="center">
+  <img src="array/../images/array.jpg" alt="Array representation" />
+  <br>
+  <em>Figure 3.1: Visual representation of an array with contiguous memory and indices</em>
+</p>
 <p>The array in the diagram has 8 elements, and hence we say its size is 8 (length in terms of Rust).</p>
 <p>The line of numbers below the array is called the indices of the array. These numbers are the addresses of elements in the array. We access elements with the help of these numbers. An index number generally starts with 0.</p>
 <p>For instance, if you want to access the 4th element, you'll do that by its index, i.e., 4 - 1 = 3:</p>
@@ -418,12 +422,20 @@ To keep things simple, we will only store the titles of the books in our data st
 <h2 id="types-of-array"><a class="header" href="#types-of-array">Types of Array:</a></h2>
 <h3 id="1-1d-array"><a class="header" href="#1-1d-array">1. 1D array:</a></h3>
 <p>One dimensional array refers to an array that contains only a row of elements. A 1D array can be accessed by using a single index.</p>
-<p><img src="array/../images/1darray.jpg" alt="1d array" /></p>
+<p align="center">
+  <img src="array/../images/1darray.jpg" alt="1D array" />
+  <br>
+  <em>Figure 3.1.1: Visual representation of a one dimensional array with contiguous memory and indices</em>
+</p>
 <p><strong>Initializing a 1D array</strong>: Arrays are one dimensional by default. When you initialize an array, like you did <a href="array/primitive.html#initializing-an-array">at the start</a>, you are initializing a 1D array.</p>
 <p><strong>Use Case</strong>: 1D arrays are used when we have to store similar items contiguously. These items are related in some way.</p>
 <h3 id="2d-array"><a class="header" href="#2d-array">2D array:</a></h3>
 <p>Two Dimensional array refers to an array that contains rows as well as columns of element. A 2D array can be accessed by using two indices; one index specifying the row, the other specifying the column.</p>
-<p><img src="array/../images//2darray.jpg" alt="2d array" /></p>
+<p align="center">
+  <img src="array/../images/2darray.jpg" alt="2D array " />
+  <br>
+  <em>Figure 3.1.2: Visual representation of a two dimensional array with contiguous memory and indices</em>
+</p>
 <blockquote>
 <p>Notice that the 1D array and 2D array figures have the same 8 elements. The only difference is how they are accessed.</p>
 <p>We use only one index to access 4 from 1D: <code>array[2]</code>.
@@ -446,9 +458,17 @@ On the other hand, we have to use two two values to access 4 from 2D: <code>arra
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vector-type"><a class="header" href="#vector-type">Vector Type</a></h1>
 <p>Unlike arrays, a vector stores the size of the array as well. Arrays don't need to store their size. That is why we can access an array element even when we exceed the actual capacity. The boundaries are not defined.</p>
 <p>Another thing about vectors is that they're generally stored in a heap, and they have a larger size allocated than is being used. As a result, when new values are inserted, the whole vector does not need to be relocated to fulfill the size requirements.</p>
-<p><img src="array/../images/vector_a.jpg" alt="vector with capacity 10" /></p>
+<p align="center">
+  <img src="array/../images/vector_a.jpg" alt="Vector with capacity 10" />
+  <br>
+  <em>Figure 3.2.1: A vector with capacity 10 and 6 elements filled, whose capacity is about to double because it has more elements than half of its capacity: 10/ 2 < 6</em>
+</p>
 <p>As with arrays, both arrays and vectors copy items into another larger array/vector once more element(s) are added; however, vectors do the copying less often as they already have more capacity than the actual length.</p>
-<p><img src="array/../images/vector_b.jpg" alt="vector with capacity 20" /></p>
+<p align="center">
+  <img src="array/../images/vector_b.jpg" alt="Vector with capacity 20" />
+  <br>
+  <em>Figure 3.2.2: A vector with capacity 20 and 10 elements filled</em>
+</p>
 <blockquote>
 <p>Note: the vectors in both the figures are the same on high level, but have different names (<code>a</code> and <code>b</code>) because they are different on the low level in the sense that they have different locations in memory.</p>
 </blockquote>
@@ -759,15 +779,23 @@ The first is by converting a string literal to a <code>String</code> type using 
     println!("After pop: {work}");
 <span class="boring">}</span></code></pre></pre>
 <h2 id="visual-representation"><a class="header" href="#visual-representation">Visual representation</a></h2>
-<p><img src="stack/./../images/stack.png" alt="stack" />
-There is no <code>is_full()</code> provided by Rust, but we can always create a new function.</p>
+<p align="center">
+  <img src="stack/../images/stack.png" alt="stack" />
+  <br>
+  <em>Figure 5.1: Visual representation of a stack</em>
+</p>
+<p>There is no <code>is_full()</code> provided by Rust, but we can always create a new function.</p>
 <p>In the next chapters, we'll be looking at some tools to solve stack dsa problems.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="easy"><a class="header" href="#easy">Easy</a></h2>
 <p><a href="https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/">Problem 1</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
 <p>A queue is a linear data used to model a First In First Out (FIFO) system. Conceptually, we add elements to the end of the queue and remove elements from the front.</p>
 <p>The queue is used to model a system where the order of elements is important. For example, in a print queue, the order of jobs is important, so we use a queue to manage the jobs.</p>
-<p><img src="queue/../images/queue.jpg" alt="queue" /></p>
+<p align="center">
+  <img src="queue/../images/queue.jpg" alt="Queue" />
+  <br>
+  <em>Figure 6.1: Visual representation of a queue</em>
+</p>
 <p>In Rust, we use a <code>VecDeque</code> to implement a queue. The <code>VecDeque</code> is a double-ended queue that allows efficient insertion and removal at both ends. It is a wrapper around a <code>Vec</code> that provides additional methods for working with the queue.</p>
 <h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
 <p>To import the <code>VecDeque</code> type, we need to add the following line at the top of our file:</p>
@@ -962,10 +990,11 @@ We could have used an enum instead of a struct, but for our initial example, a s
 <p>After running the preceding codeblock you'll get an error saying <code>Node</code> has infinite size. What does that mean exactly?</p>
 <p>Here, you are technically saving the <em>value</em> of Node inside itself, not the address. This means that node will contain its value, <em>and</em> the next node.
 The next node will contain the value, <em>and</em> the node after it.</p>
-<figure>
-  <img src="linked_list/../images/recursive_node.jpg" alt="Recursiveness of Node struct">
-  <figcaption style="text-align:center">Recursive Node</figcaption>
-</figure>
+<p align="center">
+  <img src="linked_list/../images/recursive_node.jpg" alt="Recursiveness of Node struct" />
+  <br>
+  <em>Figure 7.2.1.1: The recursive nature of a Node that is stored in a stack</em>
+</p>
 <p>As you can see from the diagram, the head node has to store all the nodes (n - 1) in it. And since we do not actually know how many nodes there are in a particular linked list, rust won't be able to assign the storage at compile time. Therefore the error presented for <code>Node</code> describes it as having infinite size.</p>
 <h3 id="how-to-store-the-address-of-next-node"><a class="header" href="#how-to-store-the-address-of-next-node">How to store the address of next node</a></h3>
 <p>To overcome the problem of infinite size, we'll have to store the address of the next Node, which can be allocated at runtime. To do that, we'll use the <a href="https://doc.rust-lang.org/book/ch15-01-box.html"><code>Box&lt;&gt;</code></a> smart pointer.</p>
@@ -1103,16 +1132,36 @@ In rust we write the methods that go with a particular struct inside an impl. In
 <li>The head is being updated</li>
 </ol>
 <p>This is before our first push operation:
-We've initialized a List, but haven't yet pushed a Node into it.
-<img src="linked_list/./../images/linked_list/list1.jpg" alt="Before Push" /></p>
-<p>We create a node and insert 78 as val. Using mem::replace, we also move the value in head (currently <code>None</code>) into next and insert <code>None</code> into head temporarily.
-<img src="linked_list/./../images/linked_list/list2.jpg" alt="Changes in new node" /></p>
-<p>After the new node is created we wrap the address in a Option, and then assign it to head.
-<img src="linked_list/./../images/linked_list/list3.jpg" alt="Changes in List" /></p>
-<p>We push one more value into the list (36). We also update next by assigning the current value of head. And replace the value in head with <code>None</code> temporarily.
-<img src="linked_list/./../images/linked_list/list4.jpg" alt="Changes in List" /></p>
-<p>At last we wrap the address in our option, and insert into the head.
-<img src="linked_list/./../images/linked_list/list5.jpg" alt="Changes in List" /></p>
+We've initialized a List, but haven't yet pushed a Node into it.</p>
+<p align="center">
+  <img src="linked_list/./../images/linked_list/list1.jpg" alt="Before Push" />
+  <br>
+  <em>Figure 7.2.3.1: State of memory before a Node is pushed in the initialized linked list</em>
+</p>
+<p>We create a node and insert 78 as val. Using mem::replace, we also move the value in head (currently <code>None</code>) into next and insert <code>None</code> into head temporarily.</p>
+<p align="center">
+  <img src="linked_list/./../images/linked_list/list2.jpg" alt="In Push" />
+  <br>
+  <em>Figure 7.2.3.2: State of memory after a Node is initialized in the push method</em>
+</p>
+<p>After the new node is created we wrap the address in a Option, and then assign it to head.</p>
+<p align="center">
+  <img src="linked_list/./../images/linked_list/list3.jpg" alt="In Push" />
+  <br>
+  <em>Figure 7.2.3.3: State of memory after address of Node is stored in the head of linked list</em>
+</p>
+<p>We push one more value into the list (36). We also update next by assigning the current value of head. And replace the value in head with <code>None</code> temporarily.</p>
+<p align="center">
+  <img src="linked_list/./../images/linked_list/list4.jpg" alt="After Push" />
+  <br>
+  <em>Figure 7.2.3.4: State of memory after a new value is pushed in the linked list</em>
+</p>
+<p>At last we wrap the address in our option, and insert into the head.</p>
+<p align="center">
+  <img src="linked_list/./../images/linked_list/list5.jpg" alt="After Push" />
+  <br>
+  <em>Figure 7.2.3.5: State of memory after address of new Node is stored in the head of linked list</em>
+</p>
 <h2 id="pop"><a class="header" href="#pop"><code>pop</code></a></h2>
 <p>The pop method will be used to remove and access the last element in our linked list.
 The method will take itself as input and give the removed element as an output.</p>
